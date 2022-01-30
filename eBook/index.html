@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiwan Monster</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="book.css">
+</head>
+<script>
+    //第一頁
+    let iter = 7;
+    let RightPage;
+    var TextBoxValue = $('.PadTextBox').val();
+    //按下按鈕
+    function nextPage() {
+        //不是最後一頁
+        if (iter != 469 && iter != null) {
+            //頁碼+1
+            iter++;
+            $('.PadTextBox').val(iter);
+        }
+        else {
+            iter = 7;
+            $('.PadTextBox').val(iter);
+        }
+        //圖片位址=頁碼+1.PNG
+        $('#PadImage').attr('src', `images/${iter}.PNG`);
+    }
+
+    function previousPage() {
+        //不是第一頁
+        if (iter != 7 && iter != null) {
+            //頁碼-1
+            iter--;
+            $('.PadTextBox').val(iter);
+        }
+        else {
+            iter = 469;
+            $('.PadTextBox').val(iter);
+        }
+        //圖片位址=頁碼+1.PNG
+        $('#PadImage').attr('src', `images/${iter}.PNG`);
+    }
+
+    function sendPage() {
+        TextBoxValue = $('.PadTextBox').val();
+        if (TextBoxValue >= 7 && TextBoxValue <= 469 && TextBoxValue != null) {
+            iter = TextBoxValue;
+            $('#PadImage').attr('src', `images/${iter}.PNG`);
+        }
+    }
+
+    function pcSendPage() {
+        TextBoxValue = $('.TextBox').val();
+        if (TextBoxValue >= 7 && TextBoxValue <= 469 && TextBoxValue != null) {
+            iter = TextBoxValue;
+            RightPage = iter++;
+            $('#image').attr('src', `images/${iter}.PNG`);
+            $('#image2').attr('src', `images/${RightPage}.PNG`);
+        }
+    }
+
+    function previousDoublePage() {
+        TextBoxValue = $('.TextBox').val();
+        iter = TextBoxValue;
+        if (iter != 7 && iter != null) {
+            iter--;
+            iter--;
+            $('.TextBox').val(iter);
+        }
+        else if (iter == 8) {
+            iter = 469;
+            $('.TextBox').val(iter);
+        }
+        else {
+            iter = 469;
+            $('.TextBox').val(iter);
+        }
+        RightPage = iter++;
+        $('#image').attr('src', `images/${iter}.PNG`);
+        $('#image2').attr('src', `images/${RightPage}.PNG`);
+    }
+
+    function nextDoublePage() {
+        TextBoxValue = $('.TextBox').val();
+        iter = TextBoxValue;
+        if (iter != 469 && iter != null) {
+            iter++;
+            iter++;
+            $('.TextBox').val(iter);
+        }
+        else if (iter == 468) {
+            iter = 7;
+            $('.TextBox').val(iter);
+        }
+        else {
+            iter = 7;
+            $('.TextBox').val(iter);
+        }
+        RightPage = iter++;
+        $('#image').attr('src', `images/${iter}.PNG`);
+        $('#image2').attr('src', `images/${RightPage}.PNG`);
+    }
+
+    function menuShow() {
+        var text = document.getElementById("MenuWidth");
+        text.classList.toggle("hide");
+        text.classList.toggle("show");
+    }
+
+    function MenuHide() {
+        var text = document.getElementById("MenuWidth");
+        text.classList.toggle("show");
+        text.classList.toggle("hide");
+    }
+
+    // $(window).resize(function () {
+    //     var width = $(this).width;
+    //     if (width < 1000) {
+    //         $('#image').attr('src', `images/${iter}.PNG`);
+    //     }
+    // })
+
+
+    // $("#sendButton").keypress(function (e) {
+    //         code = (e.keyCode ? e.keyCode : e.which);
+
+    //         if (code == 13) {
+    //             $("#sendButton").click();
+    //         }
+    //     })
+
+</script>
+
+<body>
+    <div class="PC">
+        <div class="Width">
+            <div class="Maxwidth">
+                <div class="Header">
+                    <input type="button" value="Menu" class="btn btn-primary PageButton MenuButton" onclick="menuShow()">
+                    <div class="block"></div>
+                    <input type="text" value="7" id="TextBox" class="TextBox">
+                    <div class="block"></div>
+                    <input type="button" value="Send" class="btn btn-primary PageButton" id="sendButton"
+                        onclick="pcSendPage()">
+                </div>
+                <div class="Picture">
+                    <input type="button" id="Left" value="Next" class="PageBtn" onclick="nextDoublePage()">
+                    <input type="button" id="Right" value="Previous" class="PageBtn" onclick="previousDoublePage()">
+                    <img id="image" src="images/7.PNG" class="Pic">
+                    <img id="image2" src="images/8.PNG" class="Pic">
+                </div>
+                <div class="Bottom">
+                    <input type="button" value="Next" class="btn btn-primary PageButton" onclick="nextDoublePage()">
+                    <div class="block"></div>
+                    <input type="button" value="Previous" class="btn btn-primary PageButton"
+                        onclick="previousDoublePage()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Pad">
+        <div class="Width">
+            <div class="Maxwidth">
+                <div class="Header">
+                    <input type="button" value="Menu" class="btn btn-primary PageButton MenuButton"
+                        onclick="menuShow()">
+                    <div class="block"></div>
+                    <input type="text" value="7" id="TextBox" class="PadTextBox" style="width: 40%; height: 100%;">
+                    <div class="block"></div>
+                    <input type="button" value="Send" class="btn btn-primary PageButton" id="sendButton"
+                        onclick="sendPage()">
+                </div>
+                <div class="Picture">
+                    <input type="button" id="Right" value="Next" class="PageBtn" onclick="nextPage()">
+                    <input type="button" id="Left" value="Previous" class="PageBtn" onclick="previousPage()">
+                    <img id="PadImage" src="images/7.PNG" class="Pic">
+                </div>
+                <div class="Bottom">
+                    <input type="button" value="Next" class="btn btn-primary PageButton" onclick="nextPage()">
+                    <div class="block"></div>
+                    <input type="button" value="Previous" class="btn btn-primary PageButton" onclick="previousPage()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="MenuWidth" class="hide">
+        <div class="MenuBlock">
+            <div class="Menu">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
