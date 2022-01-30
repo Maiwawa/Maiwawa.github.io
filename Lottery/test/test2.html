@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<script>
+    let RandomInt = 1;
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+    function clickLottery() {
+        RandomInt = getRandom(1, 8);
+        //隨機籤詩
+        $('#Image').attr('src', `resource/${RandomInt}.JPG`);
+    }
+</script>
+
+<body>
+    <img src="resource/1.JPG" alt="" id="Image" style="height: 90vh;">
+    <input type="button" onclick="clickLottery()" value="click me">
+</body>
+
+</html>

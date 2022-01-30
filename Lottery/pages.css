@@ -1,0 +1,179 @@
+.Backgorund {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: inline-block;
+}
+
+.LoveBackgorund {
+    background-color: #FF7979;
+}
+
+.WealthBackgorund {
+    background-color: #FBB03B;
+}
+
+.WorkBackground {
+    background-color: #A67C52;
+}
+
+
+.Header {
+    width: 100%;
+    height: 6.5vh;
+    display: inline-block;
+    margin-top: 3vh;
+}
+
+.HeaderOptions {
+    width: 40%;
+    display: inline-block;
+    background-color: white;
+    height: 5vh;
+    color: black;
+    font-size: 18px;
+    line-height: 5vh;
+    margin-top: 1.5vh;
+}
+
+.HeaderOptions:hover {
+    height: 6.5vh;
+    line-height: 6.5vh;
+    margin-top: 0vh;
+    font-size: 20px;
+}
+
+.HeaderLeftOption {
+    border-radius: 10px 0 0 10px;
+}
+
+.HeaderRightOption {
+    border-radius: 0 10px 10px 0;
+    margin-left: 1%;
+}
+
+.Lottery {
+    display: inline-block;
+    height: 52vh;
+    margin-top: 12vh;
+}
+
+.LotteryPic:hover {
+    height: 52vh;
+    margin-top: 0vh;
+}
+
+.LotteryPic {
+    height: 50vh;
+    margin-top: 1vh;
+}
+
+.Bottom {
+    width: 100%;
+    height: 17vh;
+}
+
+.BackBtn {
+    height: 15vh;
+    margin-top: 1vh;
+    margin-left: 70%;
+}
+
+.BackBtn:hover {
+    height: 17vh;
+    margin-top: 0vh;
+}
+
+.BackBtnPic {
+    height: 100%;
+}
+
+.hide {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    position: absolute;
+    top: 0vh;
+}
+
+.show {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    position: absolute;
+    top: 0vh;
+}
+
+#StickPic {
+    position: absolute;
+    height: 80vh;
+    top: 15vh;
+    transform: translateX(-50%);
+}
+
+.CloseBlock {
+    height: 15vh;
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+#ClosePic {
+    height: 8vh;
+    margin-top: 3.5vh;
+    margin-left: 70%;
+}
+
+#ClosePic:hover {
+    height: 9vh;
+    margin-top: 3vh;
+}
+
+@media (max-width:768px) {
+    .Lottery {
+        height: 50vh;
+        margin-top: 10vh;
+    }
+
+    .LotteryPic {
+        height: 50vh;
+    }
+
+    .BackBtn {
+        height: 12vh;
+        margin-top: 7vh;
+        margin-left: 70%;
+    }
+
+    .BackBtn:hover {
+        height: 14vh;
+        margin-top: 6vh;
+    }
+}
+
+@media (max-width:500px) {
+    .Lottery {
+        height: 40vh;
+        margin-top: 10vh;
+    }
+
+    .LotteryPic {
+        height: 40vh;
+    }
+
+    .BackBtn {
+        height: 10vh;
+        margin-top: 11vh;
+        margin-left: 70%;
+    }
+
+    .BackBtn:hover {
+        height: 12vh;
+        margin-top: 10vh;
+    }
+}

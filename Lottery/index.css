@@ -1,0 +1,75 @@
+.Options {
+    display: inline-block;
+    width: 33.33333333333333333333%;
+    height: 100vh;
+}
+
+@media (max-width:820px) {
+    .Options {
+        width: 100%;
+        height: 33.333333333333vh;
+    }
+    .Logo{
+        height: 100%;
+    }
+    .LogoPic {
+        height: 80%;
+        position: relative;
+        top: 10%;
+    }
+    .LogoPic:hover{
+        height: 85%;
+        top: 7.5%;
+    }
+}
+
+.LoveOption {
+    background-color: #FF7979;
+}
+
+.WealthOption {
+    background-color: #FBB03B;
+}
+
+.WorkOption {
+    background-color: #A67C52;
+}
+
+
+@media (min-width:1024px) {
+    .Options {
+        min-height: 768px;
+    }
+
+    .LogoPic {
+        width: 20%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        position: absolute;
+        top: 30%;
+        max-width: 240px;
+    }
+
+    .LogoPic:hover {
+        top: 27.5%;
+        width: 25%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width:1024px) and (min-width:821px) {
+    .LogoPic {
+        width: 20%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        position: absolute;
+        top: 30%;
+        max-width: 240px;
+    }
+
+    .LogoPic:hover {
+        top: 27.5%;
+        width: 25%;
+        max-width: 300px;
+    }
+}

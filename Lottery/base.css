@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.Width {
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+}
+
+.MaxWidth {
+    width: 100%;
+    max-width: 1200px;
+    display: inline-block;
+    text-align: center;
+}
+
+@media (min-width:1024px) {
+    .MinHeight {
+        min-height: 768px;
+    }
+}

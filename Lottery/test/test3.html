@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function clickMe() {
+            var text = document.getElementById("popup");
+            text.classList.toggle("hide");
+            text.classList.toggle("show");
+        }
+    </script>
+</head>
+<style>
+    form {
+        width: 50%;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+</style>
+
+<body>
+    <img src="resource/2.JPG" onclick="clickMe()">
+
+    <img src="resource/1.JPG" alt="" id="popup" class="hide">
+</body>
+
+</html>
