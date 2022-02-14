@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>財運籤筒</title>
+    <title>愛情籤筒</title>
     <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"
@@ -19,18 +19,18 @@
     const gifInterval = 3700;
 
     function clickPoemCan() {
-        document.getElementById('poemAnimation').src = "resource/Lottery/wealthpoemanimation.gif";
+        document.getElementById('poemAnimation').src = "resource/animations/lovepoemanimation.gif";
         switchPoemAnimation();
         setTimeout(function () {
-            document.getElementById('poemAnimation').src = "resource/Lottery/workpoemanimation.gif";
+            document.getElementById('poemAnimation').src = "resource/animations/workpoemanimation.gif";
             switchPoemAnimation();
             takeAPoem();
         }, gifInterval)
     }
 
     function takeAPoem() {
-        const randomNum = getRandom(1, 26);
-        $('#poemPic').attr('src', `resource/work/${randomNum}.jpg`);
+        const randomNum = getRandom(1, 19);
+        $('#poemPic').attr('src', `resource/lovepoems/${randomNum}.jpg`);
 
         switchPoem();
 
@@ -50,16 +50,17 @@
         poemAnimation.classList.toggle("poemanimationshowing");
         poemAnimation.classList.toggle("poemanimationhidden");
     }
+
 </script>
 
 <body>
     <div class="width">
         <div class="maxwidth">
-            <div class="bgsetting wealthbg">
+            <div class="bgsetting lovebg">
                 <div class="header">
-                    <a href="love.html">
+                    <a href="wealth.html">
                         <div class="headeroptions headerleftoption">
-                            愛情抽籤
+                            財運抽籤
                         </div>
                     </a>
                     <a href="work.html">
@@ -69,13 +70,13 @@
                     </a>
                 </div>
                 <div class="poemcancontent">
-                    <img src="resource/wealthlottery.png" alt="財運籤筒" id="poemCan" onclick="clickPoemCan()">
+                    <img src=" resource/lovelottery.png" alt="愛情籤筒" id="poemCan" onclick="clickPoemCan()">
                 </div>
 
                 <div class="bottom">
                     <div id="backBtn">
                         <a href="index.html">
-                            <img src="resource/wealthbackbtn.png" alt="返回圖樣" class="backbtnpic">
+                            <img src="resource/lovebackbtn.png" alt="返回圖樣" class="backbtnpic">
                         </a>
                     </div>
                 </div>
@@ -84,22 +85,23 @@
                     <div class="closecontent">
                         <img src="resource/close.png" alt="關閉圖樣" id="closeBtn" onclick="switchPoem()">
                     </div>
-                    <img id="poemPic" src="" alt="">
+                    <img id="poemPic" src="" alt="籤詩">
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
 
+
     <div class="poemanimationhidden" id="poemAnimationContent">
         <div class="animationcontent">
-            <div class="maxwidth wealthbg fullheight">
+            <div class="maxwidth lovebg fullheight">
                 <div class="whitecontent">
                     <div class="cutcontent">
-                        <img src="resource/wealthanimationbg.jpg" alt="動圖背景" class="whitebgpic">
+                        <img src="resource/loveanimationbg.jpg" alt="動圖背景" class="whitebgpic">
                     </div>
                     <div class="cutcontent">
-                        <img src="resource/Lottery/workpoemanimation.gif" alt="抽籤動圖" class="poemanimation"
+                        <img src="resource/animations/workpoemanimation.gif" alt="抽籤動圖" class="poemanimation"
                             id="poemAnimation">
                     </div>
                 </div>
