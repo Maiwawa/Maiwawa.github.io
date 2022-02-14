@@ -15,92 +15,16 @@
     <link rel="stylesheet" href="base.css">
     <link rel="stylesheet" href="pages.css">
 </head>
-
-<style>
-    .GIFBlock {
-        position: absolute;
-        top: 0;
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-    }
-
-    .WhiteBlock {
-        display: inline-block;
-        text-align: center;
-        width: 100%;
-    }
-
-    .WhiteBackgroundPic {
-        height: 70vh;
-        margin: 15vh 0 -65vh 0;
-        display: inline-block;
-    }
-
-    .LotteryGIF {
-        height: 60vh;
-    }
-
-    .TestBlock {
-        width: 100%;
-        text-align: center;
-        display: inline-block;
-    }
-
-    .FullHeight {
-        height: 100vh;
-    }
-
-    .ShowGIF {
-        display: inline-block;
-    }
-
-    .HideGIF {
-        display: none;
-    }
-
-    @media (max-width:600px) {
-        .WhiteBackgroundPic {
-            max-width: 80%;
-        }
-
-        .LotteryGIF {
-            max-height: 50%;
-        }
-    }
-</style>
-
-
 <script>
-    function creatGIF() {
-        var el = document.getElementById("GIFGIF");
-        el.innerHTML = '<div class="GIFBlock" id="GIF"><div class="MaxWidth WorkBackground FullHeight"><div class="WitheBlock"><div class="TestBlock"><img src="resource/whitebackground.jpg" alt="" class="WhiteBackgroundPic"></div><div class="TestBlock"><img src="resource/Lottery/V2.gif" alt="" class="LotteryGIF"></div></div></div></div>';
-    }
-
-    function removeGIF() {
-        var el = document.getElementById("GIF");
-        el.remove();
-    }
-
     let RandomInt = 1;
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
 
     function clickLottery() {
-        showGIF();
-        creatGIF();
-        setTimeout(function () {
-            removeGIF();
-            showGIF();
-        }, 3700)
-        randomStick();
-    }
-
-    function randomStick() {
         RandomInt = getRandom(1, 34);
         //隨機籤詩
-        $('#StickPic').attr('src', `resource/work/${RandomInt}.jpg`);
+        $('#StickPic').attr('src', `resource/work/${RandomInt}.JPG`);
         StickShow();
     }
 
@@ -110,10 +34,10 @@
         text.classList.toggle("show");
     }
 
-    function showGIF() {
-        var GIF = document.getElementById("GIFGIF");
-        GIF.classList.toggle("HideGIF");
-        GIF.classList.toggle("ShowGIF");
+    function StickHide() {
+        var text = document.getElementById("Sitck");
+        text.classList.toggle("show");
+        text.classList.toggle("hide");
     }
 
 </script>
@@ -122,7 +46,7 @@
     <div class="Width">
         <div class="MaxWidth">
             <div class="Backgorund WorkBackground">
-                <!-- <div class="Header">
+                <div class="Header">
                     <a href="love.html">
                         <div class="HeaderOptions HeaderLeftOption">
                             愛情抽籤
@@ -133,29 +57,29 @@
                             財運抽籤
                         </div>
                     </a>
-                </div> -->
+                </div>
                 <div class="Lottery">
                     <img src="resource/worklottery.png" alt="工作籤筒" class="LotteryPic" onclick="clickLottery()">
                 </div>
 
-                <!-- <div class="Bottom">
+                <div class="Bottom">
                     <div class="BackBtn">
                         <a href="index.html"><img src="resource/workbackbtn.png" alt="" class="BackBtnPic"></a>
                     </div>
-                </div> -->
+                </div>
+
                 <div id="Sitck" class="hide">
                     <div class="CloseBlock">
-                        <a href="lotteryPage.html"><img src="resource/close.png" alt="" id="ClosePic"></a>
+                        <img src="resource/close.png" alt="" id="ClosePic" onclick="StickHide()">
                     </div>
                     <div class="StickBlock">
-                        <img id="StickPic" src="resource/work.png" alt="">
+                        <img id="StickPic" src="resource/1.jpg" alt="">
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    <div class="SomeThing HideGIF" id="GIFGIF"></div>
 </body>
 
 </html>

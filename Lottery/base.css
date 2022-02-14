@@ -4,13 +4,13 @@ body {
     font-size: 0;
 }
 
-.Width {
+.width {
     width: 100%;
     text-align: center;
     height: 100vh;
 }
 
-.MaxWidth {
+.maxwidth {
     width: 100%;
     max-width: 1200px;
     display: inline-block;
