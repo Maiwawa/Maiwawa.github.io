@@ -16,68 +16,96 @@
     <link rel="stylesheet" href="pages.css">
 </head>
 <script>
-    let RandomInt = 1;
-    function getRandom(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    };
+    const gifInterval = 3700;
 
-    function clickLottery() {
-        RandomInt = getRandom(1, 19);
-        //隨機籤詩
-        $('#StickPic').attr('src', `resource/love/${RandomInt}.jpg`);
-        StickShow();
+    function clickPoemCan() {
+        switchPoemAnimation();
+        $('poemAnimation').src = "resource/Lottery/lovepoemanimation.gif";
+        setTimeout(function () {
+
+            switchPoemAnimation();
+            takeAPoem();
+        }, gifInterval)
     }
 
-    function StickShow() {
-        var text = document.getElementById("Sitck");
-        text.classList.toggle("hide");
-        text.classList.toggle("show");
+    function takeAPoem() {
+        const randomNum = getRandom(1, 19);
+        $('#poemPic').attr('src', `resource/work/${randomNum}.jpg`);
+
+        switchPoem();
+
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        };
     }
 
-    function StickHide() {
-        var text = document.getElementById("Sitck");
-        text.classList.toggle("show");
-        text.classList.toggle("hide");
+    function switchPoem() {
+        var text = document.getElementById("poemContent");
+        text.classList.toggle("poemhidden");
+        text.classList.toggle("poemshowing");
+        $('poemAnimation').src = "resource/Lottery/lovepoemanimation2.gif";
+    }
+
+    function switchPoemAnimation() {
+        var poemAnimation = document.getElementById('poemAnimationContent');
+        poemAnimation.classList.toggle("poemanimationshowing");
+        poemAnimation.classList.toggle("poemanimationhidden");
     }
 
 </script>
 
 <body>
-    <div class="Width">
-        <div class="MaxWidth">
-            <div class="Backgorund LoveBackgorund">
-                <div class="Header">
+    <div class="width">
+        <div class="maxwidth">
+            <div class="bgsetting lovebg">
+                <div class="header">
                     <a href="wealth.html">
-                        <div class="HeaderOptions HeaderLeftOption">
+                        <div class="headeroptions headerleftoption">
                             財運抽籤
                         </div>
                     </a>
                     <a href="work.html">
-                        <div class="HeaderOptions HeaderRightOption">
+                        <div class="headeroptions headerrightoption">
                             工作抽籤
                         </div>
                     </a>
                 </div>
-                <div class="Lottery">
-                    <img src=" resource/lovelottery.png" alt="" class="LotteryPic" id="Lottery"
-                        onclick="clickLottery()">
+                <div class="poemcancontent">
+                    <img src=" resource/lovelottery.png" alt="愛情籤筒" id="poemCan" onclick="clickPoemCan()">
                 </div>
 
-                <div class="Bottom">
-                    <div class="BackBtn">
-                        <a href="index.html"><img src="resource/lovebackbtn.png" alt="" class="BackBtnPic"></a>
+                <div class="bottom">
+                    <div id="backBtn">
+                        <a href="index.html">
+                            <img src="resource/lovebackbtn.png" alt="返回圖樣" class="backbtnpic">
+                        </a>
                     </div>
                 </div>
 
-                <div id="Sitck" class="hide">
-                    <div class="CloseBlock">
-                        <img src="resource/close.png" alt="" id="ClosePic" onclick="StickHide()">
+                <div id="poemContent" class="poemhidden">
+                    <div class="closecontent">
+                        <img src="resource/close.png" alt="關閉圖樣" id="closeBtn" onclick="switchPoem()">
                     </div>
-                    <div class="StickBlock">
-                        <img id="StickPic" src="resource/1.JPG" alt="">
+                    <img id="poemPic" src="" alt="籤詩">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="poemanimationhidden" id="poemAnimationContent">
+        <div class="animationcontent">
+            <div class="maxwidth lovebg fullheight">
+                <div class="whitecontent">
+                    <div class="cutcontent">
+                        <img src="resource/loveanimationbg.jpg" alt="動圖背景" class="whitebgpic">
+                    </div>
+                    <div class="cutcontent">
+                        <img src="resource/Lottery/lovepoemanimation2.gif" alt="抽籤動圖" class="poemanimation"
+                            id="poemAnimation">
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>

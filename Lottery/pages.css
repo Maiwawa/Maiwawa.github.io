@@ -5,11 +5,11 @@
     display: inline-block;
 }
 
-.LoveBackgorund {
+.lovebg {
     background-color: #FF7979;
 }
 
-.WealthBackgorund {
+.wealthbg {
     background-color: #FBB03B;
 }
 
@@ -43,11 +43,11 @@
     font-size: 20px;
 }
 
-.headerleftoptions {
+.headerleftoption {
     border-radius: 10px 0 0 10px;
 }
 
-.headerrightoptions {
+.headerrightoption {
     border-radius: 0 10px 10px 0;
     margin-left: 1%;
 }

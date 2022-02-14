@@ -18,10 +18,9 @@
 
 <script>
 
-    let playPoemAnimationYet = false;
     const gifInterval = 3700;
 
-    function clickLottery() {
+    function clickPoemCan() {
         switchPoemAnimation();
         $('poemAnimation').src = "resource/Lottery/workpoemanimation.gif";
         setTimeout(function () {
@@ -63,34 +62,36 @@
 
                 <div class="header">
                     <a href="love.html">
-                        <div class="headeroptions headerleftoptions">
+                        <div class="headeroptions headerleftoption">
                             愛情抽籤
                         </div>
                     </a>
                     <a href="wealth.html">
-                        <div class="headeroptions headerrightoptions">
+                        <div class="headeroptions headerrightoption">
                             財運抽籤
                         </div>
                     </a>
                 </div>
 
                 <div class="poemcancontent">
-                    <img src="resource/worklottery.png" alt="工作籤筒" id="poemCan" onclick="clickLottery()">
+                    <img src="resource/worklottery.png" alt="工作籤筒" id="poemCan" onclick="clickPoemCan()">
                 </div>
 
                 <div class="bottom">
                     <div id="backBtn">
-                        <a href="index.html"><img src="resource/workbackbtn.png" alt="" class="backbtnpic"></a>
+                        <a href="index.html">
+                            <img src="resource/workbackbtn.png" alt="返回圖樣" class="backbtnpic">
+                        </a>
                     </div>
                 </div>
 
                 <div id="poemContent" class="poemhidden">
                     <div class="closecontent">
                         <a href="work.html">
-                            <img src="resource/close.png" id="closeBtn" alt="" onclick="switchPoem()">
+                            <img src="resource/close.png" id="closeBtn" alt="關閉圖樣" onclick="switchPoem()">
                         </a>
                     </div>
-                    <img id="poemPic" src="resource/work.png" alt="">
+                    <img id="poemPic" src="" alt="籤詩">
                 </div>
 
             </div>
@@ -102,10 +103,10 @@
             <div class="maxwidth workbg fullheight">
                 <div class="whitecontent">
                     <div class="cutcontent">
-                        <img src="resource/whitebackground.jpg" alt="" class="whitebgpic">
+                        <img src="resource/workanimationbg.jpg" alt="動圖背景" class="whitebgpic">
                     </div>
                     <div class="cutcontent">
-                        <img src="resource/Lottery/workpoemanimation.gif" alt="" class="poemanimation"
+                        <img src="resource/Lottery/workpoemanimation2.gif" alt="抽籤動圖" class="poemanimation"
                             id="poemAnimation">
                     </div>
                 </div>

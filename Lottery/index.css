@@ -1,47 +1,47 @@
-.Options {
+.options {
     display: inline-block;
     width: 33.33333333333333333333%;
     height: 100vh;
 }
 
 @media (max-width:820px) {
-    .Options {
+    .options {
         width: 100%;
         height: 33.333333333333vh;
     }
-    .Logo{
+    .logocontent{
         height: 100%;
     }
-    .LogoPic {
+    .logopic {
         height: 80%;
         position: relative;
         top: 10%;
     }
-    .LogoPic:hover{
+    .logopic:hover{
         height: 85%;
         top: 7.5%;
     }
 }
 
-.LoveOption {
+.loveoption {
     background-color: #FF7979;
 }
 
-.WealthOption {
+.wealthoption {
     background-color: #FBB03B;
 }
 
-.WorkOption {
+.workoption {
     background-color: #A67C52;
 }
 
 
 @media (min-width:1024px) {
-    .Options {
+    .options {
         min-height: 768px;
     }
 
-    .LogoPic {
+    .logopic {
         width: 20%;
         transform: translateY(-50%);
         transform: translateX(-50%);
@@ -50,7 +50,7 @@
         max-width: 240px;
     }
 
-    .LogoPic:hover {
+    .logopic:hover {
         top: 27.5%;
         width: 25%;
         max-width: 300px;
@@ -58,7 +58,7 @@
 }
 
 @media (max-width:1024px) and (min-width:821px) {
-    .LogoPic {
+    .logopic {
         width: 20%;
         transform: translateY(-50%);
         transform: translateX(-50%);
@@ -67,7 +67,7 @@
         max-width: 240px;
     }
 
-    .LogoPic:hover {
+    .logopic:hover {
         top: 27.5%;
         width: 25%;
         max-width: 300px;
