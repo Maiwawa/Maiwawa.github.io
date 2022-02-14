@@ -21,10 +21,10 @@
     const gifInterval = 3700;
 
     function clickPoemCan() {
+        document.getElementById('poemAnimation').src = "resource/Lottery/workpoemanimation.gif";
         switchPoemAnimation();
-        $('poemAnimation').src = "resource/Lottery/workpoemanimation.gif";
         setTimeout(function () {
-
+            document.getElementById('poemAnimation').src = "resource/Lottery/lovepoemanimation.gif";
             switchPoemAnimation();
             takeAPoem();
         }, gifInterval)
@@ -45,7 +45,6 @@
         var text = document.getElementById("poemContent");
         text.classList.toggle("poemhidden");
         text.classList.toggle("poemshowing");
-        $('poemAnimation').src = "resource/Lottery/workpoemanimation2.gif";
     }
 
     function switchPoemAnimation() {
@@ -106,7 +105,7 @@
                         <img src="resource/workanimationbg.jpg" alt="動圖背景" class="whitebgpic">
                     </div>
                     <div class="cutcontent">
-                        <img src="resource/Lottery/workpoemanimation2.gif" alt="抽籤動圖" class="poemanimation"
+                        <img src="resource/Lottery/lovepoemanimation.gif" alt="抽籤動圖" class="poemanimation"
                             id="poemAnimation">
                     </div>
                 </div>
