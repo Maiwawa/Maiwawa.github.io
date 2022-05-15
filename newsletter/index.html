@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首頁</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .bg-light {
+            background-color: rgba(0, 0, 0, 0) !important;
+        }
+
+        .banner {
+            height: 100vh;
+            width: 100%;
+            background-color: #f2f1a1;
+            position: relative;
+
+        }
+
+        .banner-content {
+            height: calc(100vh - 56px);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .banner-width {
+            width: 80%;
+        }
+
+        .banner-height {
+            height: 80%;
+
+        }
+
+        .normalHeader {
+            display: none;
+        }
+
+        @media (min-width:1000px) {
+            .normalHeader {
+                display: block;
+            }
+
+            .smallHeader {
+                display: none;
+            }
+        }
+
+        .authors {
+            padding: 60px 20px;
+        }
+
+
+        .authortitle {
+            width: 110px;
+            float: left;
+            display: inline-block;
+            text-align: justify;
+            text-align-last: justify;
+            color: rgb(71, 98, 57);
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .authortitle::after {
+            content: "：";
+        }
+
+        .authornames {
+            float: left;
+            display: inline-block;
+            width: 60%;
+            color: rgb(71, 98, 57);
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .authorcontent {
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        .video {
+            width: 60%;
+            display: inline-block;
+        }
+
+        @media (max-width:1000px) {
+            .video {
+                width: 80%;
+            }
+        }
+
+
+
+
+
+
+
+
+        .content-title-background {
+            background-color: #5c7887;
+            text-align: center;
+            padding: 30px 0;
+            color: #FFF;
+            font-size: 40px;
+            font-weight: bolder;
+            margin: 20px 0;
+        }
+
+        .content-title-text-small {
+            font-size: 20px;
+        }
+
+        .content-text {
+            font-size: 20px;
+            padding: 0 40px;
+        }
+
+        .footer {
+            margin-top: 100px;
+            border-top: 0.1px solid #999;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier-fulid">
+        <div class="banner">
+            <div class="normalHeader">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">文化勤報63期</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            </ul>
+                            <div class="d-flex" role="search">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-secondary dropdown-toggle"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        首頁
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a href="page1.html"><button class="dropdown-item"
+                                                    type="button">建築工藝人-謝明標先生</button></a></li>
+                                        <li><a href="page2.html"><button class="dropdown-item"
+                                                    type="button">酪梨王子-淋育洲先生</button></a></li>
+                                        <li><a href="page3.html"><button class="dropdown-item"
+                                                    type="button">車籠埔-賴玉敏里長</button></a></li>
+                                        <li><a href="page4.html"><button class="dropdown-item"
+                                                    type="button">興隆里發展協會-張朝宗先生</button></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="smallHeader">
+                <nav class="navbar bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">文化勤報63期</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                            aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="page1.html">建築工藝人-謝明標先生</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="page2.html">酪梨王子-淋育洲先生</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="page3.html">車籠埔-賴玉敏里長</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="page4.html">興隆里發展協會-張朝宗先生</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="banner-content">
+                <img src="resource/index-banner.jpg"
+                    class="position-absolute top-50 start-50 translate-middle banner-height" id="bannerImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="container authors">
+        <div id="authors">
+
+        </div>
+    </div>
+
+    <div class="container-fulid text-center">
+        <div class="video">
+            <div
+                style="position: relative !important; padding-bottom: 56.25% !important; height: 0px !important; overflow: hidden !important; max-width: 100% !important;">
+                <iframe src="https://www.youtube.com/embed/4qIAVzJ6J5Q" frameborder="0" webkitallowfullscreen="true"
+                    mozallowfullscreen="true" allowfullscreen="true"
+                    allow="autoplay; fullscreen; clipboard-read; clipboard-write"
+                    style="position: absolute !important; top: 0px !important; left: 0px !important; width: 100% !important; height: 100% !important;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fulid">
+        <div class="content-title-background">
+            <span class="content-title-text">總編的話</span>
+            <span class="content-title-text content-title-text-small">　沈芸妃</span>
+        </div>
+    </div>
+
+    <div class="container-lg content-text">
+        　　將沉悶的室內教育空間，轉移到戶外與大自然互動。在一個春天的清晨，一群人在游惠遠老師帶領下，前進山邊的聚落--車籠埔，開啟跨世代的對話之旅。<br /><br />
+
+        <span style="font-size: 23px; font-weight: bolder;">歷史是說過和做過事情的記憶。</span>--卡爾‧貝克如是說！記憶拼湊歷史！<br /><br />
+
+        　　經由實際走訪，採訪數位年齡加起來超過250歲的指標性前輩，記錄他們精彩的故事及心路歷程，認識車籠埔的過往；運用微旅行的方式，一步一步踩過昔日山林墾荒的足跡。如今蠻貊不再，取而代之的是整潔的步道與里民彼此間的體貼關懷濃情密意。<br /><br />
+
+        　　對於涉世未深、鄉土語能力有限的小大一而言，跨出去是我們的勇氣，把刊物如期發行是我們的豪氣！在整個運作的過程中，眾夥伴們發揮最大的潛力，壓迫自己完成此生的第一個採訪任務並徹夜趕稿、排版，儘管辛苦，但不會改變我們想帶領大家認識車籠埔的初衷！<br /><br />
+    </div>
+
+    <div class="container">
+        <div class="footer">
+            <div class="row" style="width: 100%;">
+                <div class="col-sm-6 col-12 footer-text">
+                    Copyright&copy;2022 NCUT DCCI.
+                </div>
+                <div class="col-sm-6 col-12 footer-text">
+                    文化勤報　第63期<br />
+                    發行日期　2022年 月 日<br />
+                    發行單位　國立勤益科技大學<br />
+                    　　　　　文化創意事業系<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            bannerSetting();
+            getAuthorsData();
+        });
+
+        $(window).on('resize', function () {
+            bannerSetting();
+        });
+
+
+        function bannerSetting() {
+            let bannerWidth = $("#bannerImage").width();
+            let bannerHeight = $("#bannerImage").height();
+
+            let winWidth = $(window).width();
+            let winHeight = $(window).height();
+
+            if (winWidth < bannerWidth) {
+                $("#bannerImage").removeClass("banner-height");
+                $("#bannerImage").addClass("banner-width");
+            } else if (winHeight < (bannerHeight + 112)) {
+                $("#bannerImage").removeClass("banner-width");
+                $("#bannerImage").addClass("banner-height");
+            }
+        }
+
+        function getAuthorsData() {
+            let dataUrl = "resource/authors.json";
+
+            $.ajax({
+                url: dataUrl,
+                method: 'GET',
+                dataType: 'json',
+                data: '',
+                success: function (authorsData) {
+                    console.log("getAuthorsData success");
+                    console.log(authorsData);
+                    console.log(typeof (authorsData));
+                    addAuthorContent(authorsData);
+                },
+                error: function () {
+                    console.log("getAuthorsData error");
+                }
+            })
+        }
+
+
+
+        function addAuthorContent(authorsData) {
+
+            for (let i = 0; i < authorsData.length; i++) {
+                let authorsNumber = authorsData.length;
+                let authorContent = `<div class="authorcontent${i} authorcontent"></div>`;
+                let authorTitle = `<div class="authortitle${i} authortitle">${authorsData[i].job}</div>`;
+                let authorNames = `<div class="authornames${i} authornames"></div>`;
+                let names = authorsData[i].name;
+
+                $('#authors').append(authorContent);
+                $(`.authorcontent${i}`).append(authorTitle);
+                $(`.authorcontent${i}`).append(authorNames);
+
+                for (let k = 0; k < names.length; k += 2) {
+                    let evenName = `<span>${names[k]}　${names[k + 1]}</span><br />`
+                    let oddName = `<span>${names[k]}</span><br />`
+                    if ((k + 2) > names.length) {
+                        $(`.authornames${i}`).append(oddName);
+                    } else {
+                        $(`.authornames${i}`).append(evenName);
+                    }
+                }
+                $(`.authorcontent${i}`).height($(`.authornames${i}`).height());
+
+            }
+        }
+
+
+
+
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
