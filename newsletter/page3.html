@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>車龍埔旅行</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="resource/css/allpage.css">
+    <link rel="stylesheet" href="resource/css/banner.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="contanier-fulid">
+        <div class="banner">
+
+            <div class="header">
+                <div class="normalheader">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="index.html">文化勤報63期</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                                </ul>
+                                <div class="d-flex" role="search">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondary dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            首頁
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a href="page1.html"><button class="dropdown-item"
+                                                        type="button">建築工藝人-謝明標先生</button></a></li>
+                                            <li><a href="page2.html"><button class="dropdown-item"
+                                                        type="button">酪梨王子-淋育洲先生</button></a></li>
+                                            <li><a href="page3.html"><button class="dropdown-item"
+                                                        type="button">車籠埔-賴玉敏里長</button></a></li>
+                                            <li><a href="page4.html"><button class="dropdown-item"
+                                                        type="button">興隆里發展協會-張朝宗先生</button></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="smallheader">
+                    <nav class="navbar navbar-dark bg-light">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="index.html">文化勤報63期</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                                aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="page1.html">建築工藝人-謝明標先生</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="page2.html">酪梨王子-淋育洲先生</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="page3.html">車籠埔-賴玉敏里長</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="page4.html">興隆里發展協會-張朝宗先生</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="banner-image">
+                <div class="banner-mask">
+                    <div class="position-absolute top-50 start-50 translate-middle banner-content">
+                        <div class="banner-title banner-text"></div>
+                        <div class="banner-secondtitle banner-text"></div>
+                        <div class="banner-article banner-text"></div>
+                        <div class="banner-picture banner-text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="footer">
+            <div class="row" style="width: 100%;">
+                <div class="col-sm-6 col-12 footer-text">
+                    Copyright&copy;2022 NCUT DCCI.
+                </div>
+                <div class="col-sm-6 col-12 footer-text">
+                    文化勤報　第63期<br />
+                    發行日期　2022年 月 日<br />
+                    發行單位　國立勤益科技大學<br />
+                    　　　　　文化創意事業系<br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        let pageTitle = $(document).attr("title");
+        $(document).ready(function () {
+            getBannerData();
+
+        });
+
+        function getBannerData() {
+            let dataUrl = "resource/banner.json";
+            $.ajax({
+                url: dataUrl,
+                type: 'GET',
+                dataType: 'json',
+                data: '',
+                async: true,
+                success: function (bannerData) {
+                    console.log("yes");
+                    console.log(bannerData);
+                    selectData(bannerData);
+                },
+                error: function () {
+                    console.log("no");
+                },
+            });
+        };
+
+        function selectData(bannerData) {
+            for (let i = 0; i < bannerData.length; i++) {
+                console.log("hi");
+                if (bannerData[i].title == pageTitle){
+                    $('.banner-title').text(bannerData[i].title);
+                    $('.banner-secondtitle').text(bannerData[i].secondtitle);
+                    $('.banner-article').text('文　' + bannerData[i].article);
+                    $('.banner-picture').text('圖　' + bannerData[i].picture);
+                    let imageUrl = bannerData[i].url;
+                    $('.banner-image').css('background-image', 'url(' + imageUrl + ')');
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

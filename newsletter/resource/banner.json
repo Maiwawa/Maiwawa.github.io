@@ -1,0 +1,58 @@
+[
+    {
+        "title": "建築工藝人",
+        "secondtitle": "專訪謝明標先生",
+        "article": [
+            "劉家欣",
+            "曾結妤"
+        ],
+        "picture": [
+            "成采綸"
+        ],
+        "url": "resource/banner1.png"
+    },
+    {
+        "title": "酪梨王子",
+        "secondtitle": "專訪林育洲先生",
+        "article": [
+            "楊絮安",
+            "宮浣芯",
+            "楊孟恩",
+            "沈芸妃",
+            "許珊綾"
+        ],
+        "picture": [
+            "林育洲",
+            "楊孟恩",
+            "賴采孜"
+        ],
+        "url": "resource/banner2.jpeg"
+    },
+    {
+        "title": "車龍埔旅行",
+        "secondtitle": "和太平區興隆里賴毓敏里長爬山去",
+        "article": [
+            "張　晏",
+            "陳學廷"
+        ],
+        "picture": [
+            "陳韋慈",
+            "林憶筠"
+        ],
+        "url": "resource/banner3.jpeg"
+    },
+    {
+        "title": "興隆里社區發展協會",
+        "secondtitle": "榮譽理事長 \n專訪張朝宗先生",
+        "article": [
+            "饒于玟",
+            "蔡彧玟",
+            "林紀葳"
+        ],
+        "picture": [
+            "李新葳",
+            "鄭芷伃"
+        ],
+        "url": "resource/banner4.jpeg"
+    }
+]
