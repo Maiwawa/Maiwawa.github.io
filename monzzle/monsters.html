@@ -7,17 +7,75 @@
     <title>妖來妖去-妖怪選單</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/allpage.css">
-        <style>
-        /* index */
+    <link rel="stylesheet" href="css/allpage.css">
+    <style>
+        /* monsters */
+        .content-header {
+            justify-content: space-between;
+            border-bottom: 4px solid #000;
+        }
+
+        .content-header-icon {
+            width: 45px;
+            height: 45px;
+        }
+
+        .content-header-left,
+        .content-header-right {
+            display: inline-block;
+        }
+
+        .content-header-right {
+            float: right;
+            position: relative;
+            top: 8px;
+            display: flex;
+        }
+
+        .content-header-title {
+            font-size: 28px;
+            font-weight: bolder;
+            display: inline-block;
+            top: 5px;
+            position: relative;
+        }
+
+        .content-header-item {
+            display: inline-block;
+            font-size: 20px;
+            position: relative;
+            top: 14px;
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+
+        .content-header-item-mgr {
+            margin-right: 20px;
+        }
 
 
+        .col-10 {
+            padding: 10px 0;
+        }
+
+        .form-select {
+            width: 120px;
+            margin-left: 20px;
+        }
+
+        .monster-text {
+            font-size: 15px;
+        }
+
+        .monster-name {
+            font-size: 25px;
+            font-weight: bolder;
+        }
 
 
 
 
         /* allpage */
-        
     </style>
 </head>
 
@@ -90,6 +148,58 @@
     </div>
 
 
+    <div class="main">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-10 content-header">
+                    <div class="content-header-left">
+                        <img src="resource/icon/monster.png" class="content-header-icon">
+                        <div class="content-header-title">妖怪選單</div>
+                    </div>
+                    <div class="content-header-right">
+                        <select class="form-select" aria-label="Default select example" id="location">
+                            <option selected>地形</option>
+                            <option value="天空">天空</option>
+                            <option value="水域">水域</option>
+                            <option value="陸地">陸地</option>
+                        </select>
+                        <select class="form-select" aria-label="Default select example" id="monstername">
+                            <option selected disabled>妖怪名</option>
+                        </select>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-8 col-sm-6 col-md-7">
+                    <img src="" class="img-fluid monster-image">
+                </div>
+                <div class="col-8 col-sm-7 col-md-7">
+                    <div class="monster-name monster-text"></div>
+                    <div class="monster-location monster-text"></div>
+                    <div class="monster-type monster-text"></div>
+                    <div class="monster-mean monster-text"></div>
+                    <div class="monster-data monster-text"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="footer-text">
+                    Copyright &copy;2022 妖來妖去製作團隊 版權所有.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -100,12 +210,72 @@
     <script src="resource/js/allpage.js"></script>
     <script>
 
+        let dataUrl = "resource/json/monster.json";
 
+        $('#location').change(function () {
+            $.ajax({
+                url: dataUrl,
+                method: 'GET',
+                dataType: 'json',
+                data: '',
+                async: false,
+                success: function (monsterData) {
+                    console.log('success');
+                    // console.log(monsterData);
+                    setName(monsterData);
+                },
+                error: function () {
+                    console.log('error');
+                },
+            });
+        });
 
+        function setName(monsterData) {
+            let select = $('#location').val();
+            console.log(select);
+            $('#monstername').empty();
+            let firstOption = '<option selected disabled>妖怪名</option>';
+            $('#monstername').append(firstOption);
+            for (let i = 0; i < monsterData.length; i++) {
+                if (select == monsterData[i].location) {
+                    console.log(monsterData[i].name);
+                    let newOption = `<option value='${monsterData[i].name}'>${monsterData[i].name}</option>`;
+                    $('#monstername').append(newOption);
+                };
+            };
+        };
 
+        $('#monstername').change(function () {
+            $.ajax({
+                url: dataUrl,
+                method: 'GET',
+                dataType: 'json',
+                data: '',
+                async: false,
+                success: function (monsterData) {
+                    console.log('success');
+                    // console.log(monsterData);
+                    setPage(monsterData);
+                },
+                error: function () {
+                    console.log('error');
+                },
+            });
+        });
 
-
-
+        function setPage(monsterData) {
+            let select = $('#monstername').val();
+            for (let i = 0; i < monsterData.length; i++) {
+                if (select == monsterData[i].name) {
+                    $('.monster-image').attr('src', monsterData[i].image);
+                    $('.monster-name').text(monsterData[i].name);
+                    $('.monster-location').text('地形：' + monsterData[i].location);
+                    $('.monster-type').text('種類：' + monsterData[i].type);
+                    $('.monster-mean').text('意義：' + monsterData[i].mean);
+                    $('.monster-data').text('資料：' + monsterData[i].data);
+                }
+            }
+        }
     </script>
 </body>
 

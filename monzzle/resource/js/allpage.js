@@ -1,6 +1,5 @@
 var winTitle = $(document).attr("title");
 $(document).ready(function () {
-    console.log(winTitle);
     settingItem();
 });
 
@@ -12,11 +11,10 @@ function settingItem() {
         dataType: "json",
         data: '',
         success: function (itemData) {
-            console.log("yes");
             clacData(itemData);
         },
         error: function () {
-            console.log("no");
+
         }
     });
 };
@@ -25,7 +23,6 @@ function settingItem() {
 function clacData(itemData) {
     for (let i = 0; i < itemData.length; i++) {
         if (itemData[i].name == winTitle) {
-            console.log(itemData[i].name + winTitle);
             $('.' + `${itemData[i].item}`).addClass('nav-item-bg');
             $('.' + `${itemData[i].menu}`).addClass('nav-item-bg');
         } else {
