@@ -34,7 +34,7 @@
             color: #000;
             position: absolute;
             transform: translate(-50%, -50%);
-            left: 50%;
+            left: calc(50% - 100px);
             top: calc(50% - 28px);
         }
 
@@ -60,19 +60,21 @@
                 font-size: 35px;
                 padding: 35px 15px;
             }
-            .banner-text-focus{
+
+            .banner-text-focus {
                 font-size: 18px;
             }
-            .banner-text{
+
+            .banner-text {
                 padding: 8px 12px;
             }
         }
 
-        @media (min-width:1000px) {
+        @media (max-width:1000px) {
 
             .banner-title,
             .banner-text {
-                left: calc(50% - 100px);
+                left: 50%;
             }
 
         }
@@ -167,7 +169,7 @@
                         妖來妖去
                     </div>
                     <div class="banner-text">
-                        <span class="banner-text-focus">大家好，我們是妖來妖去製作團隊</span><br />
+                        <span class="banner-text-focus">妖來妖去製作團隊</span><br />
                         團隊繪製出許多精緻的妖怪圖片，並製作相關產品，如：拼圖、貼圖、明信片...
                     </div>
                 </div>
