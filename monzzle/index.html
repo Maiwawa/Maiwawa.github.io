@@ -25,13 +25,15 @@
         }
 
         .banner-title {
-            -webkit-writing-mode: vertical-rl;
+            /* -webkit-writing-mode: vertical-rl; */
             color: white;
             font-size: 50px;
             font-weight: bolder;
             padding: 50px 25px;
             background-color: burlywood;
             color: #000;
+            left: 50%;
+            line-height: 50px;
         }
 
         .banner-text {
@@ -41,6 +43,7 @@
             padding: 10px 15px;
             font-size: 15px;
             max-width: 560px;
+            left: 50%;
         }
 
         .banner-text-focus {
@@ -52,6 +55,7 @@
             .banner-title {
                 font-size: 35px;
                 padding: 35px 15px;
+                line-height: 35px;
             }
 
             .banner-text-focus {
@@ -64,8 +68,8 @@
         }
 
         @media (min-width:1000px) {
-            .start-50{
-                left: calc(50% - 100px) !important;
+            .position-left {
+                left: calc(50% - 100px);
             }
         }
 
@@ -155,10 +159,13 @@
         <div class="container-fulid">
             <div class="banner">
                 <div class="banner-mask">
-                    <div class="banner-title position-absolute top-50 start-50 translate-middle">
-                        妖來妖去
+                    <div class="banner-title position-absolute top-50 translate-middle position-left">
+                        妖<br />
+                        來<br />
+                        妖<br />
+                        去<br />
                     </div>
-                    <div class="banner-text position-absolute start-50 translate-middle">
+                    <div class="banner-text position-absolute translate-middle position-left">
                         <span class="banner-text-focus">妖來妖去製作團隊</span><br />
                         團隊繪製出許多精緻的妖怪圖片，並製作相關產品，如：拼圖、貼圖、明信片...
                     </div>
