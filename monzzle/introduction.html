@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>妖來妖去-介紹</title>
+    <title>妖來妖去-關於我們</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/allpage.css">
@@ -79,8 +79,6 @@
             border: 0
         }
 
-
-
         .member,
         .team {
             border-bottom: 4px solid #000;
@@ -92,9 +90,10 @@
                 float: left;
                 width: 100%;
             }
-        .content-header-item {
-            top: 0;
-        }
+
+            .content-header-item {
+                top: 0;
+            }
 
         }
 
@@ -118,17 +117,20 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item nav-item0">
+                            <li class="nav-item nav-item-home">
                                 <a class="nav-link" href="index.html">首頁</a>
                             </li>
-                            <li class="nav-item nav-item1">
-                                <a class="nav-link" href="introduction.html ">介紹</a>
+                            <li class="nav-item nav-item-aboutus">
+                                <a class="nav-link" href="introduction.html ">關於我們</a>
                             </li>
-                            <li class="nav-item nav-item2">
+                            <li class="nav-item nav-item-subject">
+                                <a class="nav-link" href="subject.html">專題介紹</a>
+                            </li>
+                            <li class="nav-item nav-item-monster">
                                 <a class="nav-link" href="monsters.html">妖怪選單</a>
                             </li>
-                            <li class="nav-item nav-item3">
-                                <a class="nav-link" href="shoppingcart.html">購物車</a>
+                            <li class="nav-item nav-item-shop">
+                                <a class="nav-link" href="shop.html">商城</a>
                             </li>
                         </ul>
                     </div>
@@ -141,28 +143,35 @@
 
     <div class="menu">
         <div class="menu-items">
-            <a href="index.html">
-                <div class="menu-item menu-item0">
+            <a class="" href="index.html">
+                <div class="menu-item menu-item-home">
                     <img src="resource/icon/home.png" class="menu-icon">
-                    <div class="menu-item-text ">首頁</div>
+                    <div class="menu-item-text">首頁</div>
+
                 </div>
             </a>
-            <a href="introduction.html">
-                <div class="menu-item menu-item1">
+            <a class="" href="introduction.html">
+                <div class="menu-item menu-item-aboutus">
                     <img src="resource/icon/aboutus.png" class="menu-icon">
-                    <div class="menu-item-text">介紹</div>
+                    <div class="menu-item-text">關於我們</div>
                 </div>
             </a>
-            <a href="monsters.html">
-                <div class="menu-item menu-item2">
+            <a class="" href="subject.html">
+                <div class="menu-item menu-item-subject">
+                    <img src="resource/icon/subject.png" class="menu-icon">
+                    <div class="menu-item-text">專題介紹</div>
+                </div>
+            </a>
+            <a class="" href="monsters.html">
+                <div class="menu-item menu-item-monster">
                     <img src="resource/icon/monster.png" class="menu-icon">
                     <div class="menu-item-text">妖怪選單</div>
                 </div>
             </a>
-            <a href="shoppingcart.html">
-                <div class="menu-item menu-item3">
-                    <img src="resource/icon/shopping-cart.png" class="menu-icon">
-                    <div class="menu-item-text">購物車</div>
+            <a class="" href="shop.html">
+                <div class="menu-item menu-item-shop">
+                    <img src="resource/icon/shop.png" class="menu-icon">
+                    <div class="menu-item-text">商城</div>
                 </div>
             </a>
         </div>
@@ -175,7 +184,7 @@
                 <div class="col-10 content-header">
                     <div class="content-header-left">
                         <img src="resource/icon/aboutus.png" class="content-header-icon">
-                        <div class="content-header-title">介紹</div>
+                        <div class="content-header-title">關於我們</div>
                     </div>
                     <div class="content-header-right">
                         <a href="#memberIntroduction">
@@ -183,9 +192,6 @@
                         </a>
                         <a href="#teamIntroduction">
                             <div class="content-header-item content-header-item-mgr">團隊介紹</div>
-                        </a>
-                        <a href="#subjectIntroduction">
-                            <div class="content-header-item ">專題介紹</div>
                         </a>
                     </div>
                 </div>
@@ -223,7 +229,7 @@
                                 <div class="card h-100">
                                     <img src="resource/carousel/3.jpg" class="card-img-top">
                                     <div class="card-body">
-                                        <h5 class="card-title">組員1</h5>
+                                        <h5 class="card-title">組員2</h5>
                                         <p class="card-text">
                                             個性：<br />
                                             專長：<br />
@@ -236,7 +242,7 @@
                                 <div class="card h-100">
                                     <img src="resource/carousel/4.jpg" class="card-img-top">
                                     <div class="card-body">
-                                        <h5 class="card-title">組員1</h5>
+                                        <h5 class="card-title">組員3</h5>
                                         <p class="card-text">
                                             個性：<br />
                                             專長：<br />
@@ -249,7 +255,7 @@
                                 <div class="card h-100">
                                     <img src="resource/carousel/5.jpg" class="card-img-top">
                                     <div class="card-body">
-                                        <h5 class="card-title">組員1</h5>
+                                        <h5 class="card-title">組員4</h5>
                                         <p class="card-text">
                                             個性：<br />
                                             專長：<br />
@@ -262,7 +268,7 @@
                                 <div class="card h-100">
                                     <img src="resource/carousel/6.jpg" class="card-img-top">
                                     <div class="card-body">
-                                        <h5 class="card-title">組員1</h5>
+                                        <h5 class="card-title">組員5</h5>
                                         <p class="card-text">
                                             個性：<br />
                                             專長：<br />
@@ -291,22 +297,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="container-lg">
-            <div class="row justify-content-center">
-                <div class="col-10">
-                    <div class="subject">
-                        <div id="subjectIntroduction" style="height: 56px; width:100%;"></div>
-                        <div class="title-text">專題介紹</div>
-                        <div class="content-text">
-                            　　介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字。<br /><br />
-                            　　介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字介紹文字。
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
 
         <div class="footer">
             <div class="container-fluid">

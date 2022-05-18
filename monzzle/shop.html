@@ -9,8 +9,51 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/allpage.css">
     <style>
-        /* index */
+        /* shop */
+        .content-header {
+            justify-content: space-between;
+            border-bottom: 4px solid #000;
+        }
 
+        .content-header-icon {
+            width: 45px;
+            height: 45px;
+        }
+
+        .content-header-left,
+        .content-header-right {
+            display: inline-block;
+        }
+
+        .content-header-right {
+            float: right;
+        }
+
+        .content-header-title {
+            font-size: 28px;
+            font-weight: bolder;
+            display: inline-block;
+            top: 5px;
+            position: relative;
+        }
+
+        .content-header-item {
+            display: inline-block;
+            font-size: 20px;
+            position: relative;
+            top: 14px;
+            text-decoration: underline;
+            font-weight: bolder;
+        }
+
+        .content-header-item-mgr {
+            margin-right: 20px;
+        }
+
+
+        .col-10 {
+            padding: 10px 0;
+        }
 
 
 
@@ -77,7 +120,7 @@
             </a>
             <a class="" href="subject.html">
                 <div class="menu-item menu-item-subject">
-                    <img src="resource/icon/aboutus.png" class="menu-icon">
+                    <img src="resource/icon/subject.png" class="menu-icon">
                     <div class="menu-item-text">專題介紹</div>
                 </div>
             </a>
@@ -89,12 +132,56 @@
             </a>
             <a class="" href="shop.html">
                 <div class="menu-item menu-item-shop">
-                    <img src="resource/icon/shopping-cart.png" class="menu-icon">
+                    <img src="resource/icon/shop.png" class="menu-icon">
                     <div class="menu-item-text">商城</div>
                 </div>
             </a>
         </div>
     </div>
+
+
+    <div class="main">
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-10 content-header">
+                    <div class="content-header-left">
+                        <img src="resource/icon/shop.png" class="content-header-icon">
+                        <div class="content-header-title">商城</div>
+                    </div>
+                    <div class="content-header-right">
+                        <a href="#">
+                            <div class="content-header-item content-header-item-mgr">本季新品</div>
+                        </a>
+                        <a href="#">
+                            <div class="content-header-item content-header-item-mgr">熱銷</div>
+                        </a>
+                        <a href="#">
+                            <div class="content-header-item ">所有商品</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="div" style="text-align: center; font-size: 50px; height: 500px; line-height: 500px;">
+                        被你發現了，這裡什麼都沒有。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="footer-text">
+                    Copyright &copy;2022 妖來妖去製作團隊 版權所有.
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"

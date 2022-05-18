@@ -24,6 +24,7 @@ function clacData(itemData) {
     for (let i = 0; i < itemData.length; i++) {
         if (itemData[i].name == winTitle) {
             $('.' + `${itemData[i].item}`).addClass('nav-item-bg');
+            console.log(itemData[i].item);
             $('.' + `${itemData[i].menu}`).addClass('nav-item-bg');
         } else {
             $('.' + `${itemData[i].item}`).removeClass('nav-item-bg');
