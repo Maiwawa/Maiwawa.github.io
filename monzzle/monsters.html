@@ -60,6 +60,9 @@
 
         .form-select {
             width: 120px;
+        }
+
+        .form-select-mgl{
             margin-left: 20px;
         }
 
@@ -72,7 +75,13 @@
             font-weight: bolder;
         }
 
-
+        @media (max-width:560px) {
+            .content-header-right{
+                float: left;
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
 
 
         /* allpage */
@@ -163,7 +172,7 @@
                             <option value="水域">水域</option>
                             <option value="陸地">陸地</option>
                         </select>
-                        <select class="form-select" aria-label="Default select example" id="monstername">
+                        <select class="form-select form-select-mgl" aria-label="Default select example" id="monstername">
                             <option selected disabled>妖怪名</option>
                         </select>
                     </div>

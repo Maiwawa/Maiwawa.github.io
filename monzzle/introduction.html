@@ -79,16 +79,23 @@
             border: 0
         }
 
-        @media (max-width:600px) {
-            .content-header-right {
-                display: none;
-            }
-        }
+
 
         .member,
         .team {
             border-bottom: 4px solid #000;
             padding-bottom: 20px;
+        }
+
+        @media (max-width:560px) {
+            .content-header-right {
+                float: left;
+                width: 100%;
+            }
+        .content-header-item {
+            top: 0;
+        }
+
         }
 
         /* allpage */
