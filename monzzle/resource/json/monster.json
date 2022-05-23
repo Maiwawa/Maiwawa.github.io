@@ -5,7 +5,8 @@
 		"type": "烏龜",
 		"mean": "平息大風",
 		"data": "烏龜每隻腳下各踩一隻烏龜，吼叫能讓大風平息",
-		"image": "resource/monsters/turtle.jpg"
+		"image": "resource/monsters/turtle.jpg",
+        "goodorbad": "正面"
 	},
 	{
 		"name": "蛇郎君",
@@ -13,7 +14,8 @@
 		"type": "人首蛇身",
 		"mean": "嫁好ㄤ防小人",
 		"data": "某處有蛇久而成怪，化為美男子往來村中，村人稱之為蛇郎君。",
-		"image": "resource/monsters/snake.jpg"
+		"image": "resource/monsters/snake.jpg",
+        "goodorbad": "正面"
 	},
 	{
 		"name": "山貓",
@@ -21,7 +23,8 @@
 		"type": "山貓",
 		"mean": "避災害",
 		"data": "宜蘭頭城的天神宮奉祀的將軍爺，真身據說是一隻山貓妖怪",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "正面"
 	},
 	{
 		"name": "豬哥石",
@@ -29,7 +32,8 @@
 		"type": "豬",
 		"mean": "使安定心神",
 		"data": "愛哭的小孩認其為義子即可平安長大(?",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "正面"
 	},
 	{
 		"name": "白馬妖怪",
@@ -37,7 +41,8 @@
 		"type": "馬",
 		"mean": "保護錢財",
 		"data": "與金銀鬼相似，白馬妖怪負責”守護寶藏”，在台灣各地都有現身的故事。此外也有傳說只有品德高超的人，才有機會跟隨白馬與白兔得知寶藏地點。",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "正面"
 	},
 	{
 		"name": "天狗",
@@ -45,7 +50,8 @@
 		"type": "白狐狸",
 		"mean": "日食",
 		"data": "像狐狸，頭白色，會吃太陽(日食)",
-		"image": "resource/monsters/dog.jpg"
+		"image": "resource/monsters/dog.jpg",
+        "goodorbad": "正面"
 	},
 	{
 		"name": "婆娑鳥",
@@ -53,7 +59,8 @@
 		"type": "鳳凰",
 		"mean": "引大鳥朝拜",
 		"data": "雄性如鳳凰，有五色，雌性則灰黑，叫聲引發白鳥來朝，甚至會引來比牛馬還大的海鳥來朝拜",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "正面"
 	},
 	{
 		"name": "傀儡山之雲龍",
@@ -61,7 +68,8 @@
 		"type": "龍",
 		"mean": "彗星",
 		"data": "渾身墨黑，能招引風雨，現身前兆常有彗星引路",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "金魅",
@@ -69,7 +77,8 @@
 		"type": "人?鬼?",
 		"mean": "辛勤工作；過勞",
 		"data": "金魅是一種魔物，若每年讓它吞食一名活人，它就會”替人工作”，原是一位被主人虐待致死的女婢化身而成。",
-		"image": "resource/monsters/girl.jpg"
+		"image": "resource/monsters/girl.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "毗舍耶",
@@ -77,7 +86,8 @@
 		"type": "貌如惡鬼",
 		"mean": "貪財泯滅人性",
 		"data": "又稱鬼人，聲如禽鳥，貌如惡鬼，族內有食人風俗；擅使繫有長繩的標槍，喜鐵器。",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "人魚",
@@ -85,7 +95,8 @@
 		"type": "人加魚",
 		"mean": "假美好的表象",
 		"data": "人身魚尾怪物，以歌聲魅惑來往魚夫；一男一女(金髮)人魚浮出水面即為凶兆。",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "魔蛇尾",
@@ -93,7 +104,8 @@
 		"type": "蛇",
 		"mean": "招喚死亡",
 		"data": "黑水溝的深海，乃是神秘魔尾蛇的棲身地。當魔尾蛇巡遊海面，將帶來巨大風雨。其”尖長蛇尾”經常浮出水面，且”綻放六瓣以上彷彿花瓣的奇異觸角”，若在海上碰到蛇尾將被毒死，跌落水中被吃掉。",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "麞妖",
@@ -101,7 +113,8 @@
 		"type": "山羌",
 		"mean": "造成火災",
 		"data": "叫就會火災的棕鹿，可能是山羌",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "疫鬼",
@@ -109,7 +122,8 @@
 		"type": "嬰孩小鬼",
 		"mean": "帶來瘟疫",
 		"data": "帶來瘟疫，全身黑，嬰孩小鬼，卻滿臉皺紋，醜若野獸",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "墓坑鳥",
@@ -117,7 +131,8 @@
 		"type": "戴勝",
 		"mean": "帶來不祥",
 		"data": "尖嘴邪鳥，眼紅如血，從獄間飛來，帶來不祥,可能是戴勝",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "麒麟颶",
@@ -125,7 +140,8 @@
 		"type": "龍首馬身",
 		"mean": "引發焚風",
 		"data": "龍首馬身，周身鱗甲散發火焰，會引起焚風",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "老猴魅",
@@ -133,7 +149,8 @@
 		"type": "猴子",
 		"mean": "好色",
 		"data": "愛好女色的妖",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "虎姑婆",
@@ -141,7 +158,8 @@
 		"type": "老虎阿嬤",
 		"mean": "時刻存有警惕之心，不輕信他人",
 		"data": "深山中的老虎精化為老婆婆假扮成一對姐妹的姑婆來欺騙他們並吃掉妹妹的故事",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "魔神仔",
@@ -149,7 +167,8 @@
 		"type": "青蛙神",
 		"mean": "防流言蜚語(不看不聽不說)",
 		"data": "被叫名字即被附身，眼睛會呈青綠色；其外觀猶如猿猴，雙眼血紅，四肢有蹼，全身皮膚猶如蛙類一般濕滑，鳴叫聲猶如猴子吱吱吵雜，以山野昆蟲、樹葉為食",
-		"image": "resource/monsters/none.jpg"
+		"image": "resource/monsters/none.jpg",
+        "goodorbad": "負面"
 	},
 	{
 		"name": "金銀鬼",
@@ -157,6 +176,7 @@
 		"type": "鬼",
 		"mean": "諷刺守財奴",
 		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
-		"image": "resource/monsters/coin.jpg"
+		"image": "resource/monsters/coin.jpg",
+        "goodorbad": "負面"
 	}
 ]

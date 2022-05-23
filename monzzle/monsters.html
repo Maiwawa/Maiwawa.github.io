@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -178,11 +178,10 @@
                         <div class="content-header-title">妖怪選單</div>
                     </div>
                     <div class="content-header-right">
-                        <select class="form-select" aria-label="Default select example" id="location">
-                            <option selected>地形</option>
-                            <option value="天空">天空</option>
-                            <option value="水域">水域</option>
-                            <option value="陸地">陸地</option>
+                        <select class="form-select" aria-label="Default select example" id="goodorbad">
+                            <option selected disabled>正負面</option>
+                            <option value="正面">正面</option>
+                            <option value="負面">負面</option>
                         </select>
                         <select class="form-select form-select-mgl" aria-label="Default select example"
                             id="monstername">
@@ -234,7 +233,7 @@
 
         let dataUrl = "resource/json/monster.json";
 
-        $('#location').change(function () {
+        $('#goodorbad').change(function () {
             $.ajax({
                 url: dataUrl,
                 method: 'GET',
@@ -253,13 +252,14 @@
         });
 
         function setName(monsterData) {
-            let select = $('#location').val();
+            let select = $('#goodorbad').val();
             console.log(select);
             $('#monstername').empty();
             let firstOption = '<option selected disabled>妖怪名</option>';
             $('#monstername').append(firstOption);
             for (let i = 0; i < monsterData.length; i++) {
-                if (select == monsterData[i].location) {
+                console.log(monsterData[i].name);
+                if (select == monsterData[i].goodorbad) {
                     console.log(monsterData[i].name);
                     let newOption = `<option value='${monsterData[i].name}'>${monsterData[i].name}</option>`;
                     $('#monstername').append(newOption);

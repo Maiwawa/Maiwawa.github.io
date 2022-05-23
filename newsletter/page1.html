@@ -65,6 +65,8 @@
                                             首頁
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a href="index.html"><button class="dropdown-item"
+                                                        type="button">首頁</button></a></li>
                                             <li><a href="page1.html"><button class="dropdown-item"
                                                         type="button">建築工藝人-謝明標先生</button></a></li>
                                             <li><a href="page2.html"><button class="dropdown-item"
@@ -191,11 +193,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="resource/js/getbanner.js"></script>
 
     <script>
-        let pageTitle = $(document).attr("title");
         $(document).ready(function () {
-            getBannerData();
             pictureSetting();
         });
 
@@ -217,38 +218,7 @@
             }
         }
 
-        function getBannerData() {
-            let dataUrl = "resource/banner.json";
-            $.ajax({
-                url: dataUrl,
-                type: 'GET',
-                dataType: 'json',
-                data: '',
-                async: true,
-                success: function (bannerData) {
-                    console.log("yes");
-                    console.log(bannerData);
-                    selectData(bannerData);
-                },
-                error: function () {
-                    console.log("no");
-                },
-            });
-        };
 
-        function selectData(bannerData) {
-            for (let i = 0; i < bannerData.length; i++) {
-                console.log("hi");
-                if (bannerData[i].title == pageTitle) {
-                    $('.banner-title').text(bannerData[i].title);
-                    $('.banner-secondtitle').text(bannerData[i].secondtitle);
-                    $('.banner-article').text('文　' + bannerData[i].article);
-                    $('.banner-picture').text('圖　' + bannerData[i].picture);
-                    let imageUrl = bannerData[i].url;
-                    $('.banner-image').css('background-image', 'url(' + imageUrl + ')');
-                }
-            }
-        }
 
 
 
