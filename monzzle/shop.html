@@ -55,9 +55,18 @@
             padding: 10px 0;
         }
 
+        .allproduct,
+        .bestseller,
+        .newproduct {
+            border-bottom: 4px solid #000;
+            padding-bottom: 20px;
+        }
 
-
-
+        .title-text {
+            font-size: 25px;
+            font-weight: bolder;
+            padding: 0 0 20px 0;
+        }
 
         /* allpage */
     </style>
@@ -149,24 +158,56 @@
                         <div class="content-header-title">商城</div>
                     </div>
                     <div class="content-header-right">
-                        <a href="#">
+                        <a href="#newproduct">
                             <div class="content-header-item content-header-item-mgr">本季新品</div>
                         </a>
-                        <a href="#">
-                            <div class="content-header-item content-header-item-mgr">熱銷</div>
+                        <a href="#bestseller">
+                            <div class="content-header-item content-header-item-mgr">暢銷商品</div>
                         </a>
-                        <a href="#">
+                        <a href="#allproduct">
                             <div class="content-header-item ">所有商品</div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="container-lg">
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <div class="div" style="text-align: center; font-size: 50px; height: 500px; line-height: 500px;">
-                        被你發現了，這裡什麼都沒有。
+                    <div class="newproduct">
+                        <div id="newproduct" style="height: 56px; width:100%;"></div>
+                        <div class="title-text">本季新品</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="bestseller">
+                        <div id="bestseller" style="height: 56px; width:100%;"></div>
+                        <div class="title-text">暢銷商品</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-lg">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="allproduct">
+                        <div id="allproduct" style="height: 56px; width:100%;"></div>
+                        <div class="title-text">所有商品</div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <div class="row row-cols-1 row-cols-md-3 g-4" id="cardContent"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -179,6 +220,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 
@@ -194,8 +236,44 @@
     <script src="resource/js/allpage.js"></script>
     <script>
 
+        $(document).ready(function () {
+            getCardData();
+        });
 
+        function getCardData() {
+            let dataUrl = "resource/json/product.json";
+            $.ajax({
+                url: dataUrl,
+                method: 'GET',
+                dataType: 'json',
+                data: '',
+                async: false,
+                success: function (productData) {
+                    console.log('success');
+                    addCard(productData);
+                },
+                error: function () {
+                    console.log('error');
 
+                },
+            });
+        }
+
+        function addCard(productData) {
+            for (let i = 0; i < productData.length; i++) {
+                let card = `<div class="col">
+                <div class="card h-100 productcard productcard${i}">
+                    <img src="${productData[i].cardurl}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">${productData[i].cardtitle}</h5>
+                        <p class="card-text">${productData[i].cardintroduction}</p>
+                    </div>
+                </div>
+            </div>`;
+                $('#cardContent').append(card);
+
+            }
+        }
 
 
 
