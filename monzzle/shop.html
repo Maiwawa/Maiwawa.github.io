@@ -27,6 +27,9 @@
 
         .content-header-right {
             float: right;
+            position: relative;
+            top: 8px;
+            display: flex;
         }
 
         .content-header-title {
@@ -158,40 +161,11 @@
                         <div class="content-header-title">商城</div>
                     </div>
                     <div class="content-header-right">
-                        <a href="#newproduct">
-                            <div class="content-header-item content-header-item-mgr">本季新品</div>
-                        </a>
-                        <a href="#bestseller">
-                            <div class="content-header-item content-header-item-mgr">暢銷商品</div>
-                        </a>
-                        <a href="#allproduct">
-                            <div class="content-header-item ">所有商品</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-lg">
-            <div class="row justify-content-center">
-                <div class="col-10">
-                    <div class="newproduct">
-                        <div id="newproduct" style="height: 56px; width:100%;"></div>
-                        <div class="title-text">本季新品</div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-lg">
-            <div class="row justify-content-center">
-                <div class="col-10">
-                    <div class="bestseller">
-                        <div id="bestseller" style="height: 56px; width:100%;"></div>
-                        <div class="title-text">暢銷商品</div>
-
+                        <select class="form-select" aria-label="Default select example" id="selectproduct">
+                            <option value="newest" selected>最新</option>
+                            <option value="oldest">最舊</option>
+                            <option value="bestsell" disabled>熱銷(尚未完成)</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -201,10 +175,8 @@
             <div class="row justify-content-center">
                 <div class="col-10">
                     <div class="allproduct">
-                        <div id="allproduct" style="height: 56px; width:100%;"></div>
-                        <div class="title-text">所有商品</div>
                         <div class="row justify-content-center">
-                            <div class="col-10">
+                            <div class="col-10" id="card">
                                 <div class="row row-cols-1 row-cols-md-3 g-4" id="cardContent"></div>
                             </div>
                         </div>
@@ -240,6 +212,57 @@
             getCardData();
         });
 
+        function sortProduct(productData) {
+            let select = $('#selectproduct').val();
+            $('#cardContent').remove();
+            console.log($('#selectproduct').val());
+            let cards = `<div class="row row-cols-1 row-cols-md-3 g-4" id="cardContent"></div>`;
+            $('#card').append(cards);
+            if (select == 'newest') {
+
+                for (let i = (productData.length - 1); i > -1; i--) {
+                    let card = `<div class="col">
+                        <div class="card h-100 productcard productcard${i}">
+                            <img src="${productData[i].cardurl}" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">${productData[i].cardtitle}</h5>
+                                    <p class="card-text">${productData[i].cardintroduction}</p>
+                                </div>
+                            </div>
+                        </div>`;
+
+                    $('#cardContent').append(card);
+                }
+
+            }
+            else if (select == 'oldest') {
+
+                for (let i = 0; i < productData.length; i++) {
+                    let card = `<div class="col">
+                        <div class="card h-100 productcard productcard${i}">
+                            <img src="${productData[i].cardurl}" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">${productData[i].cardtitle}</h5>
+                                    <p class="card-text">${productData[i].cardintroduction}</p>
+                                </div>
+                            </div>
+                        </div>`;
+                    $('#cardContent').append(card);
+                }
+
+            }
+            else if (select == 'bestsell') {
+
+
+                
+            }
+        }
+
+
+        $('#selectproduct').change(function () {
+            getCardData();
+        });
+
         function getCardData() {
             let dataUrl = "resource/json/product.json";
             $.ajax({
@@ -250,7 +273,7 @@
                 async: false,
                 success: function (productData) {
                     console.log('success');
-                    addCard(productData);
+                    sortProduct(productData);
                 },
                 error: function () {
                     console.log('error');
@@ -258,6 +281,7 @@
                 },
             });
         }
+
 
         function addCard(productData) {
             for (let i = 0; i < productData.length; i++) {
