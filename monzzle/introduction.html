@@ -12,7 +12,7 @@
         /* introduction */
         .content-header {
             justify-content: space-between;
-            border-bottom: 4px solid #000;
+            border-bottom: 4px solid #513A35;
         }
 
         .content-header-icon {
@@ -64,12 +64,6 @@
             margin: 30px 0 0 0;
         }
 
-        .title-text {
-            font-size: 25px;
-            font-weight: bolder;
-            padding: 0 0 20px 0;
-        }
-
         .card-img-top {
             border-radius: 99em !important;
             padding: 10px;
@@ -80,7 +74,7 @@
         }
 
         .member {
-            border-bottom: 4px solid #000;
+            border-bottom: 4px solid #513A35;
             padding-bottom: 20px;
         }
 
@@ -96,6 +90,10 @@
 
         }
 
+        .title-text{
+            font-size: 25px;
+        }
+
         /* allpage */
     </style>
 </head>
@@ -104,10 +102,12 @@
     <div class="header">
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">妖來妖去</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <a class="navbar-brand" href="index.html">
+                    <img src="resource/logo/logo-x.png" alt="" width="80" height="30">
+                </a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
@@ -183,14 +183,14 @@
                 <div class="col-10 content-header">
                     <div class="content-header-left">
                         <img src="resource/icon/aboutus.png" class="content-header-icon">
-                        <div class="content-header-title">關於我們</div>
+                        <div class="content-header-title title-text-color">關於我們</div>
                     </div>
                     <div class="content-header-right">
                         <a href="#memberIntroduction">
-                            <div class="content-header-item content-header-item-mgr">組員介紹</div>
+                            <div class="content-header-item content-header-item-mgr title-text-color">組員介紹</div>
                         </a>
                         <a href="#teamIntroduction">
-                            <div class="content-header-item content-header-item-mgr">團隊介紹</div>
+                            <div class="content-header-item content-header-item-mgr title-text-color">團隊介紹</div>
                         </a>
                     </div>
                 </div>
@@ -209,7 +209,7 @@
                 <div class="col-10">
                     <div class="member">
                         <div id="memberIntroduction" style="height: 56px; width:100%;"></div>
-                        <div class="title-text">組員介紹</div>
+                        <div class="title-text title-text-color">組員介紹</div>
                         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                             <div class="col">
                                 <div class="card h-100">

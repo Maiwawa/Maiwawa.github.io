@@ -3,7 +3,7 @@
 }
 
 .bg-light {
-    background-color: #fff !important;
+    background-color: #513A35 !important;
     border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -76,9 +76,23 @@ a {
     }
 }
 
-.footer-text {
+.footer {
     text-align: center;
     border-top: 0.1px solid rgba(0, 0, 0, 0.2);
     padding: 20px 0 30px 0;
     margin-top: 100px;
+    color: white;
+    font-weight: bolder;
+    background-color: #513A35;
+    position: relative;
+}
+
+.title-text-color,.card-title,.title-text {
+    color: #513A35;
+    font-weight: bolder;
+}
+
+.content-text-color,.card-text,.content-text{
+    color: #805F55;
+    font-weight: bold;
 }

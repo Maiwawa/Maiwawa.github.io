@@ -12,7 +12,12 @@
         /* monsters */
         .content-header {
             justify-content: space-between;
-            border-bottom: 4px solid #000;
+            border-bottom: 4px solid #513A35;
+        }
+
+        .form-select{
+            border: 2px solid #513A35;
+            border-radius: 10px;
         }
 
         .content-header-icon {
@@ -96,10 +101,12 @@
     <div class="header">
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">妖來妖去</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <a class="navbar-brand" href="index.html">
+                    <img src="resource/logo/logo-x.png" alt="" width="80" height="30">
+                </a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
@@ -175,15 +182,15 @@
                 <div class="col-10 content-header">
                     <div class="content-header-left">
                         <img src="resource/icon/monster.png" class="content-header-icon">
-                        <div class="content-header-title">妖怪選單</div>
+                        <div class="content-header-title title-text-color">妖怪選單</div>
                     </div>
                     <div class="content-header-right">
-                        <select class="form-select" aria-label="Default select example" id="goodorbad">
-                            <option selected disabled>正負面</option>
+                        <select class="form-select content-text-color" aria-label="Default select example" id="goodorbad">
+                            <option selected disabled class="title-text-color">正負面</option>
                             <option value="正面">正面</option>
                             <option value="負面">負面</option>
                         </select>
-                        <select class="form-select form-select-mgl" aria-label="Default select example"
+                        <select class="form-select form-select-mgl content-text-color" aria-label="Default select example"
                             id="monstername">
                             <option selected disabled>妖怪名</option>
                         </select>

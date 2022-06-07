@@ -8,11 +8,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="css/allpage.css">
+    <script src="https://unpkg.com/vue@next"></script>
     <style>
         /* shop */
         .content-header {
             justify-content: space-between;
-            border-bottom: 4px solid #000;
+            border-bottom: 4px solid #513A35;
+        }
+
+        .form-select {
+            border: 2px solid #513A35;
+            border-radius: 10px;
+        }
+
+        .allproduct,
+        .bestseller,
+        .newproduct {
+            border-bottom: 4px solid #513A35;
+            padding-bottom: 20px;
         }
 
         .content-header-icon {
@@ -58,18 +71,6 @@
             padding: 10px 0;
         }
 
-        .allproduct,
-        .bestseller,
-        .newproduct {
-            border-bottom: 4px solid #000;
-            padding-bottom: 20px;
-        }
-
-        .title-text {
-            font-size: 25px;
-            font-weight: bolder;
-            padding: 0 0 20px 0;
-        }
 
         /* allpage */
     </style>
@@ -79,10 +80,12 @@
     <div class="header">
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">妖來妖去</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <a class="navbar-brand" href="index.html">
+                    <img src="resource/logo/logo-x.png" alt="" width="80" height="30">
+                </a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
@@ -158,10 +161,11 @@
                 <div class="col-10 content-header">
                     <div class="content-header-left">
                         <img src="resource/icon/shop.png" class="content-header-icon">
-                        <div class="content-header-title">商城</div>
+                        <div class="content-header-title title-text-color">商城</div>
                     </div>
                     <div class="content-header-right">
-                        <select class="form-select" aria-label="Default select example" id="selectproduct">
+                        <select class="form-select content-text-color" aria-label="Default select example"
+                            id="selectproduct">
                             <option value="newest" selected>最新</option>
                             <option value="oldest">最舊</option>
                             <option value="bestsell" disabled>熱銷(尚未完成)</option>
@@ -225,14 +229,15 @@
                         <div class="card h-100 productcard productcard${i}">
                             <img src="${productData[i].cardurl}" class="card-img-top">
                                 <div class="card-body">
-                                    <h5 class="card-title">${productData[i].cardtitle}</h5>
-                                    <p class="card-text">${productData[i].cardintroduction}</p>
+                                    <h5 class="card-title title-text-color">${productData[i].cardtitle}</h5>
+                                    <p class="card-text content-text-color">${productData[i].cardintroduction}</p>
                                 </div>
                             </div>
                         </div>`;
 
                     $('#cardContent').append(card);
                 }
+
 
             }
             else if (select == 'oldest') {
@@ -254,7 +259,7 @@
             else if (select == 'bestsell') {
 
 
-                
+
             }
         }
 
@@ -285,16 +290,32 @@
 
         function addCard(productData) {
             for (let i = 0; i < productData.length; i++) {
-                let card = `<div class="col">
-                <div class="card h-100 productcard productcard${i}">
-                    <img src="${productData[i].cardurl}" class="card-img-top">
-                    <div class="card-body">
-                        <h5 class="card-title">${productData[i].cardtitle}</h5>
-                        <p class="card-text">${productData[i].cardintroduction}</p>
-                    </div>
-                </div>
-            </div>`;
-                $('#cardContent').append(card);
+                const bb = Vue.createApp({
+                    template: `<div class="col">
+                                    <div class="card h-100 productcard productcard${i}">
+                                        <img src="${productData[i].cardurl}" class="card-img-top">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${productData[i].cardtitle}</h5>
+                                            <p class="card-text">${productData[i].cardintroduction}</p>
+                                        </div>
+                                    </div>
+                                </div>`,
+                    data() {
+                        return {
+
+                        }
+                    }
+                }).mount('#cardContent');
+                //     let card = `< div class= "col" >
+                //             <div class="card h-100 productcard productcard${i}">
+                //                 <img src="${productData[i].cardurl}" class="card-img-top">
+                //                     <div class="card-body">
+                //                         <h5 class="card-title">${productData[i].cardtitle}</h5>
+                //                         <p class="card-text">${productData[i].cardintroduction}</p>
+                //                     </div>
+                //             </div>
+                // </div >`;
+                //     $('#cardContent').append(card);
 
             }
         }

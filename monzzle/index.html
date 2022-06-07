@@ -12,7 +12,7 @@
         /* index */
         .banner {
             width: 100%;
-            height: calc(100vh - 56px);
+            height: calc(96vh - 56px);
             background-size: cover;
             background-position: center 35%;
             background-image: url("");
@@ -24,47 +24,19 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .banner-title {
-            /* -webkit-writing-mode: vertical-rl; */
-            color: white;
-            font-size: 50px;
-            font-weight: bolder;
-            padding: 50px 25px;
-            background-color: burlywood;
-            color: #000;
-            left: 50%;
-            line-height: 50px;
-        }
-
-        .banner-text {
-            top: 85%;
-            background-color: burlywood;
-            width: 70%;
-            padding: 10px 15px;
-            font-size: 15px;
-            max-width: 560px;
+        .position-left {
             left: 50%;
         }
 
-        .banner-text-focus {
-            font-size: 20px;
-            font-weight: bolder;
+        .logo-bg {
+            background-color: rgba(244, 235, 215, 1) !important;
+            width: 30%;
+            border-radius: 10%;
         }
 
-        @media (max-width:600px) {
-            .banner-title {
-                font-size: 35px;
-                padding: 35px 15px;
-                line-height: 35px;
-            }
-
-            .banner-text-focus {
-                font-size: 18px;
-            }
-
-            .banner-text {
-                padding: 8px 12px;
-            }
+        .logo-img {
+            width: 100%;
+            
         }
 
         @media (min-width:1000px) {
@@ -75,10 +47,11 @@
 
         .content-title {
             font-size: 30px;
-            border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+            border-bottom: 4px solid #513A35;
             font-weight: bolder;
             padding: 0 0 5px 20px;
             margin: 30px 0;
+            color: #513A35;
         }
 
         /* allpage */
@@ -89,10 +62,12 @@
     <div class="header">
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">妖來妖去</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <a class="navbar-brand" href="index.html">
+                    <img src="resource/logo/logo-x.png" alt="" width="80" height="30">
+                </a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
@@ -166,165 +141,161 @@
         <div class="container-fulid">
             <div class="banner">
                 <div class="banner-mask">
-                    <div class="banner-title position-absolute top-50 translate-middle position-left">
-                        妖<br />
-                        來<br />
-                        妖<br />
-                        去<br />
+                    <div class="position-absolute top-50 translate-middle position-left logo-bg">
+                        <img src="resource/logo/logo-y.png" alt="" class="logo-img">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg">
+        <div class="row justify-content-center">
+            <div class="col-11 content-title title-text-color">
+                我們是誰
+            </div>
+            <div class="col-sm-8 col-10 content-text-color">
+                大家好，我們是妖來妖去製作團隊！<br /><br />
+
+                團隊成員透過蒐集台灣妖怪文獻，由文獻發現、創作，繪製出許多精緻且具有文化意涵的妖怪圖片。<br /><br />
+
+                專題包含了此網站及相關產品，如：拼圖、貼圖、明信片...
             </div>
         </div>
 
         <div class="container-lg">
             <div class="row justify-content-center">
-                <div class="col-11 content-title">
-                    我們是誰
+                <div class="col-11 content-title title-text-color">
+                    關於專題
                 </div>
                 <div class="col-sm-8 col-10">
-                    大家好，我們是妖來妖去製作團隊！<br /><br />
-
-                    團隊成員透過蒐集台灣妖怪文獻，由文獻發現、創作，繪製出許多精緻且具有文化意涵的妖怪圖片。<br /><br />
-
-                    專題包含了此網站及相關產品，如：拼圖、貼圖、明信片...
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="resource/carousel/1.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="resource/carousel/2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="resource/carousel/3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
-            <div class="container-lg">
-                <div class="row justify-content-center">
-                    <div class="col-11 content-title">
-                        關於專題
-                    </div>
-                    <div class="col-sm-8 col-10">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="resource/carousel/1.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resource/carousel/2.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resource/carousel/3.jpg" class="d-block w-100" alt="...">
-                                </div>
+            <div class="row justify-content-center">
+                <div class="col-11 content-title title-text-color">
+                    我們的商品
+                </div>
+                <div class="col-sm-5 col-10">
+                    <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="resource/carousel/4.jpg" class="d-block w-100" alt="...">
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                            <div class="carousel-item">
+                                <img src="resource/carousel/5.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="resource/carousel/6.jpg" class="d-block w-100" alt="...">
+                            </div>
                         </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
 
-                <div class="row justify-content-center">
-                    <div class="col-11 content-title">
-                        我們的商品
-                    </div>
-                    <div class="col-sm-5 col-10">
-                        <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="resource/carousel/4.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resource/carousel/5.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resource/carousel/6.jpg" class="d-block w-100" alt="...">
-                                </div>
+                <div class="col-sm-5 col-10">
+                    <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="resource/carousel/7.jpg" class="d-block w-100" alt="...">
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleControls2" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-5 col-10">
-                        <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="resource/carousel/7.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resource/carousel/8.jpg" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resource/carousel/9.jpg" class="d-block w-100" alt="...">
-                                </div>
+                            <div class="carousel-item">
+                                <img src="resource/carousel/8.jpg" class="d-block w-100" alt="...">
                             </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleControls3" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                            <div class="carousel-item">
+                                <img src="resource/carousel/9.jpg" class="d-block w-100" alt="...">
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="footer">
-                <div class="container-fluid">
-                    <div class="footer-text">
-                        Copyright &copy;2022 妖來妖去製作團隊 版權所有.
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
         </div>
 
+    </div>
+    </div>
+
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="footer-text">
+                Copyright &copy;2022 妖來妖去製作團隊 版權所有.
+            </div>
+        </div>
+    </div>
 
 
 
 
 
-        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 
-        <script src="resource/js/allpage.js"></script>
-        <script>
-            $(document).ready(function () {
-                let bannerInt = getRandomInt(9);
-                setBanner(bannerInt);
-            });
-
-
-
-            function getRandomInt(max) {
-                return Math.floor(Math.random() * max);
-            }
-
-            function setBanner(bannerInt) {
-                $('.banner').css('background-image', 'url(resource/banner/' + bannerInt + '.jpg)')
-            };
+    <script src="resource/js/allpage.js"></script>
+    <script>
+        $(document).ready(function () {
+            let bannerInt = getRandomInt(9);
+            setBanner(bannerInt);
+        });
 
 
 
-        </script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function setBanner(bannerInt) {
+            $('.banner').css('background-image', 'url(resource/banner/' + bannerInt + '.jpg)')
+        };
+
+
+
+    </script>
 </body>
 
 </html>

@@ -12,7 +12,13 @@
         /* introduction */
         .content-header {
             justify-content: space-between;
-            border-bottom: 4px solid #000;
+            border-bottom: 4px solid #513A35;
+        }
+
+        .concept,
+        .standardtext {
+            border-bottom: 4px solid #513A35;
+            padding-bottom: 20px;
         }
 
         .content-header-icon {
@@ -79,12 +85,6 @@
             border: 0
         }
 
-        .concept,
-        .standardtext {
-            border-bottom: 4px solid #000;
-            padding-bottom: 20px;
-        }
-
         @media (max-width:560px) {
             .content-header-right {
                 float: left;
@@ -105,10 +105,12 @@
     <div class="header">
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">妖來妖去</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <a class="navbar-brand" href="index.html">
+                    <img src="resource/logo/logo-x.png" alt="" width="80" height="30">
+                </a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
@@ -184,17 +186,17 @@
                 <div class="col-10 content-header">
                     <div class="content-header-left">
                         <img src="resource/icon/subject.png" class="content-header-icon">
-                        <div class="content-header-title">專題介紹</div>
+                        <div class="content-header-title title-text-color">專題介紹</div>
                     </div>
                     <div class="content-header-right">
                         <a href="#designConcept">
-                            <div class="content-header-item content-header-item-mgr">設計理念</div>
+                            <div class="content-header-item content-header-item-mgr title-text-color">設計理念</div>
                         </a>
                         <a href="#standardText">
-                            <div class="content-header-item content-header-item-mgr">標準字</div>
+                            <div class="content-header-item content-header-item-mgr title-text-color">標準字</div>
                         </a>
                         <a href="#standardColor">
-                            <div class="content-header-item ">標準色</div>
+                            <div class="content-header-item title-text-color">標準色</div>
                         </a>
                     </div>
                 </div>
@@ -213,7 +215,7 @@
                 <div class="col-10">
                     <div id="designConcept" style="height: 56px; width:100%;"></div>
                     <div class="title-text">設計理念</div>
-                    <div class="concept">
+                    <div class="concept content-text-color">
                         　　我們是以台灣妖怪為主軸，透過蒐集到的妖怪文獻來進行妖怪的發想與設計，使設計出的妖怪不失原有意涵。<br /><br />
                         　　我們希望消費者可以透過拼拼圖來認識妖怪，在娛樂的過程中進行文化的傳承，讓更多人可以認識台灣的本土文化，而拼圖可以讓消費者獲得莫大的成就感，同時又具有收藏的價值。
                     </div>
@@ -224,7 +226,7 @@
         <div class="container-lg">
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <div class="standardtext">
+                    <div class="standardtext content-text-color">
                         <div id="standardText" style="height: 56px; width:100%;"></div>
                         <div class="title-text">標準字</div>
                         <h1 style="width: 100%;background-color: antiquewhite;padding: 100px 20px;">這是標準字的圖片</h1>
@@ -237,7 +239,7 @@
         <div class="container-lg">
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <div class="standardcolor">
+                    <div class="standardcolor content-text-color">
                         <div id="standardColor" style="height: 56px; width:100%;"></div>
                         <div class="title-text">標準色</div>
                         <h1 style="width: 100%;background-color: antiquewhite;padding: 100px 20px;">這是標準色的圖片</h1>
