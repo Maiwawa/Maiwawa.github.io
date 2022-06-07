@@ -1,5 +1,64 @@
+/* 字體顏色設定 */
+.title-text-color, .card-title, .title-text, .menu-item-text, .nav-link {
+    color: #513A35 !important;
+    font-weight: bolder;
+}
+
+.content-text-color, .card-text {
+    color: #805F55;
+    font-weight: bold;
+}
+
+/* 副頁的上面 */
+.content-header {
+    justify-content: space-between;
+    border-bottom: 4px solid #513A35;
+    margin-top: 50px;
+}
+
+.content-header-title{
+    font-size: 28px;
+    font-weight: bolder;
+    display: inline-block;
+    top: 5px;
+    position: relative;
+}
+
+.content-header-icon {
+    width: 45px;
+    height: 45px;
+}
+
+.content-header-right {
+    float: right;
+}
+
+
+.content-header-item {
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+    top: 14px;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+/* 妖怪&商城的選單 */
+.form-select {
+    border: 2px solid #513A35;
+    border-radius: 10px;
+}
+
+/* 標題下方實線 */
+.title-border {
+    border-bottom: 4px solid #513A35;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* navbar */
 .nav-item-bg {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(209, 178, 167, 0.8);
 }
 
 .bg-light {
@@ -21,6 +80,7 @@
     }
 }
 
+/* 通用設定 */
 .row {
     width: 100%;
     margin: 0;
@@ -35,6 +95,7 @@ a {
     color: #000;
 }
 
+/* 右邊菜單 */
 .menu {
     position: fixed;
     top: 56px;
@@ -57,6 +118,7 @@ a {
     height: 25px;
 }
 
+
 .menu-item-text {
     display: inline-block;
     font-size: 18px;
@@ -66,33 +128,24 @@ a {
     padding: 0 10px;
 }
 
-.main{
+/* 中間內容區塊 */
+.main {
     width: calc(100% - 200px);
 }
 
 @media (max-width:1000px) {
-    .main{
+    .main {
         width: 100%;
     }
 }
 
+/* 下方copyright */
 .footer {
     text-align: center;
-    border-top: 0.1px solid rgba(0, 0, 0, 0.2);
     padding: 20px 0 30px 0;
     margin-top: 100px;
     color: white;
     font-weight: bolder;
     background-color: #513A35;
     position: relative;
-}
-
-.title-text-color,.card-title,.title-text {
-    color: #513A35;
-    font-weight: bolder;
-}
-
-.content-text-color,.card-text,.content-text{
-    color: #805F55;
-    font-weight: bold;
 }

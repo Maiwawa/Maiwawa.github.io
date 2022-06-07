@@ -11,16 +11,6 @@
     <script src="https://unpkg.com/vue@next"></script>
     <style>
         /* shop */
-        .content-header {
-            justify-content: space-between;
-            border-bottom: 4px solid #513A35;
-        }
-
-        .form-select {
-            border: 2px solid #513A35;
-            border-radius: 10px;
-        }
-
         .allproduct,
         .bestseller,
         .newproduct {
@@ -28,10 +18,7 @@
             padding-bottom: 20px;
         }
 
-        .content-header-icon {
-            width: 45px;
-            height: 45px;
-        }
+
 
         .content-header-left,
         .content-header-right {
@@ -39,27 +26,9 @@
         }
 
         .content-header-right {
-            float: right;
             position: relative;
             top: 8px;
             display: flex;
-        }
-
-        .content-header-title {
-            font-size: 28px;
-            font-weight: bolder;
-            display: inline-block;
-            top: 5px;
-            position: relative;
-        }
-
-        .content-header-item {
-            display: inline-block;
-            font-size: 20px;
-            position: relative;
-            top: 14px;
-            text-decoration: underline;
-            font-weight: bolder;
         }
 
         .content-header-item-mgr {
@@ -81,7 +50,7 @@
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="resource/logo/logo-x.png" alt="" width="80" height="30">
+                    <img src="resource/logo/logo-x-white.png" alt="" width="80" height="30">
                 </a>
                 <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -290,32 +259,16 @@
 
         function addCard(productData) {
             for (let i = 0; i < productData.length; i++) {
-                const bb = Vue.createApp({
-                    template: `<div class="col">
-                                    <div class="card h-100 productcard productcard${i}">
-                                        <img src="${productData[i].cardurl}" class="card-img-top">
-                                        <div class="card-body">
-                                            <h5 class="card-title">${productData[i].cardtitle}</h5>
-                                            <p class="card-text">${productData[i].cardintroduction}</p>
-                                        </div>
+                let card = `< div class= "col" >
+                            <div class="card h-100 productcard productcard${i}">
+                                <img src="${productData[i].cardurl}" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${productData[i].cardtitle}</h5>
+                                        <p class="card-text">${productData[i].cardintroduction}</p>
                                     </div>
-                                </div>`,
-                    data() {
-                        return {
-
-                        }
-                    }
-                }).mount('#cardContent');
-                //     let card = `< div class= "col" >
-                //             <div class="card h-100 productcard productcard${i}">
-                //                 <img src="${productData[i].cardurl}" class="card-img-top">
-                //                     <div class="card-body">
-                //                         <h5 class="card-title">${productData[i].cardtitle}</h5>
-                //                         <p class="card-text">${productData[i].cardintroduction}</p>
-                //                     </div>
-                //             </div>
-                // </div >`;
-                //     $('#cardContent').append(card);
+                            </div>
+                </div >`;
+                $('#cardContent').append(card);
 
             }
         }
