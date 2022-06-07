@@ -33,6 +33,18 @@
     float: right;
 }
 
+@media (max-width:560px) {
+    .content-header-right {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .content-header-item {
+        top: 0 !important;
+    }
+
+}
 
 .content-header-item {
     display: inline-block;
