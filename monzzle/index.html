@@ -15,13 +15,13 @@
             height: calc(96vh - 56px);
             background-size: cover;
             background-position: center 35%;
-            background-image: url("");
+            background-image: url("resource/banner/banner.jpg");
         }
 
         .banner-mask {
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.2);
         }
 
         .position-left {
@@ -60,10 +60,11 @@
             color: #513A35;
         }
 
-        .content-text{
+        .content-text {
             font-size: 20px;
         }
-        .content{
+
+        .content {
             margin: 40px 0;
         }
 
@@ -165,7 +166,7 @@
         <div class="container-lg">
             <div class="row justify-content-center content">
                 <div class="col-10 content-title title-text-color">
-                    我們是誰
+                    關於我們
                 </div>
                 <div class="col-sm-8 col-10 content-text-color content-text">
                     大家好，我們是妖來妖去製作團隊！<br /><br />
@@ -179,24 +180,19 @@
             <div class="container-lg">
                 <div class="row justify-content-center content">
                     <div class="col-10 content-title title-text-color">
-                        關於專題
+                        專題介紹
                     </div>
                     <div class="col-sm-8 col-10">
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="subject.html">
-                                        <img src="resource/carousel/1.jpg" class="d-block w-100" alt="...">
+                                        <img src="resource/carousel/bird.jpg" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="subject.html">
-                                        <img src="resource/carousel/2.jpg" class="d-block w-100" alt="...">
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="subject.html">
-                                        <img src="resource/carousel/3.jpg" class="d-block w-100" alt="...">
+                                        <img src="resource/carousel/turtle.jpg" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                             </div>
@@ -216,24 +212,19 @@
 
                 <div class="row justify-content-center content">
                     <div class="col-10 content-title title-text-color">
-                        我們的商品
+                        商城
                     </div>
                     <div class="col-sm-5 col-10">
                         <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="shop.html">
-                                        <img src="resource/carousel/4.jpg" class="d-block w-100" alt="...">
+                                        <img src="resource/carousel/coin.jpg" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="shop.html">
-                                        <img src="resource/carousel/5.jpg" class="d-block w-100" alt="...">
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="shop.html">
-                                        <img src="resource/carousel/6.jpg" class="d-block w-100" alt="...">
+                                        <img src="resource/carousel/dog.jpg" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                             </div>
@@ -255,17 +246,12 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <a href="shop.html">
-                                        <img src="resource/carousel/7.jpg" class="d-block w-100" alt="...">
+                                        <img src="resource/carousel/snake.jpg" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                                 <div class="carousel-item">
                                     <a href="shop.html">
-                                        <img src="resource/carousel/8.jpg" class="d-block w-100" alt="...">
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="shop.html">
-                                        <img src="resource/carousel/9.jpg" class="d-block w-100" alt="...">
+                                        <img src="resource/carousel/girl.jpg" class="d-block w-100" alt="...">
                                     </a>
                                 </div>
                             </div>
@@ -310,8 +296,8 @@
     <script src="resource/js/allpage.js"></script>
     <script>
         $(document).ready(function () {
-            let bannerInt = getRandomInt(9);
-            setBanner(bannerInt);
+            // let bannerInt = getRandomInt(9);
+            // setBanner(bannerInt);
             logoSetting();
         });
 
@@ -346,13 +332,13 @@
         }
 
 
-        function getRandomInt(max) {
-            return Math.floor(Math.random() * max);
-        }
+        // function getRandomInt(max) {
+        //     return Math.floor(Math.random() * max);
+        // }
 
-        function setBanner(bannerInt) {
-            $('.banner').css('background-image', 'url(resource/banner/' + bannerInt + '.jpg)')
-        };
+        // function setBanner(bannerInt) {
+        //     $('.banner').css('background-image', 'url(resource/banner/' + bannerInt + '.jpg)')
+        // };
 
 
 
