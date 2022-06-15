@@ -16,7 +16,7 @@
     margin-top: 50px;
 }
 
-.content-header-title{
+.content-header-title {
     font-size: 28px;
     font-weight: bolder;
     display: inline-block;
@@ -160,4 +160,20 @@ a {
     font-weight: bolder;
     background-color: #513A35;
     position: relative;
+}
+
+/*文字設定*/
+.content-text {
+    font-size: 16px;
+}
+
+@media (min-width:600px) {
+    .content-text {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+}
+
+body {
+    font-family: Microsoft JhengHei;
 }

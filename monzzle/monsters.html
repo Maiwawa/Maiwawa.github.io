@@ -39,7 +39,8 @@
         }
 
         .monster-text {
-            font-size: 15px;
+            font-size: 20px;
+            margin-bottom: 2px;
         }
 
         .monster-name {
@@ -52,9 +53,31 @@
             margin-top: 10px;
         }
 
-        .monster-image{
+        .monster-image {
             margin: 20px 0;
         }
+
+        .spinner {
+            width: calc(100% - 200px);
+            height: 100vh;
+            position: fixed;
+            background-color: white;
+            z-index: 10000000000000000000000;
+            margin-top: 4px;
+            display: none;
+        }
+
+        @media (max-width:1000px) {
+            .spinner {
+                width: 100%;
+            }
+        }
+
+        .spinner-border {
+            top: 50vh;
+            position: relative;
+        }
+
         /* allpage */
     </style>
 </head>
@@ -139,6 +162,14 @@
 
 
     <div class="main">
+        <div class="spinner">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+
         <div class="container-lg">
             <div class="row justify-content-center">
                 <div class="col-10 content-header">
@@ -147,13 +178,14 @@
                         <div class="content-header-title title-text-color">妖怪選單</div>
                     </div>
                     <div class="content-header-right">
-                        <select class="form-select content-text-color" aria-label="Default select example" id="goodorbad">
+                        <select class="form-select content-text-color" aria-label="Default select example"
+                            id="goodorbad">
                             <option selected disabled class="title-text-color">正負面</option>
                             <option value="正面">正面</option>
                             <option value="負面">負面</option>
                         </select>
-                        <select class="form-select form-select-mgl content-text-color" aria-label="Default select example"
-                            id="monstername">
+                        <select class="form-select form-select-mgl content-text-color"
+                            aria-label="Default select example" id="monstername">
                             <option selected disabled>妖怪名</option>
                         </select>
                     </div>
@@ -163,9 +195,9 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-8 col-sm-7 col-md-5 monster-content">
-                    <img src="resource/banner/9.jpg" class="img-fluid monster-image">
+                    <img src="resource/banner/9.jpg" class="img-fluid monster-image" id="monster-image">
                 </div>
-                <div class="col-8 col-sm-7 col-md-9">
+                <div class="col-8 col-sm-7 col-md-9 placeholder-glow">
                     <div class="monster-name monster-text title-text-color"></div>
                     <div class="monster-location monster-text content-text-color"></div>
                     <div class="monster-type monster-text content-text-color"></div>
@@ -258,12 +290,17 @@
             let select = $('#monstername').val();
             for (let i = 0; i < monsterData.length; i++) {
                 if (select == monsterData[i].name) {
-                    $('.monster-image').attr('src', monsterData[i].image);
+                    $('.spinner').show();
+                    $('#monster-image').attr('src', monsterData[i].image);
                     $('.monster-name').text(monsterData[i].name);
                     $('.monster-location').text('地形：' + monsterData[i].location);
                     $('.monster-type').text('種類：' + monsterData[i].type);
                     $('.monster-mean').text('意義：' + monsterData[i].mean);
                     $('.monster-data').text('資料：' + monsterData[i].data);
+                    document.getElementById('monster-image').onload = function () {
+                        alert('onloaded');
+                        $('.spinner').hide();
+                    }
                 }
             }
         }
