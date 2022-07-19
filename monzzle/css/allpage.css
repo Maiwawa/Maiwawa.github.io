@@ -93,9 +93,9 @@
 }
 
 /* 通用設定 */
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .row {
     width: 100%;
