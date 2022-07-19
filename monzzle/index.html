@@ -73,7 +73,7 @@
             color: #805F55;
         }
 
-        
+
 
         /* allpage */
     </style>
@@ -92,11 +92,11 @@
                     <span class="navbar-toggler-icon "></span>
                 </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
+                    aria-labelledby="offcanvasNavbarLabel" >
                     <div class="offcanvas-header">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
+                    <div class="offcanvas-body show">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item nav-item-home">
                                 <a class="nav-link" href="index.html">首頁</a>
@@ -109,6 +109,9 @@
                             </li>
                             <li class="nav-item nav-item-monster">
                                 <a class="nav-link" href="monsters.html">妖怪選單</a>
+                            </li>
+                            <li class="nav-item nav-item-game">
+                                <a class="nav-link" href="game.html">小遊戲</a>
                             </li>
                             <li class="nav-item nav-item-shop">
                                 <a class="nav-link" href="shop.html">商城</a>
@@ -126,32 +129,38 @@
         <div class="menu-items">
             <a class="" href="index.html">
                 <div class="menu-item menu-item-home">
-                    <img src="resource/icon/home.png" class="menu-icon">
+                    <img src="resource/icon/home.svg" class="menu-icon">
                     <div class="menu-item-text">首頁</div>
 
                 </div>
             </a>
             <a class="" href="introduction.html">
                 <div class="menu-item menu-item-aboutus">
-                    <img src="resource/icon/aboutus.png" class="menu-icon">
+                    <img src="resource/icon/aboutus.svg" class="menu-icon">
                     <div class="menu-item-text">關於我們</div>
                 </div>
             </a>
             <a class="" href="subject.html">
                 <div class="menu-item menu-item-subject">
-                    <img src="resource/icon/subject.png" class="menu-icon">
+                    <img src="resource/icon/subject.svg" class="menu-icon">
                     <div class="menu-item-text">專題介紹</div>
                 </div>
             </a>
             <a class="" href="monsters.html">
                 <div class="menu-item menu-item-monster">
-                    <img src="resource/icon/monster.png" class="menu-icon">
+                    <img src="resource/icon/monster.svg" class="menu-icon">
                     <div class="menu-item-text">妖怪選單</div>
+                </div>
+            </a>
+            <a class="" href="game.html">
+                <div class="menu-item menu-item-game">
+                    <img src="resource/icon/game.svg" class="menu-icon">
+                    <div class="menu-item-text">小遊戲</div>
                 </div>
             </a>
             <a class="" href="shop.html">
                 <div class="menu-item menu-item-shop">
-                    <img src="resource/icon/shop.png" class="menu-icon">
+                    <img src="resource/icon/shop.svg" class="menu-icon">
                     <div class="menu-item-text">商城</div>
                 </div>
             </a>
@@ -304,56 +313,8 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-    <script src="resource/js/allpage.js"></script>
-    <script>
-        $(document).ready(function () {
-            // let bannerInt = getRandomInt(9);
-            // setBanner(bannerInt);
-            logoSetting();
-        });
-
-        $(window).on('resize', function () {
-            logoSetting();
-        });
-
-        function logoSetting() {
-            let winWidth = $(window).width();
-            let winHeight = $(window).height();
-
-            let bannerHeight = $('.banner').height();
-            let logoHeight = $('.logo-img').height();
-
-            // $('#winSize').text(winWidth);
-
-            if ((winWidth) < 985) {
-                $('.logo-img').attr('src', 'resource/logo/logo-y.jpg');
-            } else {
-                $('.logo-img').attr('src', 'resource/logo/logo-x.jpg');
-            }
-
-            if (logoHeight > (bannerHeight - 100)) {
-                $('.banner').height(logoHeight + 200);
-                $('.logo-bg').css('margin-top', 150)
-            }
-            else {
-                $('.banner').css('height', 'calc(96vh - 56px)')
-                $('.logo-bg').css('margin-top', 0)
-            }
-
-        }
-
-
-        // function getRandomInt(max) {
-        //     return Math.floor(Math.random() * max);
-        // }
-
-        // function setBanner(bannerInt) {
-        //     $('.banner').css('background-image', 'url(resource/banner/' + bannerInt + '.jpg)')
-        // };
-
-
-
-    </script>
+    <script src="js/allpage.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

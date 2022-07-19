@@ -23,5 +23,10 @@
         "name": "妖來妖去-商城",
         "item": "nav-item-shop",
         "menu": "menu-item-shop"
+    },
+    {
+        "name": "妖來妖去-小遊戲",
+        "item": "nav-item-game",
+        "menu": "menu-item-game"
     }
 ]

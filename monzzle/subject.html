@@ -29,7 +29,7 @@
             width: 100%;
             background-size: cover;
             background-position: center center;
-            background-image: url('resource/banner/banner2.jpg');
+            background-image: url('resource/banner/banner2(small).jpg');
             margin: 30px 0 0 0;
         }
 
@@ -52,10 +52,18 @@
             margin-bottom: 20px;
         }
 
+        @media (max-width:700px) {
+    .content-header-right {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+    }
 
+    .content-header-item {
+        top: 0 !important;
+    }
 
-
-        /* allpage */
+}
     </style>
 </head>
 
@@ -89,6 +97,9 @@
                             <li class="nav-item nav-item-monster">
                                 <a class="nav-link" href="monsters.html">妖怪選單</a>
                             </li>
+                            <li class="nav-item nav-item-game">
+                                <a class="nav-link" href="game.html">小遊戲</a>
+                            </li>
                             <li class="nav-item nav-item-shop">
                                 <a class="nav-link" href="shop.html">商城</a>
                             </li>
@@ -105,32 +116,38 @@
         <div class="menu-items">
             <a class="" href="index.html">
                 <div class="menu-item menu-item-home">
-                    <img src="resource/icon/home.png" class="menu-icon">
+                    <img src="resource/icon/home.svg" class="menu-icon">
                     <div class="menu-item-text">首頁</div>
 
                 </div>
             </a>
             <a class="" href="introduction.html">
                 <div class="menu-item menu-item-aboutus">
-                    <img src="resource/icon/aboutus.png" class="menu-icon">
+                    <img src="resource/icon/aboutus.svg" class="menu-icon">
                     <div class="menu-item-text">關於我們</div>
                 </div>
             </a>
             <a class="" href="subject.html">
                 <div class="menu-item menu-item-subject">
-                    <img src="resource/icon/subject.png" class="menu-icon">
+                    <img src="resource/icon/subject.svg" class="menu-icon">
                     <div class="menu-item-text">專題介紹</div>
                 </div>
             </a>
             <a class="" href="monsters.html">
                 <div class="menu-item menu-item-monster">
-                    <img src="resource/icon/monster.png" class="menu-icon">
+                    <img src="resource/icon/monster.svg" class="menu-icon">
                     <div class="menu-item-text">妖怪選單</div>
+                </div>
+            </a>
+            <a class="" href="game.html">
+                <div class="menu-item menu-item-game">
+                    <img src="resource/icon/game.svg" class="menu-icon">
+                    <div class="menu-item-text">小遊戲</div>
                 </div>
             </a>
             <a class="" href="shop.html">
                 <div class="menu-item menu-item-shop">
-                    <img src="resource/icon/shop.png" class="menu-icon">
+                    <img src="resource/icon/shop.svg" class="menu-icon">
                     <div class="menu-item-text">商城</div>
                 </div>
             </a>
@@ -143,7 +160,7 @@
             <div class="row justify-content-center">
                 <div class="col-10 content-header">
                     <div class="content-header-left">
-                        <img src="resource/icon/subject.png" class="content-header-icon">
+                        <img src="resource/icon/subject.svg" class="content-header-icon">
                         <div class="content-header-title title-text-color">專題介紹</div>
                     </div>
                     <div class="content-header-right">
@@ -154,7 +171,10 @@
                             <div class="content-header-item content-header-item-mgr title-text-color">標準字</div>
                         </a>
                         <a href="#standardColor">
-                            <div class="content-header-item title-text-color">標準色</div>
+                            <div class="content-header-item content-header-item-mgr title-text-color">標準色</div>
+                        </a>
+                        <a href="#monsterDesign">
+                            <div class="content-header-item title-text-color">妖怪設計</div>
                         </a>
                     </div>
                 </div>
@@ -229,7 +249,7 @@
             <div class="row justify-content-center">
                 <div class="col-10">
                     <div>
-                        <div id="standardColor" style="height: 56px; width:100%;"></div>
+                        <div id="monsterDesign" style="height: 56px; width:100%;"></div>
                         <div class="title-text title-border">妖怪設計</div>
 
                         <div class="row justify-content-center">
@@ -271,16 +291,7 @@
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
 
-    <script src="resource/js/allpage.js"></script>
-    <script>
-
-
-
-
-
-
-
-    </script>
+    <script src="js/allpage.js"></script>
 </body>
 
 </html>
