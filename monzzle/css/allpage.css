@@ -69,6 +69,12 @@
 }
 
 /* navbar */
+.nav-link {
+    padding-left: 15px;
+    padding: 10px;
+    font-size: 18px;
+}
+
 .nav-item-bg {
     background-color: rgba(209, 178, 167, 0.8);
 }
@@ -80,6 +86,42 @@
 
 .navbar-toggler {
     display: none;
+}
+
+.nav-img {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center center;
+    float: left;
+}
+
+.nav-text {
+    padding-left: 8px;
+}
+
+#nav-img-home {
+    background-image: url("../resource/icon/home.svg");
+}
+
+#nav-img-aboutus {
+    background-image: url("../resource/icon/aboutus.svg");
+}
+
+#nav-img-subject {
+    background-image: url("../resource/icon/subject.svg");
+}
+
+#nav-img-monster {
+    background-image: url("../resource/icon/monster.svg");
+}
+
+#nav-img-game {
+    background-image: url("../resource/icon/game.svg");
+}
+
+#nav-img-shop {
+    background-image: url("../resource/icon/shop.svg");
 }
 
 @media (max-width:1000px) {

@@ -94,3 +94,37 @@ div#frame {
 		height: calc(100vh - 58.594px);
 	}
 }
+
+.content-header-left,
+.content-header-right {
+	display: inline-block;
+}
+
+.col-10 {
+	padding: 10px 0;
+}
+
+#changeimage {
+	position: relative;
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	background-image: url("../resource/puzzle/options.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.card-body {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.imgsel:hover {
+	cursor: pointer;
+}
+
+#img-container-title {
+	color: #513A35;
+	font-weight: bolder;
+}
