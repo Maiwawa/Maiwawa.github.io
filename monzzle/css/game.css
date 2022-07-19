@@ -66,6 +66,7 @@ div#frame {
 
 	position: absolute;
 	width: calc(100% - 200px);
+	height: 100vh;
 	background: rgba(0, 0, 0, 0.6);
 	display: none;
 	z-index: 90;
@@ -88,8 +89,8 @@ div#frame {
 	}
 
 	#wrapper {
-		padding-top: 0px;
+		padding-top: 20px;
 		width: 100%;
-		height: calc(100vh - 57.813px);
+		height: calc(100vh - 58.594px);
 	}
 }
