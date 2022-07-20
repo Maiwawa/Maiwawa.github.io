@@ -47,8 +47,8 @@ span.number {
 div#frame {
 
 	display: inline-block;
-	height: 200px;
-	width: 200px;
+	/* height: 200px; */
+	/* width: 200px; */
 	/*border: 1px solid black;*/
 	position: absolute;
 	top: 225px;
