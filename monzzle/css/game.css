@@ -24,6 +24,20 @@ li.tile {
 	background-size: contain;
 }
 
+
+@media (min-width:1000px) {
+	div#game {
+		height: 672px;
+		width: 672px;
+	}
+
+	li.tile {
+		width: 220px;
+		height: 220px;
+	}
+}
+
+
 #blank {
 	cursor: default;
 	border: none;
@@ -107,11 +121,15 @@ div#frame {
 #changeimage {
 	position: relative;
 	display: inline-block;
-	width: 45px;
-	height: 45px;
-	background-image: url("../resource/puzzle/options.png");
+	background-color: #513A35;
+	color: white;
+	font-size: bolder;
+	padding: 8px 15px;
+	border-radius: 10px;
+	top: 10px;
+	/* background-image: url("../resource/puzzle/options.png");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 100% 100%; */
 	cursor: pointer;
 }
 

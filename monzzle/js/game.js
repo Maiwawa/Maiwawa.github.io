@@ -1,3 +1,103 @@
+let winWidth = $(window).width();
+if (winWidth >= 1000) {
+    tileSize = 226;
+    middleTile = 226;
+    bottomTile = 452;
+} else {
+    tileSize = 113;
+    middleTile = 113;
+    bottomTile = 226;
+}
+
+
+$('#testBtn').click(function () {
+    console.log(getTotal());
+    changeTile();
+});
+let isToBig = false;
+let isToSmall = false;
+
+$(window).resize(function () {
+    changeTile();
+});
+
+
+
+function changeTile() {
+    let currentWidth = $(window).width();
+    console.log('current width:' + currentWidth);
+    let total = getTotal();
+    if ((currentWidth < 1000) && (isToSmall == false)) {
+        console.log('total:' + total);
+        if (total != 1017) {
+            console.log('to small');
+            toSmall();
+            isToSmall = true;
+            isToBig = false;
+        }
+    }
+    else if ((currentWidth >= 1000) && (isToBig == false)) {
+        console.log('total:' + total);
+        if (total != 2034) {
+            console.log('to big');
+            toBig();
+            isToBig = true;
+            isToSmall = false;
+        }
+    }
+}
+
+function toBig() {
+    for (let i = 1; i < 9; i++) {
+        let top = $(`#${i}`).position().top;
+        let left = $(`#${i}`).position().left;
+        // console.log(top);
+        // console.log(left);
+        $(`#${i}`).css({ top: top * 2 });
+        $(`#${i}`).css({ left: left * 2 });
+        top = $(`#${i}`).position().top;
+        left = $(`#${i}`).position().left;
+        // console.log(top);
+        // console.log(left);
+    }
+    let blankTop = $('#blank').position().top;
+    let blankLeft = $('#blank').position().left;
+    $('#blank').css({ top: blankTop * 2 });
+    $('#blank').css({ left: blankLeft * 2 });
+}
+
+function toSmall() {
+    for (let i = 1; i < 9; i++) {
+        let top = $(`#${i}`).position().top;
+        let left = $(`#${i}`).position().left;
+        // console.log(top);
+        // console.log(left);
+        $(`#${i}`).css({ top: top / 2 });
+        $(`#${i}`).css({ left: left / 2 });
+        top = $(`#${i}`).position().top;
+        left = $(`#${i}`).position().left;
+        // console.log(top);
+        // console.log(left);
+    }
+    let blankTop = $('#blank').position().top;
+    let blankLeft = $('#blank').position().left;
+    $('#blank').css({ top: blankTop / 2 });
+    $('#blank').css({ left: blankLeft / 2 });
+}
+
+function getTotal() {
+    let total = 0;
+    for (let k = 1; k < 9; k++) {
+        let top = $(`#${k}`).position().top;
+        console.log(top);
+        total = total + top;
+    }
+    let blank = $('#blank').position().top;
+    total = total + $('#blank').position().top;
+    console.log('blank:' + blank);
+    return total;
+}
+
 
 var game = new Object();
 game.tiles = Array.from(document.getElementsByClassName('tile')); //is our board
@@ -169,19 +269,24 @@ function shuffle(array) { //shuffle is part of set tiles
 }
 
 function setTiles(gameobj) {
-
-
     var a = gameobj.tiles
 
     a = shuffle(a);
 
     var set = [[a[0], a[1], a[2]], [a[3], a[4], a[5]], [a[6], a[7], a[8]]];
 
+    if (winWidth > 1000) {
+        tileSize = 226;
+        middleTile = 226;
+        bottomTile = 452;
+    } else {
+        tileSize = 113;
+        middleTile = 113;
+        bottomTile = 226;
+    }
 
     for (var i = 0; i < 3; i++) {
-
-
-        position = (Array.prototype.indexOf.call(set[0], set[0][i])) * 113
+        position = (Array.prototype.indexOf.call(set[0], set[0][i])) * tileSize
         set[0][i].style.top = "0px";
         set[0][i].style.left = position.toString() + "px";
 
@@ -190,8 +295,8 @@ function setTiles(gameobj) {
     for (var i = 0; i < 3; i++) {
 
 
-        position = (Array.prototype.indexOf.call(set[1], set[1][i])) * 113
-        set[1][i].style.top = "113px";
+        position = (Array.prototype.indexOf.call(set[1], set[1][i])) * tileSize
+        set[1][i].style.top = `${middleTile}px`;
         set[1][i].style.left = position.toString() + "px";
 
     }
@@ -199,8 +304,8 @@ function setTiles(gameobj) {
     for (var i = 0; i < 3; i++) {
 
 
-        position = (Array.prototype.indexOf.call(set[2], set[2][i])) * 113
-        set[2][i].style.top = "226px";
+        position = (Array.prototype.indexOf.call(set[2], set[2][i])) * tileSize
+        set[2][i].style.top = `${bottomTile}px`;
         set[2][i].style.left = position.toString() + "px";
 
     }
@@ -212,6 +317,16 @@ function setTiles(gameobj) {
 
 
 function shiftPuzzle(tile) {
+    let winWidth = $(window).width();
+    if (winWidth > 1000) {
+        tileSize = 226;
+        middleTile = 226;
+        bottomTile = 452;
+    } else {
+        tileSize = 113;
+        middleTile = 113;
+        bottomTile = 226;
+    }
 
     if (isRight(tile)) {
 
@@ -259,14 +374,14 @@ function moveRight(tile) {
     var current_posX = tile.style.left;
     var res = current_posX.split('px')[0];
     current = eval(res);
-    tile.style.left = (current + 113).toString() + "px";
+    tile.style.left = (current + tileSize).toString() + "px";
 
 
     var blank_position = Array.prototype.indexOf.call(game.tiles, game.blanktile);
     var current_blank_posX = game.blanktile.style.left;
     var res_blank = current_blank_posX.split('px')[0];
     var current_blank = eval(res_blank);
-    game.blanktile.style.left = (current_blank - 113).toString() + "px";
+    game.blanktile.style.left = (current_blank - tileSize).toString() + "px";
 
     //game.tiles = Array.from(game.tiles);
     game.tiles[blank_position] = game.tiles[position]
@@ -291,14 +406,14 @@ function moveLeft(tile) {
     var current_posX = tile.style.left;
     var res = current_posX.split('px')[0];
     current = eval(res);
-    tile.style.left = (current - 113).toString() + "px";
+    tile.style.left = (current - tileSize).toString() + "px";
 
 
     var blank_position = Array.prototype.indexOf.call(game.tiles, game.blanktile);
     var current_blank_posX = game.blanktile.style.left;
     var res_blank = current_blank_posX.split('px')[0];
     var current_blank = eval(res_blank);
-    game.blanktile.style.left = (current_blank + 113).toString() + "px";
+    game.blanktile.style.left = (current_blank + tileSize).toString() + "px";
 
     //game.tiles = Array.from(game.tiles);
     game.tiles[blank_position] = game.tiles[position]
@@ -328,13 +443,13 @@ function moveTop(tile) {
     var current_posY = tile.style.top;
     var res = current_posY.split('px')[0];
     current = eval(res);
-    tile.style.top = (current - 113).toString() + "px";
+    tile.style.top = (current - tileSize).toString() + "px";
 
     var blank_position = Array.prototype.indexOf.call(game.tiles, game.blanktile);
     var current_blank_posY = game.blanktile.style.top;
     var res_blank = current_blank_posY.split('px')[0];
     var current_blank = eval(res_blank);
-    game.blanktile.style.top = (current_blank + 113).toString() + "px";
+    game.blanktile.style.top = (current_blank + tileSize).toString() + "px";
 
     game.tiles[blank_position] = game.tiles[position]
     game.tiles[position] = game.blanktile;
@@ -359,13 +474,13 @@ function moveDown(tile) {
     var current_posY = tile.style.top;
     var res = current_posY.split('px')[0];
     current = eval(res);
-    tile.style.top = (current + 113).toString() + "px";
+    tile.style.top = (current + tileSize).toString() + "px";
 
     var blank_position = Array.prototype.indexOf.call(game.tiles, game.blanktile);
     var current_blank_posY = game.blanktile.style.top;
     var res_blank = current_blank_posY.split('px')[0];
     var current_blank = eval(res_blank);
-    game.blanktile.style.top = (current_blank - 113).toString() + "px";
+    game.blanktile.style.top = (current_blank - tileSize).toString() + "px";
 
     game.tiles[blank_position] = game.tiles[position]
     game.tiles[position] = game.blanktile;
@@ -377,9 +492,7 @@ function isEqual(currentboard, winboard) {
     for (var i = 0; i < currentboard.length; i++) {
 
         if (currentboard[i] != winboard[i]) {
-
             return false
-
         }
 
     }
@@ -393,9 +506,7 @@ function win() {
     // body...
 
     if (isEqual(game.tiles, game.winCondition)) {
-
         setTimeout(function () { alert("You win!"); }, 500);
-
     }
 
 
@@ -408,10 +519,6 @@ function win() {
     setPuzzleImage();
     addClickEvent();
     setTiles(global);
-
-
-
-
 
 }(game));
 
