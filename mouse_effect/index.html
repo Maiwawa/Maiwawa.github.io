@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="object" data-value="3">duck<br /><span>and GOOSE</span></h2>
+        <img src="1.png" class="object" data-value="-5">
+        <img src="2.png" class="object" data-value="5">
+        <img src="3.png" class="object" data-value="6">
+        <img src="4.png" class="object" data-value="-2">
+        <img src="5.png" class="object" data-value="4">
+        <img src="6.png" class="object" data-value="-4">
+        <img src="7.png" class="object" data-value="-9">
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', parallax);
+
+        function parallax(e) {
+            document.querySelectorAll('.object').forEach(function (move) {
+                let moving_value = move.getAttribute('data-value');
+                let x = (e.clientX * moving_value) / 250;
+                let y = (e.clientY * moving_value) / 250;
+
+                move.style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px)';
+            })
+        }
+    </script>
+</body>
+
+</html>
