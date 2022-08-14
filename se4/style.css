@@ -90,6 +90,9 @@ header .logo {
 }
 
 header .navigation a {
+    position: relative;
+    display: inline-block;
+    width: 88px;
     color: #513A35;
     font-size: 1.1em;
     font-weight: 500;

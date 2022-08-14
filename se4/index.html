@@ -71,13 +71,19 @@
         function onloadImg() {
             let imgs = document.querySelectorAll('.image');
             let x = 0;
-            imgs.forEach(function (img) {
-                if (img.complete) {
+            for (let i = 0; i < imgs.length; i++) {
+                if (imgs[i].complete) {
                     x++;
                     console.log(x);
-                };
-            });
-            loadedImg();
+                } else {
+                    onloadImg();
+                }
+            }
+            if (x == 4) {
+                loadedImg();
+            } else {
+                onloadImg();
+            }
         };
 
 
@@ -104,23 +110,24 @@
             $('.palace').css({ 'transition': '0s' });
         })
 
-        const navs = document.querySelectorAll('.nav');
+        // const navs = document.querySelectorAll('.nav');
 
-        navs.forEach(function (nav) {
-            nav.addEventListener('mousemove', function (e) {
-                const position = nav.getBoundingClientRect();
-                const x = e.pagex - position.left - position.width / 2;
-                const y = e.pagey - position.top - position.height / 2;
+        // navs.forEach(function (nav) {
+        //     nav.addEventListener('mousemove', function (e) {
+        //         const position = nav.getBoundingClientRect();
+        //         const x = e.pagex - position.left - position.width / 2;
+        //         const y = e.pagey - position.top - position.height / 2;
 
-                nav.children[0].style.transform = "translate(" + x * 0.3 + "px," + y * 0.5 + "px)";
-            });
-        });
+        //         console.log('position:' + position + ',x:' + x + ',y:' + y);
+        //         nav.children[0].style.transform = "translate(" + x * 0.3 + "px," + y * 0.5 + "px)";
+        //     });
+        // });
 
-        navs.forEach(function (nav) {
-            nav.addEventListener('mouseout', function (e) {
-                nav.children[0].style.transform = "translate(0px,0px)";
-            });
-        });
+        // navs.forEach(function (nav) {
+        //     nav.addEventListener('mouseout', function (e) {
+        //         nav.children[0].style.transform = "translate(0px,0px)";
+        //     });
+        // });
 
 
     </script>
