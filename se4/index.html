@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <div class="n2">
+        <input type="checkbox" id="check">
+        <header>
+            <h4><a href="#" class="logo">妖來妖去</a></h4>
+            <div class="navigation">
+                <a href="#" class="nav">Home</a>
+                <a href="#" class="nav">About</a>
+                <a href="#" class="nav">Info</a>
+                <a href="#" class="nav">Serices</a>
+                <a href="#" class="nav">Contact</a>
+            </div>
+            <label for="check">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+    </div>
+
+    <div class="banner-logo">
+        <img src="logo-x.png" class="image">
+    </div>
+
+    <section class="home">
+        <img src="bg.jpg" class="image">
+        <img src="1.png" class="pyramids image">
+        <img src="2.png" class="palace image">
+        <!-- <div class="info">
+            <h2 class="title">妖來妖去</h2>
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus non consequuntur quo
+                sit magni perferendis eaque placeat mollitia pariatur accusamus rerum, laudantium aut numquam
+                perspiciatis sapiente architecto accusantium. Perspiciatis, architecto.</p>
+            <a href="#" class="btn">Read More</a>
+        </div> -->
+    </section>
+    <section class="content">
+        <h2>Pyramids of Giza</h2>
+
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            onloadImg();
+        });
+
+        function loadedImg() {
+            setTimeout(function () {
+                $('.loader_bg').hide();
+                loadAnimation();
+            });
+        }
+
+        function onloadImg() {
+            let imgs = document.querySelectorAll('.image');
+            let x = 0;
+            imgs.forEach(function (img) {
+                if (img.complete) {
+                    x++;
+                    console.log(x);
+                };
+            });
+            loadedImg();
+        };
+
+
+        function loadAnimation() {
+            $('.pyramids').css({ 'transform': 'translateX(0)' });
+            $('.palace').css({ 'transform': 'translateX(0)' });
+            $('.logo').css({ 'transform': 'translateY(0)' });
+            $('nav').css({ 'transform': 'translateY(0)' });
+
+            setTimeout(function () {
+                $('.banner-logo').css({ 'transform': 'translateY(0)' });
+                $('.banner-logo').css({ 'opacity': '1' });
+            }, 500);
+        };
+
+        $(window).scroll(function () {
+            const scrollVal = window.scrollY;
+
+            $('.pyramids').css({ 'left': scrollVal * -0.25 + 'px' });
+            $('.palace').css({ 'left': scrollVal * 0.25 + 'px' });
+
+
+            $('.pyramids').css({ 'transition': '0s' });
+            $('.palace').css({ 'transition': '0s' });
+        })
+
+        const navs = document.querySelectorAll('.nav');
+
+        navs.forEach(function (nav) {
+            nav.addEventListener('mousemove', function (e) {
+                const position = nav.getBoundingClientRect();
+                const x = e.pagex - position.left - position.width / 2;
+                const y = e.pagey - position.top - position.height / 2;
+
+                nav.children[0].style.transform = "translate(" + x * 0.3 + "px," + y * 0.5 + "px)";
+            });
+        });
+
+        navs.forEach(function (nav) {
+            nav.addEventListener('mouseout', function (e) {
+                nav.children[0].style.transform = "translate(0px,0px)";
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
