@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <div class="n2">
+        <input type="checkbox" id="check">
+        <header>
+            <h4><a href="#" class="logo">妖來妖去</a></h4>
+            <div class="navigation">
+                <a href="#" class="nav">關於我們</a>
+                <a href="#" class="nav">專題介紹</a>
+                <a href="#" class="nav">妖怪選單</a>
+                <a href="#" class="nav">小遊戲</a>
+                <a href="#" class="nav">商城</a>
+            </div>
+            <label for="check">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+    </div>
+
+    <div class="banner-logo">
+        <img src="logo-x.png" class="image">
+    </div>
+
+    <section class="home">
+        <img src="bg.jpg" class="image">
+        <img src="1.png" class="pyramids image">
+        <img src="2.png" class="palace image">
+    </section>
+    <section class="content">
+        <h2>關於我們</h2>
+        <p>
+            妖怪的誕生，源自於人類的想像力，也如同一面鏡子，反映出人們對大自然的恐懼，或對社會、族群命運的一種假想。<br /><br />
+
+            人們害怕妖怪作祟，那為何還是要述說令人恐懼的妖怪傳說呢？<br /><br />
+
+            因為，妖怪也代表著「善意的提醒」，有時是為了傳遞道德教訓或教導人們如何趨吉避凶。<br /><br />
+
+            為了能夠觸及廣泛客群，我們決定以台灣妖怪結合拼圖來呈現，讓消費者在遊玩過程中，能進一步了解台灣妖怪文化。
+        </p>
+    </section>
+
+    <script>
+
+        var imgs = [];  					//定義一個運算元組
+        $('.image').each(function () {  	//遍歷所有圖片,將圖片
+            var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
+            $(this).bind('load', function () {
+                dfd.resolve();  			//圖片載入完成後,表示操作成功
+            });
+            if (this.complete) {				//如果圖片載入狀態為完成,那麼也標識操作成功
+                setTimeout(function () {
+                    dfd.resolve();
+                }, 2000);
+            }
+            imgs.push(dfd);  			//將所有操作物件放入陣列中
+        })
+        $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
+            $('.loader_bg').hide();
+            loadAnimation();
+        });
+
+
+        function loadAnimation() {
+            $('.pyramids').css({ 'transform': 'translateX(0)' });
+            $('.palace').css({ 'transform': 'translateX(0)' });
+            $('.logo').css({ 'transform': 'translateY(0)' });
+            $('nav').css({ 'transform': 'translateY(0)' });
+
+            setTimeout(function () {
+                $('.banner-logo').css({ 'transform': 'translateY(0)' });
+                $('.banner-logo').css({ 'opacity': '1' });
+            }, 500);
+        };
+
+        // $(window).scroll(function () {
+        //     const scrollVal = window.scrollY;
+
+        //     $('.pyramids').css({ 'left': scrollVal * -0.25 + 'px' });
+        //     $('.palace').css({ 'left': scrollVal * 0.25 + 'px' });
+
+
+        //     $('.pyramids').css({ 'transition': '0s' });
+        //     $('.palace').css({ 'transition': '0s' });
+        // })
+
+    </script>
+</body>
+
+</html>
