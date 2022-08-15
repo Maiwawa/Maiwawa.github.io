@@ -43,13 +43,13 @@
         <img src="bg.jpg" class="image">
         <img src="1.png" class="pyramids image">
         <img src="2.png" class="palace image">
-        <!-- <div class="info">
+        <div class="info">
             <h2 class="title">妖來妖去</h2>
             <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus non consequuntur quo
                 sit magni perferendis eaque placeat mollitia pariatur accusamus rerum, laudantium aut numquam
                 perspiciatis sapiente architecto accusantium. Perspiciatis, architecto.</p>
             <a href="#" class="btn">Read More</a>
-        </div> -->
+        </div>
     </section>
     <section class="content">
         <h2>Pyramids of Giza</h2>
@@ -57,6 +57,7 @@
     </section>
 
     <script>
+
         var imgs = [];  					//定義一個運算元組
         $('.image').each(function () {  	//遍歷所有圖片,將圖片
             var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
@@ -98,26 +99,6 @@
             $('.pyramids').css({ 'transition': '0s' });
             $('.palace').css({ 'transition': '0s' });
         })
-
-        // const navs = document.querySelectorAll('.nav');
-
-        // navs.forEach(function (nav) {
-        //     nav.addEventListener('mousemove', function (e) {
-        //         const position = nav.getBoundingClientRect();
-        //         const x = e.pagex - position.left - position.width / 2;
-        //         const y = e.pagey - position.top - position.height / 2;
-
-        //         console.log('position:' + position + ',x:' + x + ',y:' + y);
-        //         nav.children[0].style.transform = "translate(" + x * 0.3 + "px," + y * 0.5 + "px)";
-        //     });
-        // });
-
-        // navs.forEach(function (nav) {
-        //     nav.addEventListener('mouseout', function (e) {
-        //         nav.children[0].style.transform = "translate(0px,0px)";
-        //     });
-        // });
-
 
     </script>
 </body>
