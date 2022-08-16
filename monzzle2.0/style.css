@@ -217,7 +217,7 @@ header .menu-btn i {
 .banner-logo {
     position: absolute;
     width: 100%;
-    z-index: 5;
+    z-index: 2;
     height: 100vh;
     align-items: center;
     justify-content: center;
