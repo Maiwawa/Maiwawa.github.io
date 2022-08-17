@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <a href="3d_rotation/index.html" class="btn color-01">
+        <span>3D風車</span>
+    </a>
+    <a href="background/index.html" class="btn color-02">
+        <span>特殊背景</span>
+    </a>
+    <a href="responsive_client/index.html" class="btn color-03">
+        <span>未完成</span>
+    </a>
+    <a href="text_effect/index.html" class="btn color-01">
+        <span>字體動畫</span>
+    </a>
+    <a href="type_loading/index.html" class="btn color-02">
+        <span>Loading(打字版)</span>
+    </a>
+    <a href="water_loading/index.html" class="btn color-03">
+        <span>Loading(水流版)</span>
+    </a>
+
+
+
+
+    <script>
+        const btns = document.querySelectorAll('.btn');
+
+        btns.forEach((btn) => {
+            btn.addEventListener('mousemove', function (e) {
+                const position = btn.getBoundingClientRect();
+                const x = e.pageX - position.left - position.width / 2;
+                const y = e.pageY - position.top - position.height / 2;
+
+                btn.children[0].style.transform = "translate(" + x * 0.3 + "px," + y * 0.5 + "px)";
+            });
+        });
+
+        btns.forEach((btn) => {
+            btn.addEventListener('mouseout', function (e) {
+                btn.children[0].style.transform = "translate(0px,0px)";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

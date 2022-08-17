@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn span {
+    position: relative;
+    display: inline-block;
+    background-color: blue;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-decoration: none;
+    width: 240px;
+    padding: 18px 0;
+    margin: 35px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(1 1 1 /15%);
+    transition: transform 0.05s linear;
+}
+
+.color-01 span {
+    background: linear-gradient(90deg, #EC5C1A, #F6CE61);
+}
+
+.color-02 span {
+    background: linear-gradient(90deg, #0165CD, #55e6fb);
+}
+
+.color-03 span {
+    background: linear-gradient(90deg, #259844, #6FF192);
+}
