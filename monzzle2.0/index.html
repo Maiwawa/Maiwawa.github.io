@@ -26,7 +26,7 @@
         </div>
         <div class="right">
             <div id="menu-border"></div>
-            <div class="menu-btn">
+            <div class="menu-btn" id="menu-btn">
                 <i class="fa-solid fa-angle-down" id="btn"></i>
             </div>
         </div>
@@ -142,26 +142,24 @@
             ScrollReveal().reveal('#logoImg', { delay: 1500, origin: 'bottom' });
         };
 
-        const menuBtn = document.querySelectorAll('.menu-btn');
-        menuBtn.forEach((btn) => {
-            btn.addEventListener('mousemove', function (e) {
-                const position = btn.getBoundingClientRect();
+        document.getElementById('menu-btn').addEventListener('mousemove', function (e) {
+            let winWidth = $(window).width();
+            if (winWidth > 900) {
+                const position = document.getElementById('menu-btn').getBoundingClientRect();
                 const x = e.pageX - position.left - position.width / 2;
                 const y = e.pageY - position.top - position.height / 2;
 
                 document.getElementById('menu-border').style.transform = 'scale(1)';
 
-                btn.children[0].style.transform = "translate(" + x * 0.2 + "px," + y * 0.4 + "px)";
+                document.getElementById('menu-btn').style.transform = "translate(" + x * 0.2 + "px," + y * 0.4 + "px)";
                 document.getElementById('menu-border').style.transform = "translate(" + x * 0.5 + "px," + y * 0.7 + "px)";
-            });
+            }
         });
 
-        menuBtn.forEach((btn) => {
-            btn.addEventListener('mouseout', function (e) {
-                btn.children[0].style.transform = "translate(0px,0px)";
-                document.getElementById('menu-border').style.transform = "translate(0px,0px)"
-                document.getElementById('menu-border').style.transform = 'scale(0)';
-            });
+        document.getElementById('menu-btn').addEventListener('mouseout', function (e) {
+            document.getElementById('menu-btn').style.transform = "translate(0px,0px)";
+            document.getElementById('menu-border').style.transform = "translate(0px,0px)"
+            document.getElementById('menu-border').style.transform = 'scale(0)';
         });
 
         function currentPage() {
@@ -175,7 +173,7 @@
         };
 
         let isMenuOpen = false;
-        $('.menu-btn').click(() => {
+        $('#menu-btn').click(() => {
 
             if (!isMenuOpen) {
                 $('.menu').css('transform', 'translateY(0)');
