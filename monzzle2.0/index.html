@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
@@ -22,7 +24,7 @@
 
     <header>
         <div class="logo">
-            <a href="#"><img src="headerlogo.png" class=""></a>
+            <a href="#"><img src="resource/headerlogo.png" class=""></a>
         </div>
         <div class="right">
             <div id="menu-border"></div>
@@ -36,10 +38,10 @@
         <div class="left">
             <div class="navs">
                 <div class="nav nav-1">
-                    <a href="#">首頁</a>
+                    <a href="index.html">首頁</a>
                 </div>
                 <div class="nav nav-2">
-                    <a href="#">關於我們</a>
+                    <a href="about.html">關於我們</a>
                 </div>
                 <div class="nav nav-3">
                     <a href="#">專題介紹</a>
@@ -78,35 +80,19 @@
     </div>
 
     <div class="banner-logo">
-        <img src="logo-min.png" id="logoImg" class="image">
+        <img src="resource/logo-min.png" id="logoImg" class="image">
     </div>
 
     <section>
-        <img src="bg-min.jpg" id="bgImg" class="image">
-        <img src="1-min.png" id="leftImg" class="image">
-        <img src="2-min.png" id="rightImg" class="image">
+        <img src="resource/bg-min.jpg" id="bgImg" class="image">
+        <img src="resource/1-min.png" id="leftImg" class="image">
+        <img src="resource/2-min.png" id="rightImg" class="image">
     </section>
 
 
 
-
+    <script src="js/menu.js"></script>
     <script>
-        let pages = ['首頁', '關於我們', '專題介紹', '妖怪選單', '小遊戲', '商城']
-        let navs = [];
-
-
-        $(document).ready(() => {
-            $('.menu .left .navs .nav').css('--myScale', 'scale(0)');
-            menuChange();
-        });
-
-        $('.menu .left .navs .nav a').mouseover(() => {
-            $('.menu .left .navs .nav a').css('color', '#a8877d');
-        });
-        $('.menu .left .navs .nav a').mouseout(() => {
-            $('.menu .left .navs .nav a').css('color', '#513A35');
-        });
-
         var imgs = [];  					//定義一個運算元組
         $('.image').each(function () {  	//遍歷所有圖片,將圖片
             var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
@@ -141,60 +127,6 @@
             ScrollReveal().reveal('#leftImg', { delay: 500, origin: 'left' });
             ScrollReveal().reveal('#logoImg', { delay: 1500, origin: 'bottom' });
         };
-
-        document.getElementById('menu-btn').addEventListener('mousemove', function (e) {
-            let winWidth = $(window).width();
-            if (winWidth > 900) {
-                const position = document.getElementById('menu-btn').getBoundingClientRect();
-                const x = e.pageX - position.left - position.width / 2;
-                const y = e.pageY - position.top - position.height / 2;
-
-                document.getElementById('menu-border').style.transform = 'scale(1)';
-
-                document.getElementById('menu-btn').style.transform = "translate(" + x * 0.2 + "px," + y * 0.4 + "px)";
-                document.getElementById('menu-border').style.transform = "translate(" + x * 0.5 + "px," + y * 0.7 + "px)";
-            }
-        });
-
-        document.getElementById('menu-btn').addEventListener('mouseout', function (e) {
-            document.getElementById('menu-btn').style.transform = "translate(0px,0px)";
-            document.getElementById('menu-border').style.transform = "translate(0px,0px)"
-            document.getElementById('menu-border').style.transform = 'scale(0)';
-        });
-
-        function currentPage() {
-            let pageTitle = document.title;
-            for (let i = 0; i < pages.length; i++) {
-                console.log('nope');
-                if (pageTitle == pages[i]) {
-                    return i;
-                }
-            }
-        };
-
-        let isMenuOpen = false;
-        $('#menu-btn').click(() => {
-
-            if (!isMenuOpen) {
-                $('.menu').css('transform', 'translateY(0)');
-                $('#btn').removeClass('fa-angle-down');
-                $('#btn').addClass('fa-xmark');
-                isMenuOpen = true;
-            } else if (isMenuOpen) {
-                $('.menu').css('transform', 'translateY(-100%)');
-                $('#btn').removeClass('fa-xmark');
-                $('#btn').addClass('fa-angle-down');
-                isMenuOpen = false;
-            } else {
-                alert('菜單錯誤boolen!');
-            }
-
-        });
-
-        function menuChange() {
-            let i = currentPage() + 1;
-            $(`.nav-${i}`).css('--myScale', 'scale(1)');
-        }
     </script>
 </body>
 

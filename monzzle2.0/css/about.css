@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo a img {
+    display: none;
+}
+
+#menu-border {
+    border: 0.2rem solid #FFF;
+    transition: 1s ease-in-out;
+    transition-property: border;
+}
+
+header .menu-btn i {
+    color: #FFF;
+    transition: 1s ease-in-out;
+    transition-property: color;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+section .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .box2 {
+    background-color: #805F55;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+section .box h2 {
+    color: #805F55;
+    font-size: 5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    animation: animate 5s ease-in-out infinite;
+    animation-delay: -5s;
+    font-family: 'Poppins', serif;
+}
+
+@keyframes animate {
+    0%, 45% {
+        transform: translateY(-70%);
+    }
+
+    55%, 90% {
+        transform: translateY(70%);
+    }
+
+    100% {
+        transform: translateY(-70%);
+    }
+}
+
+section .box.box2 h2 {
+    color: #FFF;
+}
+
+section .box h2 span:nth-child(2) {
+    line-height: 1em;
+    font-size: 2em;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="#"><img src="resource/headerlogo.png" class=""></a>
+        </div>
+        <div class="right">
+            <div id="menu-border"></div>
+            <div class="menu-btn" id="menu-btn">
+                <i class="fa-solid fa-angle-down" id="btn"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <div class="left">
+            <div class="navs">
+                <div class="nav nav-1">
+                    <a href="index.html">首頁</a>
+                </div>
+                <div class="nav nav-2">
+                    <a href="about.html">關於我們</a>
+                </div>
+                <div class="nav nav-3">
+                    <a href="#">專題介紹</a>
+                </div>
+                <div class="nav nav-4">
+                    <a href="#">妖怪選單</a>
+                </div>
+                <div class="nav nav-5">
+                    <a href="#">小遊戲</a>
+                </div>
+                <div class="nav nav-6">
+                    <a href="#">商城</a>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="infos">
+                <div class="info">
+                    學校：<br />
+                    國立勤益科技大學
+                </div>
+                <div class="info">
+                    系所：<br />
+                    文化創意事業系
+                </div>
+                <div class="info">
+                    班級：<br />
+                    四文三甲
+                </div>
+                <div class="info">
+                    聯絡資訊：<br />
+                    <span>monzzle01@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="box box1">
+            <h2>
+                <span>Hello! We Are</span>
+                <span>Monzzle!</span>
+            </h2>
+        </div>
+        <div class="box box2">
+            <h2>
+                <span>大家好!我們是</span>
+                <span>妖來妖去!</span>
+            </h2>
+        </div>
+    </section>
+    <section>
+
+    </section>
+
+    <script src="js/menu.js"></script>
+    <script>
+        var imgs = [];  					//定義一個運算元組
+        $('.image').each(function () {  	//遍歷所有圖片,將圖片
+            var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
+            $(this).bind('load', function () {
+                dfd.resolve();  			//圖片載入完成後,表示操作成功
+            });
+            if (this.complete) {				//如果圖片載入狀態為完成,那麼也標識操作成功
+                setTimeout(function () {
+                    dfd.resolve();
+                }, 2000);
+            }
+            imgs.push(dfd);  			//將所有操作物件放入陣列中
+        })
+        $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
+            $('.loader_bg').hide();
+            loadedImg();
+        });
+
+        ScrollReveal({
+            reset: true, distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+
+        function loadedImg() {
+            ScrollReveal({
+                reset: true, distance: '60px',
+                duration: 2500,
+                delay: 400
+            });
+            ScrollReveal().reveal('.box1 h2', { delay: 0, origin: 'top' });
+            ScrollReveal().reveal('.box2 h2', { delay: 0, origin: 'top' });
+        };
+
+        let isMenuOpen2 = false;
+        $('#menu-btn').click(() => {
+            if (!isMenuOpen2) {
+                $('.logo a img').show();
+                $('#menu-btn i').css('color', '#513A35');
+                $('#menu-border').css('border', '0.2rem solid #513A35')
+                isMenuOpen2 = true;
+            } else if (isMenuOpen2) {
+                $('.logo a img').hide();
+                $('#menu-btn i').css('color', '#FFF');
+                $('#menu-border').css('border', '0.2rem solid #FFF')
+                isMenuOpen2 = false;
+            }
+        });
+    </script>
+</body>
+
+</html>
