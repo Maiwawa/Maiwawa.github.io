@@ -14,7 +14,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 
@@ -79,22 +78,50 @@
             </div>
         </div>
     </div>
-
-    <section>
-        <div class="box box1">
-            <h2>
-                <span>Hello! We Are</span>
-                <span>Monzzle!</span>
-            </h2>
-        </div>
-        <div class="box box2">
-            <h2>
-                <span>大家好!我們是</span>
-                <span>妖來妖去!</span>
-            </h2>
+    <section class="s1">
+        <div class="title-content">
+            <div class="title-text">
+                <p>大家好! 我們是<br /></p>
+                <h1>妖來妖去</h1>
+            </div>
+            <div class="title-text">
+                <p>Hi! We are<br /></p>
+                <h1>Monzzle</h1>
+            </div>
         </div>
     </section>
-    <section>
+
+    <section class="s2">
+        <div class="section-60">
+            <div>
+                <h1>" 團隊介紹 "</h1>
+                <p>我們是一群因緣際會下聚在一起的人，團隊總計五人，每個人都有不同的特質與個性，發揮各自的專長，負責不同的工作內容，過程中有爭吵也有歡笑，雖然每周都在趕進度，燃燒肝臟燃燒生命。</p>
+            </div>
+        </div>
+        <div class="section-40">
+            <img src="resource/portrait/0.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="s3">
+        <div class="section-40">
+            <img src="resource/Churchill.jpg" alt="">
+        </div>
+        <div class="section-60">
+            <div>
+                <h1>" 團隊座右銘 "</h1>
+                <p>underidoderidoderiododeriodoo</p>
+                <p>-Winstion Churchill</p>
+
+                <audio controls autoplay>
+                    <source src="resource/Churchill.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <section class="s4">
 
     </section>
 
@@ -126,28 +153,16 @@
 
         function loadedImg() {
             ScrollReveal({
-                reset: true, distance: '60px',
+                // reset: true,
+                distance: '60px',
                 duration: 2500,
                 delay: 400
             });
-            ScrollReveal().reveal('.box1 h2', { delay: 0, origin: 'top' });
-            ScrollReveal().reveal('.box2 h2', { delay: 0, origin: 'top' });
+            ScrollReveal().reveal('.s1', { delay: 500, origin: 'bottom' });
+            ScrollReveal().reveal('.s2 .section-40', { delay: 500, origin: 'right' });
+            ScrollReveal().reveal('.section-60 div', { delay: 500, origin: 'bottom' });
+            ScrollReveal().reveal('.s3 .section-40', { delay: 1000, origin: 'left' });
         };
-
-        let isMenuOpen2 = false;
-        $('#menu-btn').click(() => {
-            if (!isMenuOpen2) {
-                $('.logo a img').show();
-                $('#menu-btn i').css('color', '#513A35');
-                $('#menu-border').css('border', '0.2rem solid #513A35')
-                isMenuOpen2 = true;
-            } else if (isMenuOpen2) {
-                $('.logo a img').hide();
-                $('#menu-btn i').css('color', '#FFF');
-                $('#menu-border').css('border', '0.2rem solid #FFF')
-                isMenuOpen2 = false;
-            }
-        });
     </script>
 </body>
 
