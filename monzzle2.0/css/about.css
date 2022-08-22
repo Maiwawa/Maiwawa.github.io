@@ -53,6 +53,7 @@ main-color {
 }
 
 body {
+    width: 100vw;
     position: relative;
     overflow-x: hidden;
     height: 100%;
@@ -64,6 +65,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 /* section 1 */
