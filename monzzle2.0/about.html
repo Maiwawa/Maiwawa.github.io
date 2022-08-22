@@ -12,15 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
-    <div class="loader_bg">
+    <!-- <div class="loader_bg">
         <div class="loader"></div>
-    </div>
+    </div> -->
 
     <header>
         <div class="logo">
@@ -99,13 +100,13 @@
             </div>
         </div>
         <div class="section-40">
-            <img src="resource/portrait/0.jpg" alt="">
+            <img src="resource/portrait/0.jpg" class="image">
         </div>
     </section>
 
     <section class="s3">
         <div class="section-40">
-            <img src="resource/Churchill.jpg" alt="">
+            <img src="resource/Churchill.jpg" class="image">
         </div>
         <div class="section-60">
             <div>
@@ -114,7 +115,7 @@
                 <p>-Winstion Churchill</p>
 
                 <audio controls autoplay>
-                    <source src="resource/Churchill.mp3" type="audio/mpeg">
+                    <!-- <source src="resource/Churchill.mp3" type="audio/mpeg"> -->
                     Your browser does not support the audio element.
                 </audio>
             </div>
@@ -122,7 +123,102 @@
     </section>
 
     <section class="s4">
+        <div class="section-60">
+            <div>
+                <p>Create By</p>
+                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sequi soluta ut iste</h1>
+                <br />
+                <p>Serivices</p>
+                <h1> Libero nostrum suscipit voluptatibus.</h1>
+            </div>
+        </div>
+        <div class="section-40">
+            <div>
+                <p>Something here</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tempore dolorum expedita unde
+                    voluptates
+                    iste veniam reiciendis in, hic perferendis praesentium ut repellat aperiam facere voluptatibus.
+                    Molestias quis est ratione!</p>
+            </div>
+        </div>
+    </section>
 
+    <section class="s5">
+        <div class="section-title">
+            <p>Members</p>
+            <h1>Here's our teammates.</h1>
+        </div>
+
+        <div class="members-content">
+            <div class="member">
+                <img src="resource/members/1.svg" class="image">
+                <div class="member-text">
+                    <h3>朱恩彤</h3>
+                    <p>個性：外向、講好笑的話<br />
+                        專長：畫插圖、英文<br />
+                        工作內容：妖怪&地圖底色上色、名牌設計​</p>
+                </div>
+            </div>
+
+            <div class="member">
+                <div class="member-img">
+                    <img src="resource/members/2.svg" class="image">
+                </div>
+                <div class="member-text">
+                    <h3>鄧宇秀</h3>
+                    <p>個性：外冷內熱、笑點低<br />
+                        專長：繪圖、彈吉他​<br />
+                        工作內容：標準字設計、妖怪角色&地圖明暗繪製​​</p>
+                </div>
+            </div>
+
+            <div class="member">
+                <div class="member-img">
+                    <img src="resource/members/3.svg" class="image">
+                </div>
+                <div class="member-text">
+                    <h3>何嘉欣</h3>
+                    <p>個性：慢熟、笑點奇低​<br />
+                        專長：繪畫、設計​<br />
+                        工作內容：妖怪&地圖草圖設計、地圖精修​​</p>
+                </div>
+            </div>
+
+            <div class="member">
+                <div class="member-img">
+                    <img src="resource/members/4.svg" class="image">
+                </div>
+                <div class="member-text">
+                    <h3>林采辰</h3>
+                    <p>個性：自由奔放、挑戰自我<br />
+                        專長：插畫、手作、烘焙​<br />
+                        工作內容：圖鑑排版、元素設計​</p>
+                </div>
+            </div>
+
+            <div class="member">
+                <div class="member-img">
+                    <img src="resource/members/5.svg" class="image">
+                </div>
+                <div class="member-text">
+                    <h3>吳彥呈</h3>
+                    <p>個性：宅、陰沉<br />
+                        專長：寫程式、設計軟體​<br />
+                        工作內容：網頁製作、企劃書撰寫​</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s6">
+        <div class="content" id="content">
+            <div class="content-text">
+                <p>Contact us　　</p>
+            </div>
+            <div>
+                <h1>聯絡我們</h1>
+            </div>
+        </div>
     </section>
 
     <script src="js/menu.js"></script>
@@ -153,16 +249,27 @@
 
         function loadedImg() {
             ScrollReveal({
-                // reset: true,
+                reset: false,
                 distance: '60px',
                 duration: 2500,
                 delay: 400
             });
             ScrollReveal().reveal('.s1', { delay: 500, origin: 'bottom' });
             ScrollReveal().reveal('.s2 .section-40', { delay: 500, origin: 'right' });
-            ScrollReveal().reveal('.section-60 div', { delay: 500, origin: 'bottom' });
+            ScrollReveal().reveal('.s2 .section-60 div, .s3 .section-60 div', { delay: 500, origin: 'bottom' });
             ScrollReveal().reveal('.s3 .section-40', { delay: 1000, origin: 'left' });
+            ScrollReveal().reveal('.s4 .section-60', { delay: 500, origin: 'left' });
+            ScrollReveal().reveal('.s4 .section-40', { delay: 500, origin: 'right' });
+            ScrollReveal().reveal('.s5 .section-title', { delay: 500, origin: 'bottom' });
+            ScrollReveal().reveal('.s5 .member', { delay: 1000, origin: 'bottom', interval: 400 });
         };
+
+        $('#content').mouseover(() => {
+            $('.content-text p').addClass('hover');
+        });
+        $('#content').mouseout(() => {
+            $('.content-text p').removeClass('hover');
+        });
     </script>
 </body>
 
