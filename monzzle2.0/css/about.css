@@ -1,6 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap');
 
+:root {
+    --sec-title: 3rem;
+    --sec-p: 1.3rem;
+    --big-title: 10rem;
+    --big-p: 2rem;
+}
+
+@media (max-width:1200px) {
+    :root {
+        --sec-title: 2.5rem;
+        --sec-p: 1.2rem;
+        --gary-p: 0.9rem;
+        --big-title: 8rem;
+        --big-p: 1.7rem;
+    }
+}
+
+@media (max-width:1000px) {
+    :root {
+        --sec-title: 2rem;
+        --sec-p: 1.1rem;
+        --gary-p: 0.8rem;
+        --big-title: 7rem;
+        --big-p: 1.5rem;
+    }
+}
+
+@media (max-width:800px) {
+    :root {
+        --sec-title: 1.5rem;
+        --sec-p: 0.9rem;
+        --gary-p: 0.6rem;
+        --big-title: 5rem;
+        --big-p: 1rem;
+    }
+}
+
 main-color {
     color: #9ECABF;
     color: #DF9A76;
@@ -43,36 +80,22 @@ section {
 }
 
 .title-text p {
-    font-size: 2rem;
+    font-size: var(--big-p);
     letter-spacing: 5px;
 }
 
 .title-text h1 {
-    font-size: 8rem;
+    font-size: var(--big-title);
     margin-top: -20px;
     letter-spacing: 35px;
 }
 
-@media (max-width:1055px) {
-    .title-text p {
-        font-size: 1.5rem;
-        letter-spacing: 3px;
-    }
-
-    .title-text h1 {
-        font-size: 6rem;
-        letter-spacing: 25px;
-    }
-}
-
 @media (max-width:750px) {
     .title-text p {
-        font-size: 1rem;
         letter-spacing: 1.5px;
     }
 
     .title-text h1 {
-        font-size: 4rem;
         letter-spacing: 15px;
     }
 }
@@ -96,8 +119,6 @@ section {
         opacity: 0;
     }
 }
-
-
 
 .s2, .s3 {
     margin-top: -15vh;
@@ -127,12 +148,12 @@ section {
 }
 
 .section-60 h1 {
-    font-size: 3rem;
+    font-size: var(--sec-title);
     padding: 10px 0;
 }
 
 .section-60 p {
-    font-size: 1.3rem;
+    font-size: var(--sec-p);
 }
 
 .section-40 {
@@ -144,25 +165,8 @@ section {
     align-items: center;
 }
 
-@media (max-width:1000px) {
-    .section-60 h1 {
-        font-size: 2rem;
-    }
-
-    .section-60 p {
-        font-size: 1.1rem;
-    }
-}
 
 @media (max-width:800px) {
-    .section-60 h1 {
-        font-size: 1.5rem;
-    }
-
-    .section-60 p {
-        font-size: 0.9rem;
-    }
-
     .section-40, .section-60 {
         width: 100%;
         height: 50vh;
@@ -210,7 +214,7 @@ section {
 
 .s4 .section-40, .s6 .section-40 {
     padding-right: 15vw;
-    font-size: 1.3rem;
+    font-size: var(--sec-p);
 }
 
 .s4 .section-40 p:first-child {
@@ -223,37 +227,23 @@ section {
 
 @media (max-width:1200px) {
     .s4 .section-60 h1 {
-        font-size: 2.5rem;
+        font-size: var(--sec-title);
     }
 }
 
 @media (max-width:1000px) {
-    .s4 .section-60 h1 {
-        font-size: 2rem;
-    }
-
     .s4 .section-40, .s6 .section-40 {
-        font-size: 1rem;
         padding-right: 12vw;
     }
 
     .s4 .section-40 p:first-child, .s4 .section-60 p {
-        font-size: 0.8rem;
+        font-size: var(--gary-p);
     }
 }
 
 @media (max-width:800px) {
-    .s4 .section-60 h1 {
-        font-size: 1.5rem;
-    }
-
     .s4 .section-40, .s6 .section-40 {
-        font-size: 0.8rem;
         padding-right: 8vw;
-    }
-
-    .s4 .section-40 p:first-child, .s4 .section-60 p {
-        font-size: 0.6rem;
     }
 
     .s4 .section-40, .s4 .section-60 {
@@ -286,11 +276,11 @@ section {
 }
 
 .s5 .section-title p {
-    font-size: 1.3rem;
+    font-size: var(--sec-p);
 }
 
 .s5 .section-title h1 {
-    font-size: 4rem;
+    font-size: var(--sec-title);
     letter-spacing: 3px;
 }
 
@@ -316,12 +306,7 @@ section {
         padding: 200px 0 150px 0;
     }
 
-    .s5 .section-title p {
-        font-size: 1.1rem;
-    }
-
     .s5 .section-title h1 {
-        font-size: 3rem;
         letter-spacing: 2.5px;
     }
 
@@ -337,12 +322,7 @@ section {
         padding: 150px 0 150px 0;
     }
 
-    .s5 .section-title p {
-        font-size: 1rem;
-    }
-
     .s5 .section-title h1 {
-        font-size: 2rem;
         letter-spacing: 2px;
     }
 
@@ -375,7 +355,7 @@ section {
 
 .content p {
     transition: 0.3s;
-    font-size: 2rem;
+    font-size: var(--big-p);
 }
 
 
@@ -403,33 +383,17 @@ section {
 .s6 .content div h1 {
     position: relative;
     top: 20px;
-    font-size: 10rem;
+    font-size: var(--big-title);
     letter-spacing: 8px;
 }
 
 @media (max-width:1200px) {
-    .s6 .content div h1 {
-        font-size: 7rem;
-    }
-
-    .content p {
-        font-size: 1.5rem;
-    }
-
     .content-text {
         margin-left: -150px;
     }
 }
 
 @media (max-width:870px) {
-    .s6 .content div h1 {
-        font-size: 5rem;
-    }
-
-    .content p {
-        font-size: 1rem;
-    }
-
     .content-text {
         margin-left: 0px;
     }
