@@ -31,10 +31,10 @@
 @media (max-width:800px) {
     :root {
         --sec-title: 1.5rem;
-        --sec-p: 0.9rem;
+        --sec-p: 1rem;
         --gary-p: 0.6rem;
-        --big-title: 5rem;
-        --big-p: 1rem;
+        --big-title: 3rem;
+        --big-p: 1.2rem;
     }
 }
 
@@ -97,6 +97,10 @@ section {
 
     .title-text h1 {
         letter-spacing: 15px;
+    }
+
+    .title-text h1 {
+        margin-top: -10px;
     }
 }
 
