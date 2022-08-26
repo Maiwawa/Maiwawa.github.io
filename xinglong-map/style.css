@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Serif TC', serif;
+}
+
+html, body, #map {
+    height: 100%;
+    width: 100vw;
+}
+
+.leaflet-popup-content {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.leaflet-popup-close-button span {
+    font-size: 1.5em;
+}
+
+section {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+section #setview-btn {
+    width: 100px;
+    height: 100px;
+    background: #232323;
+    z-index: 99999;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    right: 20px;
+    top: 20px;
+}
+
+#map {
+    z-index: 2;
+}

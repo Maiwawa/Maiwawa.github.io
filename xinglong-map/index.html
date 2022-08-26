@@ -4,52 +4,178 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>路線圖</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
         integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
         crossorigin="" />
-
-
-    <style>
-        #map {
-            height: 100vh;
-        }
-    </style>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="map"></div>
+    <section>
+        <div id="setview-btn">
+            查看興隆里
+        </div>
+    </section>
 
-    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-        integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-        crossorigin=""></script>
     <script>
-
-        map = L.map('map').setView([24.111340, 120.732530], 17);
+        map = L.map('map').setView([24.114746, 120.736678], 17);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '<a href="https://www.openstreetmap.org/">OSM</a>',
-            maxZoom: 18,
+            maxZoom: 20
         }).addTo(map);
 
-        L.marker([24.111340, 120.732530]).addTo(map)
+        // map.locate({ setView: true, maxZoom: 16 });
+
+        // function onLocationFound(e) {
+        //     var radius = e.accuracy;
+
+        //     L.marker(e.latlng).addTo(map)
+        //         .bindPopup("You are within " + radius + " meters from this point").openPopup();
+
+        //     L.circle(e.latlng, radius).addTo(map);
+        // }
+
+        // map.on('locationfound', onLocationFound);
+
+        // function onLocationError(e) {
+        //     alert(e.message);
+        // }
+
+        // map.on('locationerror', onLocationError);
+
+        let temple = L.icon({
+            iconUrl: 'resource/temple.png',
+
+            iconSize: [81.25, 65], // size of the icon
+            iconAnchor: [40.625, 38], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [0, -35] // point from which the popup should open relative to the iconAnchor
+        });
+        L.marker([24.111421, 120.732569], { icon: temple }).addTo(map)
             .bindPopup('廣興宮&興隆里活動中心')
 
-        L.marker([24.115546, 120.7351809]).addTo(map)
+
+
+        let tree = L.icon({
+            iconUrl: 'resource/tree.png',
+
+            iconSize: [80.6, 65], // size of the icon
+            iconAnchor: [40.3, 32.5], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [-5, -30] // point from which the popup should open relative to the iconAnchor
+        });
+        L.marker([24.115546, 120.7351809], { icon: tree }).addTo(map)
             .bindPopup('百年樟樹')
 
-        L.marker([24.1165908, 120.7357561]).addTo(map)
+
+        let book = L.icon({
+            iconUrl: 'resource/book.png',
+
+            iconSize: [65, 67.6], // size of the icon
+            iconAnchor: [32.5, 33.8], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [-5, -35] // point from which the popup should open relative to the iconAnchor
+        });
+        L.marker([24.116646, 120.735444], { icon: book }).addTo(map)
             .bindPopup('拍照用大書本')
 
-        L.marker([24.1165, 120.7370023]).addTo(map)
+
+        let owl = L.icon({
+            iconUrl: 'resource/owl.png',
+
+            iconSize: [90.35, 65], // size of the icon
+            iconAnchor: [45.175, 32.5], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [5, -35] // point from which the popup should open relative to the iconAnchor
+        });
+        L.marker([24.116205, 120.737257], { icon: owl }).addTo(map)
             .bindPopup('貓頭鷹地標')
 
-        L.marker([24.1161454, 120.7388108]).addTo(map)
+
+        let trail = L.icon({
+            iconUrl: 'resource/trail.png',
+
+            iconSize: [84.5, 65], // size of the icon
+            iconAnchor: [42.25, 32.5], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [-5, -35] // point from which the popup should open relative to the iconAnchor
+        });
+        L.marker([24.115921, 120.739038], { icon: trail }).addTo(map)
             .bindPopup('楓香林步道入口')
 
-        L.marker([24.1173114, 120.7423234]).addTo(map)
+
+        let museum = L.icon({
+            iconUrl: 'resource/museum.png',
+
+            iconSize: [139.75, 32.5], // size of the icon
+            iconAnchor: [69.875, 16.25], // point of the icon which will correspond to marker's location
+            shadowAnchor: [4, 62],  // the same for the shadow
+            popupAnchor: [-5, -30] // point from which the popup should open relative to the iconAnchor
+        });
+        L.marker([24.117214, 120.742321], { icon: museum }).addTo(map)
             .bindPopup('古農莊文物館')
+
+
+
+        map.locate({
+            setView: false, // 是否讓地圖跟著移動中心點
+            watch: true, // 是否要一直監測使用者位置
+            maxZoom: 17, // 最大的縮放值
+            enableHighAccuracy: true, // 是否要高精準度的抓位置
+            timeout: 10000 // 觸發locationerror事件之前等待的毫秒數
+        });
+
+
+
+
+
+
+
+
+        const xinglong = [24.114746, 120.736678, 17];
+
+
+        const customIcon = L.icon({
+            iconUrl: 'https://letswritetw.github.io/letswrite-leaflet-osm-locate/dist/dot.svg',
+            iconSize: [30, 30],
+        });
+        const marker = L.marker(xinglong, {
+            icon: customIcon,
+            opacity: 1.0
+        }).addTo(map);
+
+
+        // 使用者提供位置
+        function foundHandler(e) {
+            marker.setLatLng(e.latlng); // 移動 marker
+        }
+
+        map.on('locationfound', foundHandler);
+
+        function errorHandler(e) {
+            console.log("e", e);
+            window.alert('無法判斷您的所在位置，無法使用此功能。預設地點將為 興隆里');
+            map.setView(xinglong, 17); // 中心移到動物園
+        }
+        map.on('locationerror', errorHandler);
+
+
+
+
+
+        //擷取經緯度
+        // function onMapClick(e) {
+        //     alert("You clicked the map at " + e.latlng);
+        // }
+
+        // map.on('click', onMapClick);
     </script>
 </body>
 
