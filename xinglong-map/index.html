@@ -24,9 +24,15 @@
 
     <div id="map"></div>
     <section>
-        <div id="setview-btn">
-            查看<br />
-            興隆里
+        <div>
+            <div class="btn" id="setview-btn">
+                查看<br />
+                興隆里
+            </div>
+            <div class="btn" id="follow-btn">
+                視角：<br />
+                跟隨
+            </div>
         </div>
     </section>
 
@@ -150,11 +156,30 @@
         }).addTo(map);
 
 
+        let changeSet = true;
         // 使用者提供位置
         function foundHandler(e) {
             marker.setLatLng(e.latlng); // 移動 marker
-            map.flyTo([e.latitude, e.longitude])
+
+            if (changeSet) {
+                map.flyTo([e.latitude, e.longitude]);
+            }
         }
+
+
+        $('#follow-btn').click(() => {
+            if (changeSet) {
+                changeSet = false;
+                var stringDisplay = "視角：\n自由";
+                var escaped = $('<div>').text(stringDisplay).text();
+                $('#follow-btn').html(escaped.replace(/\n/g, '<br />'));
+            } else if (!changeSet) {
+                changeSet = true;
+                var stringDisplay = "視角：\n跟隨";
+                var escaped = $('<div>').text(stringDisplay).text();
+                $('#follow-btn').html(escaped.replace(/\n/g, '<br />'));
+            }
+        })
 
         map.on('locationfound', foundHandler);
 

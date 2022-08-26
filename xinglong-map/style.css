@@ -74,7 +74,7 @@ section {
     align-items: flex-start;
 }
 
-section #setview-btn {
+.btn {
     width: 100px;
     height: 100px;
     background: #232323;
@@ -86,8 +86,7 @@ section #setview-btn {
     align-items: center;
     cursor: pointer;
     color: #fff;
-    right: 20px;
-    top: 20px;
+    margin: 20px;
     text-align: center;
     letter-spacing: 4px;
 }
