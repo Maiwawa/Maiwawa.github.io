@@ -52,6 +52,8 @@ html, body, #map {
     }
 }
 
+
+
 .leaflet-popup-content {
     font-size: 1.2rem;
     padding: 3px 8px;
@@ -86,6 +88,18 @@ section #setview-btn {
     color: #fff;
     right: 20px;
     top: 20px;
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+@media (max-width:900px) {
+    section #setview-btn {
+        width: 80px;
+        height: 80px;
+        right: 15px;
+        top: 15px;
+        letter-spacing: 2px;
+    }
 }
 
 #map {
