@@ -165,7 +165,23 @@
                 map.flyTo([e.latitude, e.longitude]);
             }
         }
-
+        $('#setview-btn').click(() => {
+            // if (isPressBtn) {
+            //     map.locate()
+            //         .on('locationfound', function (e) {
+            //         })
+            //     isPressBtn = false;
+            // }
+            // else if (!isPressBtn) {
+            //     isPressBtn = true;
+            //     map.flyTo([24.114746, 120.736678], 17)
+            // };
+            map.flyTo([24.114746, 120.736678], 17)
+            changeSet = false;
+            var stringDisplay = "視角：\n自由";
+            var escaped = $('<div>').text(stringDisplay).text();
+            $('#follow-btn').html(escaped.replace(/\n/g, '<br />'));
+        });
 
         $('#follow-btn').click(() => {
             if (changeSet) {
