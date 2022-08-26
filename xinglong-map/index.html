@@ -159,7 +159,7 @@
 
         function errorHandler(e) {
             console.log("e", e);
-            window.alert('無法判斷您的所在位置，無法使用此功能。');
+            window.alert('定位功能未被允許，無法使用此功能。預設地點將為 興隆里');
             map.setView(xinglong, 17); // 中心移到動物園
         }
         map.on('locationerror', errorHandler);
