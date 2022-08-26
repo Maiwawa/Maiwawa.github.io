@@ -12,10 +12,16 @@
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
     <div id="map"></div>
     <section>
         <div id="setview-btn">
@@ -24,31 +30,29 @@
     </section>
 
     <script>
-        map = L.map('map').setView([24.114746, 120.736678], 17);
+        var imgs = [];  					//定義一個運算元組
+        $('.leaflet-interactive').each(function () {  	//遍歷所有圖片,將圖片
+            var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
+            $(this).bind('load', function () {
+                dfd.resolve();  			//圖片載入完成後,表示操作成功
+            });
+            if (this.complete) {				//如果圖片載入狀態為完成,那麼也標識操作成功
+                setTimeout(function () {
+                    dfd.resolve();
+                }, 2000);
+            }
+            imgs.push(dfd);  			//將所有操作物件放入陣列中
+        })
+        $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
+            $('.loader_bg').hide();
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '<a href="https://www.openstreetmap.org/">OSM</a>',
-            maxZoom: 20
-        }).addTo(map);
+            map = L.map('map').setView([24.114746, 120.736678], 17);
 
-        // map.locate({ setView: true, maxZoom: 16 });
-
-        // function onLocationFound(e) {
-        //     var radius = e.accuracy;
-
-        //     L.marker(e.latlng).addTo(map)
-        //         .bindPopup("You are within " + radius + " meters from this point").openPopup();
-
-        //     L.circle(e.latlng, radius).addTo(map);
-        // }
-
-        // map.on('locationfound', onLocationFound);
-
-        // function onLocationError(e) {
-        //     alert(e.message);
-        // }
-
-        // map.on('locationerror', onLocationError);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '<a href="https://www.openstreetmap.org/">OSM</a>',
+                maxZoom: 20
+            }).addTo(map);
+        });
 
         let temple = L.icon({
             iconUrl: 'resource/temple.png',
@@ -132,13 +136,6 @@
             timeout: 10000 // 觸發locationerror事件之前等待的毫秒數
         });
 
-
-
-
-
-
-
-
         const xinglong = [24.114746, 120.736678, 17];
 
 
@@ -155,17 +152,33 @@
         // 使用者提供位置
         function foundHandler(e) {
             marker.setLatLng(e.latlng); // 移動 marker
+            map.flyTo([e.latitude, e.longitude])
         }
 
         map.on('locationfound', foundHandler);
 
         function errorHandler(e) {
             console.log("e", e);
-            window.alert('無法判斷您的所在位置，無法使用此功能。預設地點將為 興隆里');
+            window.alert('無法判斷您的所在位置，無法使用此功能。');
             map.setView(xinglong, 17); // 中心移到動物園
         }
         map.on('locationerror', errorHandler);
 
+        let isPressBtn = false;
+
+        $('#setview-btn').click(() => {
+            // if (isPressBtn) {
+            //     map.locate()
+            //         .on('locationfound', function (e) {
+            //         })
+            //     isPressBtn = false;
+            // }
+            // else if (!isPressBtn) {
+            //     isPressBtn = true;
+            //     map.flyTo([24.114746, 120.736678], 17)
+            // };
+            map.flyTo([24.114746, 120.736678], 17)
+        });
 
 
 
