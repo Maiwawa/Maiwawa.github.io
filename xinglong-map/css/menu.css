@@ -227,3 +227,21 @@ header .menu-btn i {
 .menu .left .navs .nav-1 span a {
     font-size: var(--nav-span);
 }
+
+@media (max-width:850px) {
+    .nav {
+        display: block;
+    }
+
+    .nav-1 span {
+        display: flex;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width:650px) {
+    .nav-1 span {
+        display: block;
+        margin-left: 10px;
+    }
+}
