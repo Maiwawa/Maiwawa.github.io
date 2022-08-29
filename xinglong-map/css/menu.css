@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --btn-size: 1.8rem;
+    --btn-border: 100px;
+    --logo-size: 60px;
+    --nav-size: 2rem;
+    --nav-small: 1.2rem;
+    --nav-span: 1.5rem;
+}
+
+@media (max-width:1200px) {
+    :root {
+        --btn-size: 1.8rem;
+        --logo-size: 55px;
+        --nav-size: 1.5rem;
+        --nav-span: 1.4rem;
+    }
+}
+
+@media (max-width:1000px) {
+    :root {
+        --btn-size: 1.8rem;
+        --btn-border: 90px;
+        --logo-size: 50px;
+        --nav-size: 1.4rem;
+        --nav-small: 1rem;
+        --nav-span: 1.1em;
+    }
+}
+
+@media (max-width:800px) {
+    :root {
+        --btn-size: 1.8rem;
+        --btn-border: 70px;
+        --logo-size: 45px;
+        --nav-size: 1.3rem;
+        --nav-span: 1rem;
+    }
+}
+
+main-color {
+    color: #C9781F;
+    color: #254820;
+    color: #699663;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Noto Serif TC', serif;
+}
+
+a {
+    text-decoration: none;
+    color: #254820;
+}
+
+header {
+    z-index: 1005;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px 10px 100px;
+}
+
+@media (max-width:1000px) {
+    header {
+        padding: 10px 30px 10px 80px;
+    }
+}
+
+@media (max-width:600px) {
+    header {
+        padding: 10px 10px 10px 40px;
+    }
+}
+
+header .logo a h1 {
+    font-size: var(--nav-size);
+}
+
+header .menu-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: var(--btn-border);
+    height: var(--btn-border);
+    margin-top: calc(var(--btn-border) * -1);
+}
+
+#menu-border {
+    border-radius: 50%;
+    width: var(--btn-border);
+    height: var(--btn-border);
+    border: 0.2rem solid #254820;
+    position: relative;
+    transform: scale(0);
+}
+
+header .menu-btn i {
+    font-size: var(--btn-size);
+    color: #254820;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: calc(50px + 6.25vw) 17.29167vw 6.25vw;
+    background: #fff;
+    z-index: 1003;
+    transform: translateY(-100%);
+    transition: 0.6s;
+}
+
+.menu .left {
+    position: relative;
+    width: 45.83333vw;
+    padding-top: 4.16667vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu .right {
+    position: relative;
+    width: 19.58333vw;
+    padding-top: 4.16667vw;
+}
+
+
+.navs {
+    position: relative;
+}
+
+.nav {
+    position: relative;
+}
+
+.menu .left .navs .nav a {
+    display: block;
+    text-decoration: none;
+    color: #254820;
+    font-size: var(--nav-size);
+    font-weight: 700;
+    padding: 15px 0;
+    letter-spacing: 10px;
+    transition: color 0.3s;
+}
+
+.menu .left .navs .nav a:hover {
+    color: #254820 !important;
+}
+
+.menu .left .nav::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1.45833vw;
+    height: 2px;
+    background: #C9781F;
+    margin-top: 1px;
+    margin-left: -4.16667vw;
+    transform: var(--myScale);
+}
+
+.menu .right .infos {
+    width: 100%;
+    position: relative;
+}
+
+.menu .right .infos .info {
+    font-size: var(--nav-small);
+    padding: 10px 0;
+    letter-spacing: 5px;
+    color: #254820;
+    font-weight: 700;
+}
+
+.menu .right .infos .info span {
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+@media(max-width:700px) {
+    .menu .right {
+        display: none;
+    }
+}
+
+.menu-mask {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 1002;
+    transition: 0.5s;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav span {
+    display: flex;
+    margin-left: 20px;
+}
+
+.menu .left .navs .nav-1 {
+    align-items: flex-end;
+}
+
+.menu .left .navs .nav-1 span a {
+    font-size: var(--nav-span);
+}
