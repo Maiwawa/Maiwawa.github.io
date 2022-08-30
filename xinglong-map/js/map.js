@@ -30,7 +30,7 @@ let temple = L.icon({
     popupAnchor: [0, -35] // point from which the popup should open relative to the iconAnchor
 });
 L.marker([24.111421, 120.732569], { icon: temple }).addTo(map)
-    .bindPopup("<a href='introduction.html#temple'>廣興宮&興隆里活動中心</a>")
+    .bindPopup("<a href='introduction.html?id=temple'>廣興宮</a>")
 
 
 
@@ -43,7 +43,7 @@ let tree = L.icon({
     popupAnchor: [-5, -30] // point from which the popup should open relative to the iconAnchor
 });
 L.marker([24.115546, 120.7351809], { icon: tree }).addTo(map)
-    .bindPopup("<a href='introduction.html#tree'>百年樟樹</a>")
+    .bindPopup("<a href='introduction.html?id=tree'>百年樟樹</a>")
 
 
 let book = L.icon({
@@ -55,7 +55,7 @@ let book = L.icon({
     popupAnchor: [-5, -35] // point from which the popup should open relative to the iconAnchor
 });
 L.marker([24.116646, 120.735444], { icon: book }).addTo(map)
-    .bindPopup("<a href='introduction.html#book'>拍照用大書本</a>")
+    .bindPopup("<a href='introduction.html?id=book'>拍照用大書本</a>")
 
 
 let owl = L.icon({
@@ -67,7 +67,7 @@ let owl = L.icon({
     popupAnchor: [5, -35] // point from which the popup should open relative to the iconAnchor
 });
 L.marker([24.116205, 120.737257], { icon: owl }).addTo(map)
-    .bindPopup("<a href='introduction.html#owl'>貓頭鷹地標</a>")
+    .bindPopup("<a href='introduction.html?id=owl'>貓頭鷹地標</a>")
 
 
 let trail = L.icon({
@@ -79,7 +79,7 @@ let trail = L.icon({
     popupAnchor: [-5, -35] // point from which the popup should open relative to the iconAnchor
 });
 L.marker([24.115921, 120.739038], { icon: trail }).addTo(map)
-    .bindPopup("<a href='introduction.html#trail'>楓香林步道入口</a>")
+    .bindPopup("<a href='introduction.html?id=trail'>楓香林步道入口</a>")
 
 
 let museum = L.icon({
@@ -91,7 +91,7 @@ let museum = L.icon({
     popupAnchor: [-5, -30] // point from which the popup should open relative to the iconAnchor
 });
 L.marker([24.117214, 120.742321], { icon: museum }).addTo(map)
-    .bindPopup("<a href='introduction.html#museum'>古農莊文物館</a>")
+    .bindPopup("<a href='introduction.html?id=museum'>古農莊文物館</a>")
 
 
 

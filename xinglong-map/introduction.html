@@ -6,22 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>景點介紹</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/introduction.css">
 </head>
 
 <body>
-    <!-- <div class="loader_bg">
-        <div class="loader"></div>
-    </div> -->
-
     <header>
         <div class="logo">
             <a href="home.html">
@@ -69,20 +63,69 @@
 
     <div class="menu-mask"></div>
 
-    <section class="s6 s6-4" id="xinglong">
-        <a href="home.html">
-            <div class="content" id="content2">
-                <div class="content-text">
-                    <p>More　　</p>
-                </div>
-                <div>
-                    <h1>維護中</h1>
-                </div>
+    <section class="attractions">
+        <div>
+            <div class="btn-content">
+                <i class="fa-solid fa-xmark" id="btn2"></i>
             </div>
-        </a>
+            <div class="att-navs">
+                <div class="att-nav" id="temple">廣興宮</div>
+                <div class="att-nav" id="tree">百年樟樹</div>
+                <div class="att-nav" id="book">拍照用大書本</div>
+                <div class="att-nav" id="owl">貓頭鷹地標</div>
+                <div class="att-nav" id="trail">楓香林步道入口</div>
+                <div class="att-nav" id="museum">古農莊文物館</div>
+            </div>
+        </div>
     </section>
 
+    <section class="s6" id="xinglong">
+        <div class="content" id="content">
+            <div class="content-text">
+                <p>更換景點　　</p>
+            </div>
+            <div>
+                <h1 id="name">選擇景點</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="s2">
+        <div class="section-60">
+            <div>
+                <h1 id="title">" 拍照用大書本 "</h1>
+                <p id="section1">
+                    興隆社區獨特的大型藝術裝置，位於貓頭鷹叔叔的環教場域，它將這裡動物植物一一記載在冊，是一本能尋找興隆社區秘聞的漂亮大書，將興隆社區的獨特生態書寫於內。唯一的缺點是，不能將這本書帶著走！但是你可以過來這裡找這本書，在你將書本翻閱至最後一頁時，就會發現你也能成為書的一部份呢！
+                </p>
+            </div>
+        </div>
+        <div class="section-40" id="bg1">
+            <img src="resource/book.png" class="image" id="img1">
+        </div>
+    </section>
+
+    <section class="s3">
+        <div class="section-40" id="bg2">
+            <img src="resource/tree.png" class="image" id="img2">
+        </div>
+        <div class="section-60">
+            <div>
+                <p id="section2">
+                    自然資源豐沛的興隆里屬於農業發展型社區，雖然身在太平的都會區內，但不論走哪都是一片綠意盎然。，興隆里所擁有的純樸大自然和都市生活中鮮少有的寧靜，總能讓人在不知不覺間留連忘返。在巷弄間，你只要隨興信步往山間行去，在芬多精的圍繞之下，自然能放下肩頭的壓力，感受綠意生機的繁茂與涼風吹拂臉龐的溫柔。少了忙碌，多了幾分縱容和輕鬆！不妨一起來探尋興隆里的獨特魅力。
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+
+    </footer>
+
+
+
     <script src="js/menu.js"></script>
+    <script src="js/introduction.js"></script>
     <script>
         var imgs = [];  					//定義一個運算元組
         $('.image').each(function () {  	//遍歷所有圖片,將圖片
@@ -99,36 +142,12 @@
         })
         $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
             $('.loader_bg').hide();
-            loadedImg();
         });
-
-        ScrollReveal({
-            reset: true, distance: '60px',
-            duration: 2500,
-            delay: 400
-        });
-
-        function loadedImg() {
-            ScrollReveal({
-                reset: false,
-                distance: '60px',
-                duration: 2500,
-                delay: 400
-            });
-            ScrollReveal().reveal('.s1', { delay: 200, origin: 'bottom' });
-            ScrollReveal().reveal('.s2 .section-40', { delay: 200, origin: 'right' });
-            ScrollReveal().reveal('.s2 .section-60 div, .s3 .section-60 div', { delay: 500, origin: 'bottom' });
-            ScrollReveal().reveal('.s3 .section-40', { delay: 500, origin: 'left' });
-            ScrollReveal().reveal('.s4 .section-60', { delay: 200, origin: 'left' });
-            ScrollReveal().reveal('.s4 .section-40', { delay: 200, origin: 'right' });
-            ScrollReveal().reveal('.s5 .section-title', { delay: 200, origin: 'bottom' });
-            ScrollReveal().reveal('.s5 .member', { delay: 400, origin: 'bottom', interval: 100 });
-            ScrollReveal().reveal('.s6', { delay: 200, origin: 'left' });
-        };
 
         $('.content').mouseover(() => {
             $('.content-text p').addClass('hover');
         });
+
         $('.content').mouseout(() => {
             $('.content-text p').removeClass('hover');
         });

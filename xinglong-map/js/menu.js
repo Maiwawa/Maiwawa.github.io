@@ -36,7 +36,7 @@ document.getElementById('menu-btn').addEventListener('mouseout', function (e) {
 function currentPage() {
     let pageTitle = document.title;
     for (let i = 0; i < pages.length; i++) {
-        console.log('nope');
+        // console.log('nope');
         if (pageTitle == pages[i]) {
             return i;
         }
@@ -66,6 +66,7 @@ function closeMenu() {
     $('#btn').addClass('fa-angle-down');
     $('.menu-mask').css('height', '0');
     isMenuOpen = false;
+    move();
 }
 
 function openMenu() {
@@ -74,6 +75,7 @@ function openMenu() {
     $('#btn').addClass('fa-xmark');
     $('.menu-mask').css('height', '100vh');
     isMenuOpen = true;
+    stop();
 }
 
 function menuChange() {
@@ -84,3 +86,13 @@ function menuChange() {
 $('.nav a').click(() => {
     closeMenu();
 })
+
+function stop() {
+    document.body.style.overflow = 'hidden';
+    document.addEventListener("touchmove", mo, { passive: false });
+}
+
+function move() {
+    document.body.style.overflow = '';
+    document.removeEventListener("touchmove", mo, { passive: false });
+}
