@@ -4,7 +4,7 @@
 :root {
     --sec-title: 3rem;
     --sec-p: 1.3rem;
-    --big-title: 8rem;
+    --big-title: 6.5rem;
     --big-p: 2rem;
     --height: 45px;
 }
@@ -14,7 +14,7 @@
         --sec-title: 2.5rem;
         --sec-p: 1.2rem;
         --gary-p: 0.9rem;
-        --big-title: 6rem;
+        --big-title: 4.5rem;
         --big-p: 1.7rem;
         --height: 39px;
     }
@@ -25,7 +25,7 @@
         --sec-title: 2rem;
         --sec-p: 1.1rem;
         --gary-p: 0.8rem;
-        --big-title: 5rem;
+        --big-title: 3.5rem;
         --big-p: 1.5rem;
         --height: 33px;
     }
@@ -36,7 +36,7 @@
         --sec-title: 1.5rem;
         --sec-p: 1rem;
         --gary-p: 0.6rem;
-        --big-title: 4rem;
+        --big-title: 2.5rem;
         --big-p: 1.2rem;
         --height: 27px;
     }
