@@ -141,6 +141,16 @@ section {
         display: -webkit-flex;
         display: flex;
     }
+
+    .s3 {
+        -webkit-flex-flow: column;
+        flex-flow: column;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
 }
 
 .s2 .section-40 {
