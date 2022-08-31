@@ -61,11 +61,11 @@ $('.right-nav').click(function () {
                     $('#title').text(data[i].name);
                     $('#monster-img').attr('src', `resource/monster/${data[i].id}.png`);
                     if (isGood) {
-                        $('.circle').css('background', 'url(../resource/monster/good.jpg)');
-                        $('.buy').css('background', 'url(../resource/monster/good.jpg)');
+                        $('.circle').css('background', 'url(../monzzle2.0/resource/monster/good.jpg)');
+                        $('.buy').css('background', 'url(../monzzle2.0/resource/monster/good.jpg)');
                     } else if (!isGood) {
-                        $('.circle').css('background', 'url(../resource/monster/bad.jpg)');
-                        $('.buy').css('background', 'url(../resource/monster/bad.jpg)');
+                        $('.circle').css('background', 'url(../monzzle2.0/resource/monster/bad.jpg)');
+                        $('.buy').css('background', 'url(../monzzle2.0/resource/monster/bad.jpg)');
                     }
                     $('.monster-content').show();
                     $('.attractions').hide();
