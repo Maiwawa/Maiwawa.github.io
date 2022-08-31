@@ -53,7 +53,7 @@ main-color {
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     position: relative;
     overflow-x: hidden;
     height: 100%;
@@ -90,7 +90,7 @@ section {
 .title-text h1 {
     font-size: var(--big-title);
     margin-top: -20px;
-    letter-spacing: 35px;
+    letter-spacing: 25px;
 }
 
 @media (max-width:750px) {
@@ -99,7 +99,7 @@ section {
     }
 
     .title-text h1 {
-        letter-spacing: 15px;
+        letter-spacing: 10px;
     }
 
     .title-text h1 {
@@ -131,7 +131,7 @@ section {
     }
 }
 
-.s2, .s3 {
+.s3 {
     margin-top: -15vh;
 }
 
@@ -159,7 +159,7 @@ section {
 }
 
 .section-60 h1 {
-    font-size: var(--sec-title);
+    font-size: var(--big-p);
     padding: 10px 0;
 }
 
@@ -174,6 +174,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
 }
 
 
@@ -203,11 +204,15 @@ section {
 }
 
 .s2 .section-40 {
-    background: #FCB70F;
+    background: #9ECABF;
+    /* border-top: #513A35 15vh solid; */
+    /* border-bottom: #513A35 15vh solid; */
 }
 
 .s3 .section-40 {
-    background: #000;
+    background: #a8877d;
+    /* border-top: #513A35 15vh solid; */
+    /* border-bottom: #513A35 15vh solid; */
 }
 
 
@@ -221,7 +226,7 @@ section {
 
 /* section 4 Lorem*/
 .s4 .section-40, .s4 .section-60 {
-    height: 70vh;
+    height: 100vh;
     align-items: flex-start;
 }
 
@@ -275,81 +280,6 @@ section {
     }
 }
 
-/* section 5 Members*/
-.s5 {
-    background: #000;
-    color: #FFF;
-    display: block;
-}
-
-.s5 .section-title {
-    text-align: center;
-    width: 100%;
-    padding: 250px 0 150px 0;
-}
-
-.s5 .section-title p {
-    font-size: var(--sec-p);
-}
-
-.s5 .section-title h1 {
-    font-size: var(--sec-title);
-    letter-spacing: 3px;
-}
-
-.members-content {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.members-content .member {
-    width: 30vw;
-    padding: 7vw;
-}
-
-@media (max-width:1000px) {
-    .members-content .member {
-        width: 50vw;
-        padding: 10vw;
-    }
-
-    .s5 .section-title {
-        padding: 200px 0 150px 0;
-    }
-
-    .s5 .section-title h1 {
-        letter-spacing: 2.5px;
-    }
-
-}
-
-@media (max-width:800px) {
-    .members-content .member {
-        width: 100vw;
-        padding: 10vw 25vw;
-    }
-
-    .s5 .section-title {
-        padding: 150px 0 150px 0;
-    }
-
-    .s5 .section-title h1 {
-        letter-spacing: 2px;
-    }
-
-}
-
-.members-content .member .member-text {
-    text-align: left;
-}
-
-.member img {
-    width: 100%;
-}
-
-
 /* section 6 Contact us*/
 .s6 {
     min-height: 80vh;
@@ -373,13 +303,13 @@ section {
 
 
 .content-text p::before {
-    content: 'Contact us　　';
+    content: 'Click　　';
     display: inline-block;
     position: absolute;
 }
 
 .content-text p::after {
-    content: 'Contact us →';
+    content: 'Click →';
     width: 100%;
     display: inline-block;
     position: absolute;

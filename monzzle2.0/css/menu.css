@@ -52,6 +52,11 @@ main-color {
     font-family: 'Poppins', 'Noto Serif TC', serif;
 }
 
+a {
+    text-decoration: none;
+    color: #513A35;
+}
+
 header {
     z-index: 5;
     position: absolute;
@@ -193,4 +198,13 @@ header .menu-btn i {
     .menu .right {
         display: none;
     }
+}
+
+.menu-mask {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    transition: 0.5s;
 }

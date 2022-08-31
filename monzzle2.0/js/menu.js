@@ -51,22 +51,42 @@ $('#menu-btn').click(() => {
     }
 
     if (!isMenuOpen) {
-        $('.menu').css('transform', 'translateY(0)');
-        $('#btn').removeClass('fa-angle-down');
-        $('#btn').addClass('fa-xmark');
-        isMenuOpen = true;
+        openMenu();
     } else if (isMenuOpen) {
-        $('.menu').css('transform', 'translateY(-100%)');
-        $('#btn').removeClass('fa-xmark');
-        $('#btn').addClass('fa-angle-down');
-        isMenuOpen = false;
+        closeMenu();
     } else {
         alert('菜單錯誤boolen!');
     }
 
 });
 
+function closeMenu() {
+    $('.menu').css('transform', 'translateY(-100%)');
+    $('#btn').removeClass('fa-xmark');
+    $('#btn').addClass('fa-angle-down');
+    $('.menu-mask').css('height', '0');
+    isMenuOpen = false;
+    move();
+}
+
+function openMenu() {
+    $('.menu').css('transform', 'translateY(0)');
+    $('#btn').removeClass('fa-angle-down');
+    $('#btn').addClass('fa-xmark');
+    $('.menu-mask').css('height', '100vh');
+    isMenuOpen = true;
+    stop();
+}
+
 function menuChange() {
     let i = currentPage() + 1;
     $(`.nav-${i}`).css('--myScale', 'scale(1)');
+}
+
+function stop() {
+    document.body.style.overflow = 'hidden';
+}
+
+function move() {
+    document.body.style.overflow = '';
 }
