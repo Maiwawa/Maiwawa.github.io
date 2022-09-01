@@ -6,3 +6,10 @@
     background: #000;
 }
 
+.content-text p::before {
+    content: 'Contact us　　';
+}
+
+.content-text p::after {
+    content: 'Contact us →';
+}

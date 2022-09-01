@@ -363,13 +363,13 @@ section {
 
 
 .content-text p::before {
-    content: 'Contact us　　';
+    content: '';
     display: inline-block;
     position: absolute;
 }
 
 .content-text p::after {
-    content: 'Contact us →';
+    content: '';
     width: 100%;
     display: inline-block;
     position: absolute;

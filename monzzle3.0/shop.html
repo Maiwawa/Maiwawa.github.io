@@ -10,9 +10,10 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/game.css">
 </head>
 
 <body>
@@ -24,16 +25,16 @@
         <div class="logo">
             <a href="index.html"><img src="resource/headerlogo.png" class=""></a>
         </div>
-        <div class="right">
-            <div id="menu-border"></div>
+        <div class="header-right">
+            <div class="menu-border" id="menu-border"></div>
             <div class="menu-btn" id="menu-btn">
                 <i class="fa-solid fa-angle-down" id="btn"></i>
             </div>
         </div>
     </header>
 
-    <div class="menu">
-        <div class="left">
+    <div class="menu-content">
+        <div class="menu-left">
             <div class="navs">
                 <div class="nav nav-1">
                     <a href="index.html">首頁</a>
@@ -55,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="right">
+        <div class="menu-right">
             <div class="infos">
                 <div class="info">
                     學校：<br />
@@ -79,7 +80,7 @@
 
     <div class="menu-mask"></div>
 
-    <section class="s6">
+    <section class="s-paragraph">
         <div class="content" id="content">
             <div class="content-text">
                 <p>回首頁　　</p>
@@ -90,8 +91,8 @@
         </div>
     </section>
 
-    <script src="js/head.js"></script>
-    <script src="js/shop.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/game.js"></script>
 
     <script>
         var imgs = [];  					//定義一個運算元組
@@ -123,7 +124,7 @@
                 reset: false,
                 distance: '60px',
                 duration: 2500,
-                delay: 400
+                delay: 200
             });
             ScrollReveal().reveal('.content', { delay: 200, origin: 'bottom' });
 
