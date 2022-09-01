@@ -1,0 +1,67 @@
+/* s-banner */
+
+.title-text h1 {
+    letter-spacing: 25px;
+}
+
+@media (max-width:750px) {
+    .title-text h1 {
+        letter-spacing: 10px;
+    }
+
+    .title-text h1 {
+        margin-top: -10px;
+    }
+
+    .title-content {
+        padding: 0 0 0 10vw;
+    }
+}
+
+@keyframes effect {
+    0%, 20%, 100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+    40%, 80% {
+        filter: blur(16px);
+        opacity: 0;
+    }
+}
+
+/* s-60-40 , s-40-60 */
+
+.section-40 {
+    padding: 0 20px;
+}
+
+.section-60 h1{
+    font-size: var(--big-p);
+}
+
+.s-60-40 .section-40 {
+    background: #9ECABF;
+    /* border-top: #513A35 15vh solid; */
+    /* border-bottom: #513A35 15vh solid; */
+}
+
+.s-40-60 .section-40 {
+    background: #a8877d;
+    /* border-top: #513A35 15vh solid; */
+    /* border-bottom: #513A35 15vh solid; */
+}
+
+/* s-Lorem*/
+.s-lorem .section-40, .s-lorem .section-60 {
+    height: 100vh;
+}
+
+/* s-paragraph*/
+.content-text p::before {
+    content: 'Click　　';
+}
+
+.content-text p::after {
+    content: 'Click →';
+}

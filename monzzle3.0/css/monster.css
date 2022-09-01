@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap');
+
+:root {
+    --height: 45px;
+    --card-p: 6em;
+    --card-title: 3em;
+}
+
+@media (max-width:1200px) {
+    :root {
+        --height: 39px;
+        --card-p: 6em;
+        --card-title: 3em;
+    }
+}
+
+@media (max-width:1000px) {
+    :root {
+        --height: 33px;
+        --card-p: 5em;
+        --card-title: 2.5em;
+    }
+}
+
+@media (max-width:800px) {
+    :root {
+        --height: 27px;
+        --card-p: 4em;
+        --card-title: 2em;
+    }
+}
+
+@media (max-width:600px) {
+    :root {
+        --card-p: 3.5em;
+    }
+}
+
+/* s-paragraph*/
+.s-paragraph {
+    min-height: 100vh;
+}
+
+.content-text p::before {
+    content: '更換妖怪　　';
+}
+
+.content-text p::after {
+    content: '更換妖怪 →';
+}
+
+/*monster-nav*/
+.nav-content {
+    position: fixed;
+    z-index: 2000;
+    background: rgba(255, 255, 255, 0.7);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.m-navs {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 4px 4px 7px 7px #2548209a;
+    padding: 20vh 25vw;
+    display: flex;
+}
+
+@media (max-width:800px) {
+    .m-navs {
+        padding: 15vh 20vw;
+    }
+}
+
+.left-nav, .right-nav {
+    font-size: var(--big-p);
+    letter-spacing: 2px;
+    color: #254820;
+    font-weight: 700;
+    margin: 20px 0;
+    cursor: pointer;
+    text-align: justify;
+    width: 100%;
+    height: var(--height);
+}
+
+.left-nav::after, .right-nav::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+.btn-content {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-content i {
+    font-size: var(--big-p);
+    transform: translateX(-100%) translateY(150%);
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.btn-content i:hover {
+    transform: translateX(-100%) translateY(150%) scale(1.3);
+}
+
+.good, .bad {
+    margin-left: 50px;
+    z-index: 200;
+}
+
+.good, .bad {
+    display: none;
+}
+
+
+
+/* s-monster */
+.monster-content {
+    display: none;
+}
+
+.section-50 {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-50:first-child {
+    padding: 0 15vw;
+}
+
+.section-50 h1 {
+    font-size: var(--sec-title);
+    padding: 10px 0;
+}
+
+.section-50 p {
+    font-size: var(--sec-p);
+}
+
+
+@media (max-width:800px) {
+    .section-50 {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .s-monster {
+        display: block;
+    }
+
+    .s-monster {
+        margin-top: 0;
+    }
+
+    .s-monster {
+        -webkit-flex-flow: column-reverse;
+        flex-flow: column-reverse;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+}
+
+
+/*card v2*/
+.container {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.container .box::before {
+    content: 'Monzzle';
+    position: absolute;
+    top: 0vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    font-size: var(--card-p);
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box::after {
+    content: 'Created';
+    position: absolute;
+    bottom: 0vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: var(--card-p);
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box:hover::before, .container .box:hover::after {
+    opacity: 0.04;
+}
+
+.container .box .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    font-size: var(--card-title);
+}
+
+.container .box:hover .name {
+    top: 5vh;
+    opacity: 1;
+}
+
+.container .box .buy {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 75px);
+    color: #232323;
+    background: url(../monzzle2.0/resource/monster/null-good.jpg);
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 11;
+}
+
+.container .box:hover .buy {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.container .box .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: url(../monzzle2.0/resource/monster/null-good.jpg);
+    transform-style: preserve-3d;
+    /* z-index: 10; */
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 50px);
+}
+
+.container .box .product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 60%;
+    object-fit: contain;
+    transition: 0.5s;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 51px);
+}
+
+.container .box:hover .product {
+    transform: translate3d(-50%, -50%, 100px);
+}
+
+@media (max-width:600px) {
+    .section-50:last-child{
+        height: 80vh;
+    }
+
+    .container .box::before, .container .box::after {
+        opacity: 0.04;
+    }
+
+    .container .box .name {
+        top: 5vh;
+        opacity: 1;
+    }
+
+    .container .box .buy {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
