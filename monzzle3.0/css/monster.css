@@ -42,6 +42,10 @@
     min-height: 100vh;
 }
 
+.s-paragraph .content div h1 {
+    min-width: 130px;
+}
+
 .content-text p::before {
     content: '更換妖怪　　';
 }
