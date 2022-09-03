@@ -25,6 +25,7 @@
         --gary-p: 0.8rem;
         --big-title: 7rem;
         --big-p: 1.5rem;
+        --lorem-p: 1.5em;
     }
 }
 
@@ -138,7 +139,7 @@ section {
 
 .section-60 {
     width: 65%;
-    height: 100%;
+    min-height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -149,6 +150,10 @@ section {
 @media (max-width:1000px) {
     .section-60 {
         padding: 0 12.29167vw;
+    }
+
+    .section-40, .section-60 {
+        min-height: 70vh;
     }
 }
 
@@ -169,17 +174,32 @@ section {
 
 .section-40 {
     width: 35%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+@media (max-width:1200px) {
+    .section-40, .section-60 {
+        min-height: 85vh;
+    }
+}
+
+@media (max-width:1000px) {
+    .section-40, .section-60 {
+        min-height: 70vh;
+    }
+}
 
 @media (max-width:800px) {
     .section-40, .section-60 {
         width: 100%;
+        min-height: 50vh;
+    }
+
+    .section-40 {
         height: 50vh;
     }
 
@@ -211,7 +231,7 @@ section {
 
 /* s-Lorem*/
 .s-lorem .section-40, .s-lorem .section-60 {
-    height: 70vh;
+    min-height: 70vh;
     align-items: flex-start;
 }
 
@@ -228,10 +248,8 @@ section {
     color: #999;
 }
 
-@media (max-width:1200px) {
-    .s-lorem .section-60 h1 {
-        font-size: var(--sec-title);
-    }
+.s-lorem .section-60 h1 {
+    font-size: var(--big-p);
 }
 
 @media (max-width:1000px) {

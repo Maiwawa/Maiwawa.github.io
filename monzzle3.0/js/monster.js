@@ -12,27 +12,27 @@ $(document).ready(() => {
 
 $('#content').click(() => {
     $('.navigation').css('display', 'flex');
-    stop();
 })
 
 $('#btn2').click(() => {
     $('.navigation').hide();
-    move();
+    $('.bad').hide();
+    $('.good').hide();
 })
 
 let isGood = true;
 
 $('.left-nav').click(function () {
     let id = this.id;
-    console.log(id);
+    // console.log(id);
 
     if (id == 'good') {
-        console.log('is good');
+        // console.log('is good');
         $('.good').show();
         $('.bad').hide();
         isGood = true;
     } else if (id == 'bad') {
-        console.log('id bad');
+        // console.log('id bad');
         $('.good').hide();
         $('.bad').show();
         isGood = false;
@@ -43,7 +43,7 @@ $('.left-nav').click(function () {
 
 $('.right-nav').click(function () {
     let id = this.id;
-    console.log(id);
+    // console.log(id);
     $.ajax({
         url: 'resource/monster/monster.json',
         method: 'GET',
@@ -51,8 +51,8 @@ $('.right-nav').click(function () {
         data: '',
         async: false,
         success: function (data) {
-            console.log('success');
-            console.log(id);
+            // console.log('success');
+            // console.log(id);
             for (let i = 0; i < data.length; i++) {
                 if (data[i].id == id) {
                     $('#name').text(data[i].name);
@@ -74,7 +74,7 @@ $('.right-nav').click(function () {
             }
         },
         error: function () {
-            console.log('error');
+            alert('error');
         },
     });
     imgCheck();

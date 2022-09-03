@@ -1,5 +1,4 @@
 /* s-banner */
-
 .title-text h1 {
     letter-spacing: 25px;
 }
@@ -31,13 +30,12 @@
 }
 
 /* s-60-40 , s-40-60 */
+.s-60-40, .s-40-60 {
+    margin-top: 0;
+}
 
 .section-40 {
     padding: 0 20px;
-}
-
-.section-60 h1{
-    font-size: var(--big-p);
 }
 
 .s-60-40 .section-40 {
@@ -50,11 +48,6 @@
     background: #a8877d;
     /* border-top: #513A35 15vh solid; */
     /* border-bottom: #513A35 15vh solid; */
-}
-
-/* s-Lorem*/
-.s-lorem .section-40, .s-lorem .section-60 {
-    height: 100vh;
 }
 
 /* s-paragraph*/

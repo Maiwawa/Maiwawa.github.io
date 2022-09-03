@@ -56,7 +56,7 @@
 
 /*monster-nav*/
 .navigation {
-    position: fixed;
+    position: absolute;
     z-index: 2000;
     background: rgba(255, 255, 255, 0.7);
     justify-content: center;
@@ -70,11 +70,15 @@
     box-shadow: 4px 4px 7px 7px #2548209a;
     padding: 20vh 25vw;
     display: flex;
+    min-height: 60vh;
+    min-width: 50vw;
 }
 
 @media (max-width:800px) {
     .m-navs {
         padding: 15vh 20vw;
+        min-height: 60vh;
+        min-width: 80vw;
     }
 }
 
@@ -305,7 +309,7 @@
 }
 
 @media (max-width:600px) {
-    .section-50:last-child{
+    .section-50:last-child {
         height: 80vh;
     }
 
