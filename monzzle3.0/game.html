@@ -80,7 +80,7 @@
 
     <div class="menu-mask"></div>
 
-    <section class="s-paragraph">
+    <!-- <section class="s-paragraph">
         <div class="content" id="content">
             <div class="content-text">
                 <p>回首頁　　</p>
@@ -89,7 +89,66 @@
                 <h1 id="title">維護中</h1>
             </div>
         </div>
+    </section> -->
+
+    <section class="navigation" id="navigation">
+        <div>
+            <div class="btn-content">
+                <i class="fa-solid fa-xmark" id="btn2"></i>
+            </div>
+            <div class="m-navs">
+                <div class="left">
+                    <div class="left-nav" id="good">正面</div>
+                    <div class="left-nav" id="bad">負面</div>
+                </div>
+                <div class="good">
+                    <div class="right-nav" id="turtle">制風龜</div>
+                    <div class="right-nav" id="snake">蛇郎君</div>
+                    <div class="right-nav" id="cat">山貓</div>
+                    <div class="right-nav" id="stone">豬哥石</div>
+                    <div class="right-nav" id="horse">白馬妖怪</div>
+                    <div class="right-nav" id="dog">天狗</div>
+                    <div class="right-nav" id="bird">婆娑鳥</div>
+                </div>
+                <div class="bad">
+                    <div class="right-nav" id="dragon">傀儡山之雲龍</div>
+                    <div class="right-nav" id="girl">金魅</div>
+                    <div class="right-nav" id="fish">人魚</div>
+                    <div class="right-nav" id="tiger">虎姑婆</div>
+                    <div class="right-nav" id="coin">金銀鬼</div>
+                </div>
+            </div>
+
+        </div>
     </section>
+
+    <section class="s-paragraph">
+        <a href="#">
+            <div class="content" id="changeimage">
+                <div class="content-text">
+                    <p>更換拼圖　　</p>
+                </div>
+                <div>
+                    <h1>選擇拼圖</h1>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <div id="frame"></div>
+    <div id="game">
+        <li class="tile" id="1"><span class="number">1</span></li>
+        <li class="tile" id="2"><span class="number">2</span></li>
+        <li class="tile" id="3"><span class="number">3</span></li>
+        <li class="tile" id="4"><span class="number">4</span></li>
+        <li class="tile" id="5"><span class="number">5</span></li>
+        <li class="tile" id="6"><span class="number">6</span></li>
+        <li class="tile" id="7"><span class="number">7</span></li>
+        <li class="tile" id="8"><span class="number">8</span></li>
+        <li class="tile" id="blank"><span></span></li>
+    </div>
+    <div id="help"><input type="checkbox" name="enablehelp" onchange="shownumbers();">Enable Help</div>
+
 
     <script src="js/header.js"></script>
     <script src="js/game.js"></script>
@@ -130,10 +189,10 @@
 
         };
 
-        $('#content').mouseover(() => {
+        $('#changeimage').mouseover(() => {
             $('.content-text p').addClass('hover');
         });
-        $('#content').mouseout(() => {
+        $('#changeimage').mouseout(() => {
             $('.content-text p').removeClass('hover');
         });
     </script>

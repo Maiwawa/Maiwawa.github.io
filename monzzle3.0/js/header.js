@@ -1,5 +1,16 @@
-let pages = ['首頁', '關於我們', '專題介紹', '妖怪選單', '小遊戲', '商城']
-let navs = [];
+// let pages = ['首頁', '關於我們', '專題介紹', '妖怪選單', '小遊戲', '商城']
+// let navs = [];
+
+let navs = document.querySelectorAll('.nav');
+let pages = []
+
+for (let i = 0; i < navs.length; i++) {
+    // console.log(navs[i].innerText);
+    // let page = navs[i].innerText;
+    // console.log(page);
+    pages.push(navs[i].innerText);
+}
+// console.log(pages);
 
 $(document).ready(() => {
     $('.menu-left .navs .nav').css('--myScale', 'scale(0)');
@@ -47,7 +58,7 @@ let isMenuOpen = false;
 $('#menu-btn').click(() => {
     let winWidth = $(window).width();
     if (winWidth > 800) {
-        
+
     }
 
     if (!isMenuOpen) {
