@@ -160,6 +160,7 @@
     </section>
 
     <script src="js/header.js"></script>
+    <script src="js/base.js"></script>
     <script>
         var imgs = [];  					//定義一個運算元組
         $('.image').each(function () {  	//遍歷所有圖片,將圖片
@@ -202,13 +203,6 @@
             ScrollReveal().reveal('.s-member .member', { delay: 200, origin: 'bottom', interval: 50 });
             ScrollReveal().reveal('.s-paragraph', { delay: 200, origin: 'left' });
         };
-
-        $('#content').mouseover(() => {
-            $('.content-text p').addClass('hover');
-        });
-        $('#content').mouseout(() => {
-            $('.content-text p').removeClass('hover');
-        });
     </script>
 </body>
 

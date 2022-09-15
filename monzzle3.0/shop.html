@@ -80,7 +80,7 @@
 
     <div class="menu-mask"></div>
 
-    <section class="s-paragraph">
+    <!-- <section class="s-paragraph">
         <div class="content" id="content">
             <div class="content-text">
                 <p>回首頁　　</p>
@@ -89,10 +89,108 @@
                 <h1 id="title">維護中</h1>
             </div>
         </div>
+    </section> -->
+
+    <section class="s-shop">
+        <div class="popup">
+            <div class="popup-content">
+                <div class="popup-left">
+                    <img src="resource/portrait/1.jpg" class="popup-img">
+                </div>
+                <div class="popup-right">
+                    <div>
+                        <div class="popup-info">
+                            <h1 class="info-title">product</h1>
+                            <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                                nulla aliquam quia fuga?</p>
+                        </div>
+                        <div class="popup-buy">
+                            <div class="buy-top"></div>
+                            <div class="buy-bottom">
+                                <span id="popup-buy-btn">加入購物車</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="product">
+                <div class="product-img">
+                    <img src="resource/horizontal/1.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product1
+                        </p>
+                        <span class="buy" id="product1">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-img">
+                    <img src="resource/horizontal/2.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product2
+                        </p>
+                        <span class="buy" id="product2">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-img">
+                    <img src="resource/horizontal/3.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product3
+                        </p>
+                        <span class="buy" id="product3">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-img">
+                    <img src="resource/horizontal/4.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product4
+                        </p>
+                        <span class="buy" id="product4">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-img">
+                    <img src="resource/horizontal/5.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product5
+                        </p>
+                        <span class="buy" id="product5">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-img">
+                    <img src="resource/horizontal/6.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product6
+                        </p>
+                        <span class="buy" id="product6">Buy!</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
+
     <script src="js/header.js"></script>
-    <script src="js/game.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/base.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
         var imgs = [];  					//定義一個運算元組
@@ -129,13 +227,68 @@
             ScrollReveal().reveal('.content', { delay: 200, origin: 'bottom' });
 
         };
+        let quantity;
 
-        $('#content').mouseover(() => {
-            $('.content-text p').addClass('hover');
+        setQuantity();
+        function setQuantity() {
+            quantity = 0;
+            let aa = `
+                    <i class="fa-solid fa-minus"></i>
+                        <div class="number">
+                            <i class="fa-solid fa-0" id="quantity"></i>
+                        </div>
+                        <i class="fa-solid fa-plus"></i>
+                    `
+            $('.buy-top').append(aa);
+            if (quantity == 0) {
+                $('.fa-minus').css('color', '#999');
+            }
+        };
+
+        $('.fa-plus').click(function () {
+            console.log(quantity);
+            if (quantity == 8) {
+                $('.fa-plus').css('color', "#999");
+            } else if (quantity == 0) {
+                $('.fa-minus').css('color', "#232323");
+            }
+
+            if (quantity < 9) {
+                $('#quantity').removeClass(`fa-${quantity}`);
+                quantity++;
+                $('#quantity').addClass(`fa-${quantity}`);
+            }
+
         });
-        $('#content').mouseout(() => {
-            $('.content-text p').removeClass('hover');
+
+        $('.fa-minus').click(function () {
+            console.log(quantity);
+            if (quantity == 9) {
+                $('.fa-plus').css('color', "#232323");
+            } else if (quantity == 1) {
+                $('.fa-minus').css('color', "#999");
+            }
+
+            if (quantity > 0) {
+                $('#quantity').removeClass(`fa-${quantity}`);
+                quantity--;
+                $('#quantity').addClass(`fa-${quantity}`);
+            }
         });
+
+
+        $('#popup-buy-btn').click(function () {
+            Email.send({
+                SecureToken: "0c5f6981-2bd3-42db-a763-ed8f7ce3ee17",
+                To: '3a852030@gm.student.ncut.edu.tw',
+                From: "monzzle01@gmail.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        });
+
     </script>
 </body>
 

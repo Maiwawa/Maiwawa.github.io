@@ -49,12 +49,3 @@
     /* border-top: #513A35 15vh solid; */
     /* border-bottom: #513A35 15vh solid; */
 }
-
-/* s-paragraph*/
-.content-text p::before {
-    content: 'Click　　';
-}
-
-.content-text p::after {
-    content: 'Click →';
-}

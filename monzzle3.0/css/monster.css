@@ -46,14 +46,6 @@
     min-width: 130px;
 }
 
-.content-text p::before {
-    content: '更換妖怪　　';
-}
-
-.content-text p::after {
-    content: '更換妖怪 →';
-}
-
 /*monster-nav*/
 .navigation {
     position: absolute;

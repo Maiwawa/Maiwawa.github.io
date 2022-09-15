@@ -1,7 +1,0 @@
-.content-text p::before {
-    content: '回首頁　　';
-}
-
-.content-text p::after {
-    content: '回首頁 →';
-}

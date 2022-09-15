@@ -1,4 +1,3 @@
-
 $(document).ready(() => {
     let winWidth = $(window).width();
     if (winWidth > 600) {
