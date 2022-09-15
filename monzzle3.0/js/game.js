@@ -118,7 +118,11 @@ game.img = {
 game.blanktile = document.getElementById('blank'); //the blank tile
 game.winCondition = Array.from(document.getElementsByClassName('tile')); //current game condition will be checked against this
 game.helpenabled = false;
+<<<<<<< HEAD
 // game.frame = document.getElementById('frame');
+=======
+game.frame = document.getElementById('frame');
+>>>>>>> d351d1ec5e03ab9bffa95ee15b51671f44d6169c
 game.navigation = document.getElementById('navigation');
 // game.slectImg = document.getElementsByClassName('imgsel');
 game.options = document.getElementById('changeimage');
@@ -129,7 +133,11 @@ function setPuzzleImage(foldername) { //adding images to every tile in the game
 
         var slectFolder = Math.floor((Math.random() * 4));
         var folder = game.folders[slectFolder];
+<<<<<<< HEAD
         // game.frame.style.backgroundImage = "url('" + "resource/puzzle/" + folder + "/" + "frame.jpg" + "')"
+=======
+        game.frame.style.backgroundImage = "url('" + "resource/puzzle/" + folder + "/" + "frame.jpg" + "')"
+>>>>>>> d351d1ec5e03ab9bffa95ee15b51671f44d6169c
 
         for (var i = 0; i < game.tiles.length; i++) {
             var tileImg = i + 1;
@@ -140,7 +148,11 @@ function setPuzzleImage(foldername) { //adding images to every tile in the game
 
     else {
 
+<<<<<<< HEAD
         // game.frame.style.backgroundImage = "url('" + "resource/puzzle/" + foldername + "/" + "frame.jpg" + "')"
+=======
+        game.frame.style.backgroundImage = "url('" + "resource/puzzle/" + foldername + "/" + "frame.jpg" + "')"
+>>>>>>> d351d1ec5e03ab9bffa95ee15b51671f44d6169c
         for (var i = 0; i < game.tiles.length; i++) {
             var tileImg = i + 1;
             game.tiles[i].style.backgroundImage = "url('" + "resource/puzzle/" + foldername + "/" + game.img[tileImg] + "')"
@@ -153,10 +165,14 @@ function setPuzzleImage(foldername) { //adding images to every tile in the game
 
 $('.right-nav').click(function () {
     let id = this.id;
+<<<<<<< HEAD
     // console.log(id);
     let text = this.text;
     $('#changeimage div h1').text(text);
     console.log(text);
+=======
+    console.log(id);
+>>>>>>> d351d1ec5e03ab9bffa95ee15b51671f44d6169c
     game.tiles = Array.from(document.getElementsByClassName('tile'));
     setPuzzleImage(id);
     console.log(id);
