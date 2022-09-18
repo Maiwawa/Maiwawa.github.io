@@ -5,3 +5,11 @@
 .s-40-60 .section-40 {
     background: #000;
 }
+
+.content-text p::after{
+    content: 'Contact us　→';
+}
+
+.content-text p::before{
+    content: 'Contact us　　';
+}

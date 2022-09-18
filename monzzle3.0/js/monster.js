@@ -7,37 +7,57 @@ $(document).ready(() => {
         });
     }
     imgCheck();
-})
+});
+
+let isGood = false;
+let isBad = false;
 
 $('#content').click(() => {
     $('.navigation').css('display', 'flex');
-})
+    isGood = false;
+    isBad = false;
+});
 
 $('#btn2').click(() => {
     $('.navigation').hide();
-    $('.bad').hide();
-    $('.good').hide();
-})
+});
 
-let isGood = true;
+
+$('.left-nav').mouseover(function () {
+    $('.left-nav').css('color', '#a8877d');
+});
+
+$('.left-nav').mouseout(function () {
+    if (isGood) {
+        $('#good').css('color', '#513A35');
+        $('#bad').css('color', '#a8877d');
+    } else if (isBad) {
+        $('#good').css('color', '#a8877d');
+        $('#bad').css('color', '#513A35');
+    } else {
+        $('#good').css('color', '#513A35');
+        $('#bad').css('color', '#513A35');
+    }
+});
 
 $('.left-nav').click(function () {
     let id = this.id;
     // console.log(id);
-
     if (id == 'good') {
         // console.log('is good');
         $('.good').show();
         $('.bad').hide();
         isGood = true;
+        isBad = false;
     } else if (id == 'bad') {
         // console.log('id bad');
         $('.good').hide();
         $('.bad').show();
         isGood = false;
+        isBad = true;
     } else {
         alert('err');
-    }
+    };
 });
 
 $('.right-nav').click(function () {
@@ -69,8 +89,8 @@ $('.right-nav').click(function () {
                     $('.monster-content').show();
                     $('.navigation').hide();
                     move();
-                }
-            }
+                };
+            };
         },
         error: function () {
             alert('error');
@@ -92,7 +112,7 @@ function imgCheck() {
             }, 2000);
         }
         imgs.push(dfd);  			//將所有操作物件放入陣列中
-    })
+    });
     $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
         $('.loader_bg').hide();
         loadedImg();
@@ -111,9 +131,8 @@ function imgCheck() {
             duration: 2500,
             delay: 400
         });
-
     };
-}
+};
 
 $('#content').mouseover(() => {
     $('.content-text p').addClass('hover');

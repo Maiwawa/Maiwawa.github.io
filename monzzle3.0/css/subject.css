@@ -18,24 +18,29 @@
 }
 
 @keyframes effect {
-    0%, 20%, 100% {
+
+    0%,
+    20%,
+    100% {
         filter: blur(0px);
         opacity: 1;
     }
 
-    40%, 80% {
+    40%,
+    80% {
         filter: blur(16px);
         opacity: 0;
     }
 }
 
 /* s-60-40 , s-40-60 */
-.s-60-40, .s-40-60 {
+.s-60-40,
+.s-40-60 {
     margin-top: 0;
 }
 
 .section-40 {
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 
 .s-60-40 .section-40 {
@@ -48,4 +53,17 @@
     background: #a8877d;
     /* border-top: #513A35 15vh solid; */
     /* border-bottom: #513A35 15vh solid; */
+}
+
+/*subject*/
+.content-text p::after {
+    content: 'Click　→';
+}
+
+.content-text p::before {
+    content: 'Click　　';
+}
+
+.s-paragraph a {
+    color: #000;
 }
