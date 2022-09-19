@@ -12,12 +12,3 @@ $('#changeimage').mouseover(() => {
 $('#changeimage').mouseout(() => {
     $('.content-text p').removeClass('hover');
 });
-
-let pageTitle = document.title;
-
-if(pageTitle == 'monster'){
-
-}else if(pageTitle == '關於我們'){
-    $('.content-text p:before').after('Content us')
-    $('.content-text p:after').before('Contact us')
-}

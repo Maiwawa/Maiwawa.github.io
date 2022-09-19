@@ -1,3 +1,56 @@
+//navigation set
+let isGood = false;
+let isBad = false;
+
+$('#changeimage').click(() => {
+    $('.navigation').css('display', 'flex');
+    // isGood = false;
+    // isBad = false;
+})
+
+$('#btn2').click(() => {
+    $('.navigation').hide();
+});
+
+$('.left-nav').mouseover(function () {
+    $('.left-nav').css('color', '#a8877d');
+});
+
+$('.left-nav').mouseout(function () {
+    if (isGood) {
+        $('#good').css('color', '#513A35');
+        $('#bad').css('color', '#a8877d');
+    } else if (isBad) {
+        $('#good').css('color', '#a8877d');
+        $('#bad').css('color', '#513A35');
+    } else {
+        $('#good').css('color', '#513A35');
+        $('#bad').css('color', '#513A35');
+    }
+});
+
+$('.left-nav').click(function () {
+    let id = this.id;
+    // console.log(id);
+
+    if (id == 'good') {
+        // console.log('is good');
+        $('.good').show();
+        $('.bad').hide();
+        isGood = true;
+        isBad = false;
+    } else if (id == 'bad') {
+        // console.log('id bad');
+        $('.good').hide();
+        $('.bad').show();
+        isGood = false;
+        isBad = true;
+    } else {
+        alert('err');
+    }
+});
+
+
 //puzzle
 let winWidth = $(window).width();
 if (winWidth >= 1000) {
@@ -162,6 +215,7 @@ $('.right-nav').click(function () {
     console.log(id);
     setTiles(game);
     game.navigation.style.display = "none";
+    $('#game').show();
 });
 
 function addClickEvent() { //adding click event to each tile
@@ -507,56 +561,24 @@ function win() {
 
 }(game));
 
-function shownumbers() {
+// function shownumbers() {
 
-    var help = document.getElementsByClassName('number');
-    if (game.helpenabled) {
-        game.helpenabled = false;
-        for (var i = 0; i < help.length; i++) {
-            help[i].style.display = "none";
-
-
-        }
-    }
-    else {
-        game.helpenabled = true
-        for (var i = 0; i < help.length; i++) {
-            help[i].style.display = "inline-block";
-
-        }
-    }
-
-}
+//     var help = document.getElementsByClassName('number');
+//     if (game.helpenabled) {
+//         game.helpenabled = false;
+//         for (var i = 0; i < help.length; i++) {
+//             help[i].style.display = "none";
 
 
-//menu
-$('#changeimage').click(() => {
-    $('.navigation').css('display', 'flex');
-})
+//         }
+//     }
+//     else {
+//         game.helpenabled = true
+//         for (var i = 0; i < help.length; i++) {
+//             help[i].style.display = "inline-block";
 
-$('#btn2').click(() => {
-    $('.navigation').hide();
-    $('.bad').hide();
-    $('.good').hide();
-})
+//         }
+//     }
 
-let isGood = true;
+// }
 
-$('.left-nav').click(function () {
-    let id = this.id;
-    // console.log(id);
-
-    if (id == 'good') {
-        // console.log('is good');
-        $('.good').show();
-        $('.bad').hide();
-        isGood = true;
-    } else if (id == 'bad') {
-        // console.log('id bad');
-        $('.good').hide();
-        $('.bad').show();
-        isGood = false;
-    } else {
-        alert('err');
-    }
-});

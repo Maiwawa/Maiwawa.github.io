@@ -1,20 +1,19 @@
-:root{
-    --t-y:160px;
+.s-game{
+    padding-bottom: 10vh;
 }
 
-.s-paragraph {
-    transform: translateY(var(--t-y));
-    min-height: 55vh;
-}
+/* .s-paragraph {
+    min-height: 80vh;
+} */
 
 div#game {
-    transform: translateY(var(--t-y));
     /*border: 1px solid black;*/
     height: 336px;
     position: relative;
     width: 336px;
     margin: auto auto;
     margin-top: 50px;
+    display: none;
 }
 
 
@@ -146,3 +145,18 @@ div#frame {
     }
 }
 
+.content-text p::before{
+    content: '更換拼圖　　';
+}
+
+.content-text p::after{
+    content: '更換拼圖　→';
+}
+
+.left-nav:hover{
+    color: #513A35 !important;
+}
+
+.s-paragraph a {
+    color: #000;
+}

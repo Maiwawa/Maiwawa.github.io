@@ -14,14 +14,13 @@ let isBad = false;
 
 $('#content').click(() => {
     $('.navigation').css('display', 'flex');
-    isGood = false;
-    isBad = false;
+    // isGood = false;
+    // isBad = false;
 });
 
 $('#btn2').click(() => {
     $('.navigation').hide();
 });
-
 
 $('.left-nav').mouseover(function () {
     $('.left-nav').css('color', '#a8877d');
