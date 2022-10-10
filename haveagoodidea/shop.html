@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="resource/headerlogo.png" class=""></a>
+        </div>
+        <div class="header-right">
+            <div class="menu-border" id="menu-border"></div>
+            <div class="menu-btn" id="menu-btn">
+                <i class="fa-solid fa-angle-down" id="btn"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-content">
+        <div class="menu-left">
+            <div class="navs">
+                <div class="nav nav-1">
+                    <a href="index.html">首頁</a>
+                </div>
+                <div class="nav nav-2">
+                    <a href="about.html">關於我們</a>
+                </div>
+                <div class="nav nav-3">
+                    <a href="subject.html">星之所向，言之有悟</a>
+                </div>
+                <div class="nav nav-4">
+                    <a href="shop.html">商城</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-right">
+            <div class="infos">
+                <div class="info">
+                    學校：<br />
+                    國立勤益科技大學
+                </div>
+                <div class="info">
+                    團隊：<br />
+                    遊創益設計團隊
+                </div>
+                <div class="info">
+                    聯絡資訊：<br />
+                    <span>????@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-mask"></div>
+
+    <!-- <section class="s-paragraph">
+        <div class="content" id="content">
+            <div class="content-text">
+                <p>回首頁　　</p>
+            </div>
+            <div>
+                <h1 id="title">維護中</h1>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="s-shop">
+        <div class="popup popup-confirm">
+            <div class="popup-content confirm-content">
+                <div>
+                    <div class="content-top">
+                        <h1>是否確認送出</h1>
+                    </div>
+                    <div class="content-bottom">
+                        <div class="btn" id="yes">是</div>
+                        <div class="btn" id="no">否</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup-customer">
+            <div class="popup-content customer-content">
+                <div>
+                    <div class="content-top">
+                        <p>Enter your Email.</p>
+                        <input type="text" id="mail">
+                    </div>
+                    <div class="content-bottom">
+                        <div class="btn" id="send-mail">送出</div>
+                        <div class="btn" id="cancel-mail">取消</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup popup-product">
+            <div class="popup-content product-content">
+                <div class="popup-left">
+                    <img src="resource/portrait/1.jpg" class="popup-img">
+                </div>
+                <div class="popup-right">
+                    <div>
+                        <div class="popup-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="popup-info">
+                            <h1 class="info-title"></h1>
+                            <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                                nulla aliquam quia fuga?</p>
+                        </div>
+                        <div class="popup-buy">
+                            <div class="buy-top"></div>
+                            <div class="buy-bottom">
+                                <span id="popup-buy-btn">加入購物車</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="product" id="product1">
+                <div class="product-img">
+                    <img src="resource/horizontal/1.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product1
+                        </p>
+                        <span class="buy">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product" id="product2">
+                <div class="product-img">
+                    <img src="resource/horizontal/2.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product2
+                        </p>
+                        <span class="buy">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product" id="product3">
+                <div class="product-img">
+                    <img src="resource/horizontal/3.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product3
+                        </p>
+                        <span class="buy">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product" id="product4">
+                <div class="product-img">
+                    <img src="resource/horizontal/4.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product4
+                        </p>
+                        <span class="buy">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product" id="product5">
+                <div class="product-img">
+                    <img src="resource/horizontal/5.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product5
+                        </p>
+                        <span class="buy">Buy!</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product" id="product6">
+                <div class="product-img">
+                    <img src="resource/horizontal/6.jpg">
+                    <div class="product-text">
+                        <p>
+                            Product6
+                        </p>
+                        <span class="buy">Buy!</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="bug">
+        <p>沒有收到信件？</p>
+    </div>
+
+
+    <script src="js/header.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/base.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+
+    </script>
+</body>
+
+</body>
+
+</html>
