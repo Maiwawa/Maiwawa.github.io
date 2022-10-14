@@ -1,0 +1,19 @@
+.s-60-40 .section-40 {
+    background: #e48751;
+}
+
+.s-40-60 .section-40 {
+    background: #D9CEC1;
+}
+
+.content-text p::after{
+    content: 'Contact us　→';
+}
+
+.content-text p::before{
+    content: 'Contact us　　';
+}
+
+.s-40-60 .section-40 .image:last-child{
+    padding: 20%;
+}
