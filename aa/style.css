@@ -1,0 +1,198 @@
+:root {
+    --header-height: 150px;
+    --right-width: 400px;
+    --left-padding-right: 80px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 70px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    background: #367841;
+    width: 150px;
+    height: 40px;
+}
+
+.navs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    width: 100px;
+    height: 30px;
+    background: #835479;
+}
+
+/* banner */
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.left {
+    width: calc(100% - var(--right-width) - var(--left-padding-right));
+    height: calc(100vh - var(--header-height));
+    padding-top: var(--header-height);
+    padding-right: var(--left-padding-right);
+    /* background: #666; */
+}
+
+.left-imgs {
+    width: calc(100% - var(--right-width) - var(--left-padding-right));
+    height: calc(100vh - var(--header-height));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 0 80px 0 0;
+}
+
+.left-img {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    z-index: 19;
+    left: 0;
+    bottom: 0;
+    background-image: url(portrait/1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: 1s ease-in-out;
+    opacity: 0;
+}
+
+.left-img2 {
+    background-image: url(portrait/2.jpg);
+}
+
+.left-img3 {
+    background-image: url(portrait/3.jpg);
+}
+
+.right {
+    width: var(--right-width);
+    height: 100%;
+    /* background: #999; */
+}
+
+.right-imgs {
+    width: var(--right-width);
+    height: calc(100vh - 300px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    border-radius: 0 0 0 80px;
+}
+
+.right-img {
+    position: absolute;
+    z-index: 19;
+    width: 100%;
+    height: 30%;
+    background-image: url(portrait/4.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: 1s ease-in-out;
+    opacity: 0;
+}
+
+.right-img2 {
+    background-image: url(portrait/5.jpg);
+}
+
+.right-img3 {
+    background-image: url(portrait/6.jpg);
+}
+
+.right-text {
+    width: 100%;
+    height: 300px;
+    /* background: #353254; */
+}
+
+.pre {
+    z-index: 20;
+}
+
+.rightshow {
+    height: 100%;
+    opacity: 1;
+}
+
+.leftshow {
+    height: 100%;
+    opacity: 1;
+}
+
+.big-left {
+    animation: bigger 9s;
+}
+
+@keyframes bigger {
+    0% {
+        transform: scale(1);
+        background-position: 50% 50%;
+    }
+
+    60% {
+        transform: scale(1.03);
+        background-position: 50% 46%;
+    }
+
+    100% {
+        transform: scale(1.04);
+        background-position: 50% 44%;
+    }
+}
+
+.big-right {
+    animation: biggerr 8s;
+}
+
+@keyframes biggerr {
+    0% {
+        transform: scale(1);
+        background-position: 50% 50%;
+    }
+
+    60% {
+        transform: scale(1.1);
+        background-position: 50% 54%;
+    }
+
+    100% {
+        transform: scale(1.12);
+        background-position: 50% 56%;
+    }
+}

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+section {
+    height: 100vh;
+    width: 385vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.scroll-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translate(-38vw);
+}
+
+.s-transition {
+    transition: 2s;
+}
+
+.scroll {
+    width: 15vw;
+    padding: 2vw;
+}
+
+.bigger{
+    transition: width 1s;
+}
+
+.scroll:nth-child(5) {
+    width: 20vw;
+}
+
+.scroll img {
+    width: 100%;
+}
+
+.animation {
+    animation: move 2s;
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: rotate(0);
+        transform-origin: left bottom
+    }
+
+    22% {
+        transform: rotate(7.5deg);
+        transform-origin: right bottom
+    }
+
+    44% {
+        transform: rotate(-7.5deg);
+        transform-origin: left bottom
+    }
+
+    66% {
+        transform: rotate(3.75deg);
+        transform-origin: right bottom
+    }
+
+    77% {
+        transform: rotate(-1.875deg);
+        transform-origin: left bottom
+    }
+
+    88% {
+        transform: rotate(.9375deg);
+        transform-origin: right bottom
+    }
+}
+
+
+.move1 {
+    transform: translate(0vw);
+}
+
+.move2 {
+    transform: translate(-19vw);
+}
+
+.move3 {
+    transform: translate(-38vw);
+}
+
+.move4 {
+    transform: translate(-57vw);
+}
+
+.move5 {
+    transform: translate(-76vw);
+}
+
+.move6 {
+    transform: translate(-95vw);
+}
+
+.move7 {
+    transform: translate(-114vw);
+}
+
+.move8 {
+    transform: translate(-133vw);
+}
+
+.move9 {
+    transform: translate(-152vw);
+}
+
+.move10 {
+    transform: translate(-171vw);
+}
+
+.move11 {
+    transform: translate(-190vw);
+}
+
+.move12 {
+    transform: translate(-209vw);
+}
+
+.move13 {
+    transform: translate(-228vw);
+}
+
+.move14 {
+    transform: translate(-247vw);
+}
+
+.move15 {
+    transform: translate(-266vw);
+}
+
+.move16 {
+    transform: translate(-285vw);
+}
+
+.move17 {
+    transform: translate(-304vw);
+}
