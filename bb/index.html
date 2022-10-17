@@ -33,7 +33,7 @@
     <script>
         $(document).ready(function () {
             addImg();
-            // move();
+            move();
             delay();
         })
 
@@ -41,7 +41,8 @@
             b = 5,
             b2 = 4,
             m = 4,
-            dataLength;
+            dataLength,
+            totalLength;
         dataUrl = "img.json";
 
         function addImg() {
@@ -49,6 +50,8 @@
                 .then((data) => {
                     appendImg(data);
                     console.log(data)
+                    dataLength = data.data.length;
+                    totalLength = dataLength + 5;
                 })
                 .catch((error) =>
                     console.log(error)
@@ -56,46 +59,70 @@
         };
 
         function appendImg(data) {
-            dataLength = data.data.length;
+            let listWidth = ((((data.data.length + 5) - 1) * 15) + ((data.data.length + 5) * 2 * 2) + 20);
+            $('section').css('width', `${listWidth}vw`);
+
+            $('#scroll-list').append(`<div class="scroll scroll0 bigger">
+                                        <img src="${data.data[data.data.length - 2].img}">
+                                    </div>`);
+            $('#scroll-list').append(`<div class="scroll scroll1 bigger">
+                                        <img src="${data.data[data.data.length - 1].img}">
+                                    </div>`);
+
             for (let i = 0; i < data.data.length; i++) {
-                aa = `<div class="scroll scroll${i} bigger">
+                aa = `<div class="scroll scroll${i + 2} bigger">
                         <img src="${data.data[i].img}">
                       </div>`;
                 $('#scroll-list').append(aa);
             };
+
+            $('#scroll-list').append(`<div class="scroll scroll${data.data.length + 2} bigger">
+                                        <img src="${data.data[0].img}">
+                                    </div>`);
+            $('#scroll-list').append(`<div class="scroll scroll${data.data.length + 3} bigger">
+                                        <img src="${data.data[1].img}">
+                                    </div>`);
+            $('#scroll-list').append(`<div class="scroll scroll${data.data.length + 4} bigger">
+                                        <img src="${data.data[2].img}">
+                                    </div>`);
         };
 
         function move() {
             setTimeout(() => {
-                if (m == 16) {
-                    $('.scroll-list').removeClass(`move15`);
-                    $('.scroll-list').addClass(`move16`);
-                    removeanimation2();
-                    // console.log(m);
-                    m = 1;
-                } if (m != 16) {
-                    $('.scroll-list').addClass(`move${m}`);
-                    $('.scroll-list').removeClass(`move${m - 1}`);
+                // dataLength = 15;
+                // totalLength = 20;
+
+                // 16
+                if (m == (totalLength - 4)) {
+                    // $('.scroll-list').removeClass(`move15`);
+                    // 15
+                    // $('.scroll-list').addClass(`move16`);
+                    $('.scroll-list').css('transform', `translate(${(m - 1) * -19}vw)`);
                     $('.scroll img').addClass(`animation`);
-                    // console.log(m);
+                    removeanimation2();
+                } if (m != (totalLength - 4)) {
+                    // $('.scroll-list').addClass(`move${m}`);
+                    // $('.scroll-list').removeClass(`move${m - 1}`);
+                    $('.scroll-list').css('transform', `translate(${(m - 1) * -19}vw)`);
+                    $('.scroll img').addClass(`animation`);
                     m++;
                 }
 
 
-                if (b == 17) {
-                    $(`.scroll16`).css('width', '15vw');
-                    $(`.scroll17`).css('width', '20vw');
+                if (b == (totalLength - 3)) {
+                    $(`.scroll${totalLength - 4}`).css('width', '15vw');
+                    $(`.scroll${totalLength - 3}`).css('width', '20vw');
                     console.log('16=15 17=20 bigger2')
                     b = 3;
                     b2 = 2;
-                } else if (b != 17) {
+                } else if (b != (totalLength - 3)) {
                     $(`.scroll${b}`).css('width', '20vw');
                     $(`.scroll${b2}`).css('width', '15vw');
                     b++;
                     b2++;
                 }
                 move();
-            }, 4000);
+            }, 5000);
         }
 
         function delay() {
@@ -109,26 +136,25 @@
             setTimeout(() => {
                 $('.scroll img').removeClass(`animation`);
                 removeanimation();
-            }, 4000);
+            }, 5000);
         }
 
         function removeanimation2() {
             setTimeout(() => {
-                $('.scroll-list').addClass(`move1`);
-                $('.scroll-list').removeClass(`move16`);
+                m = 2;
+                $('.scroll-list').css('transform', `translate(0vw)`);
                 $('.scroll-list').removeClass('s-transition');
-
+                // $('.scroll-list').addClass(`move1`);
+                // $('.scroll-list').removeClass(`move16`);
                 $('.scroll').removeClass('bigger');
-                console.log('rm bigger + 2=20 17 = 15')
                 $(`.scroll2`).css('width', '20vw');
-                $(`.scroll17`).css('width', '15vw');
+                $(`.scroll${totalLength - 3}`).css('width', '15vw');
             }, 2000);
             setTimeout(() => {
                 $('.scroll-list').addClass('s-transition');
 
                 $('.scroll').addClass('bigger');
-                console.log('add bigger')
-            }, 4000);
+            }, 5000);
         }
     </script>
 </body>

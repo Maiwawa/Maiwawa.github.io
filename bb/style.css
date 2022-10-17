@@ -14,7 +14,7 @@ body {
 
 section {
     height: 100vh;
-    width: 385vw;
+    /* width: 366vw; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@ section {
 }
 
 .s-transition {
-    transition: 2s;
+    transition: 1.5s;
 }
 
 .scroll {
@@ -86,7 +86,7 @@ section {
     }
 }
 
-
+/* 
 .move1 {
     transform: translate(0vw);
 }
@@ -153,4 +153,4 @@ section {
 
 .move17 {
     transform: translate(-304vw);
-}
+} */

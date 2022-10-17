@@ -1,13 +1,5 @@
 [
     {
-        "img": "resource/14.jpg",
-        "name": ""
-    },
-    {
-        "img": "resource/15.jpg",
-        "name": ""
-    },
-    {
         "img": "resource/1.jpg",
         "name": ""
     },
@@ -65,18 +57,6 @@
     },
     {
         "img": "resource/15.jpg",
-        "name": ""
-    },
-    {
-        "img": "resource/1.jpg",
-        "name": ""
-    },
-    {
-        "img": "resource/2.jpg",
-        "name": ""
-    },
-    {
-        "img": "resource/3.jpg",
         "name": ""
     }
 ]
