@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-body {
+body,html {
     overflow-x: hidden;
 }
 
