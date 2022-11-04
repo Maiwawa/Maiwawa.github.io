@@ -53,9 +53,11 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-body,html {
+body {
+    width: 100vw;
     position: relative;
     overflow-x: hidden;
+    height: 100%;
 }
 
 section {
