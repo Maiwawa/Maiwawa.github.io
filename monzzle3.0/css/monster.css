@@ -84,11 +84,14 @@ section {
     font-size: var(--banner-p);
 }
 
+.s-scroll{
+    /* overflow-x: hidden; */
+}
+
 .scroll-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
 }
 
 .scroll-list {
