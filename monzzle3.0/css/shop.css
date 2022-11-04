@@ -1,0 +1,278 @@
+.bug{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vh;
+    cursor:pointer;
+}
+
+/*section shop*/
+.s-shop {
+    padding: 160px 10%;
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    width: 30%;
+    /* min-height: 300px; */
+    /* background: #254820; */
+    border-radius: 20px;
+    margin: 1.6%;
+    padding: 30px;
+    /* border: #232323 1px solid; */
+    box-shadow: 5px 10px 18px #888888;
+    transition: 1s;
+    transition-property: transform;
+    cursor: pointer;
+}
+
+.product-img {
+    width: 100%;
+}
+
+.product-img img {
+    width: 100%;
+    border-radius: 20px;
+    transition: 1s;
+    transition-property: transform;
+}
+
+.product-text {
+    margin-top: 20px;
+    color: #232323;
+    font-size: var(--big-p);
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy {
+    background: #888;
+    color: #FFF;
+    padding: 2% 10%;
+    border-radius: 20px;
+    font-size: var(--sec-p);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    transition-property: transform;
+}
+
+.buy:hover {
+    transform: scale(1.2);
+}
+
+.product:hover {
+    transform: scale(1.1);
+}
+
+.product:hover .buy {
+    animation: buy 1.2s infinite;
+}
+
+.product-img img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes buy {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width:1000px) {
+    .product {
+        width: 45%;
+        margin: 2.5%;
+    }
+}
+
+.popup {
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.5);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.popup-product {
+    z-index: 1000;
+}
+
+.popup-customer {
+    z-index: 1001;
+}
+
+.popup-confirm {
+    z-index: 1002;
+}
+
+.popup-content {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px #888888;
+    ;
+}
+
+.product-content {
+    width: 80%;
+    height: 80vh;
+}
+
+.customer-content {
+    padding: 10vh 20vw;
+}
+
+.confirm-content {
+    padding: 5vh 10%;
+}
+
+.popup-left,
+.popup-right {
+    width: 50%;
+    height: 100%;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.popup-close {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    transform: translateY(-200%);
+}
+
+.popup-close i {
+    font-size: var(--big-p);
+    transition: 0.3s transform;
+}
+
+.popup-close i:hover {
+    transform: scale(1.2);
+}
+
+.popup-buy {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.popup-buy .buy-top {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buy-top i:first-child,
+.buy-top i:last-child {
+    padding: 5%;
+    /* margin: 0 10%; */
+    cursor: pointer;
+    position: relative;
+    font-size: var(--sec-p);
+}
+
+.buy-top i:first-child {
+    margin-right: 10%;
+}
+
+.buy-top i:last-child {
+    margin-left: 10%;
+}
+
+.buy-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#popup-buy-btn {
+    background: #232323;
+    color: #fff;
+    padding: 3% 7%;
+    border-radius: 15px;
+    margin-top: 5%;
+    cursor: pointer;
+    animation: 3s buy infinite;
+}
+
+.content-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.btn {
+    padding: 3% 10%;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.3s transform;
+}
+
+#yes,
+#send-mail {
+    background: rgb(98, 214, 103);
+}
+
+#no,
+#cancel-mail {
+    background: rgb(241, 85, 85);
+}
+
+#yes:hover,
+#no:hover {
+    transform: scale(1.1);
+}
+
+#mail {
+    width: 120%;
+    transform: translateX(-10%);
+}
+
+/* #send-mail{
+    background: #232323;
+    color: #fff;
+    display: inline-block;
+    padding: 3% 8%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5%;
+} */

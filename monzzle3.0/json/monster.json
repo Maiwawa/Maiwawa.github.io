@@ -1,0 +1,99 @@
+[
+	{
+		"name": "蛇郎君",
+		"location": "陸地",
+		"type": "人首蛇身",
+		"mean": "嫁好ㄤ防小人",
+		"data": "某處有蛇久而成怪，化為美男子往來村中，村人稱之為蛇郎君。",
+		"imgPng": "resource/monster/snake.png",
+		"imgJpg": "resource/monster/snake.jpg",
+		"goodorbad": "正面",
+		"id": "snake"
+	},
+	{
+		"name": "山貓",
+		"location": "陸地",
+		"type": "山貓",
+		"mean": "避災害",
+		"data": "宜蘭頭城的天神宮奉祀的將軍爺，真身據說是一隻山貓妖怪",
+		"imgPng": "resource/monster/cat.png",
+		"imgJpg": "resource/monster/cat.jpg",
+		"goodorbad": "正面",
+		"id": "cat"
+	},
+	{
+		"name": "白馬妖怪",
+		"location": "陸地",
+		"type": "馬",
+		"mean": "保護錢財",
+		"data": "與金銀鬼相似，白馬妖怪負責”守護寶藏”，在台灣各地都有現身的故事。此外也有傳說只有品德高超的人，才有機會跟隨白馬與白兔得知寶藏地點。",
+		"imgPng": "resource/monster/hourse.png",
+		"imgJpg": "resource/monster/hourse.jpg",
+		"goodorbad": "正面",
+		"id": "horse"
+	},
+	{
+		"name": "天狗",
+		"location": "陸地",
+		"type": "白狐狸",
+		"mean": "日食",
+		"data": "像狐狸，頭白色，會吃太陽(日食)",
+		"imgPng": "resource/monster/dog.png",
+		"imgJpg": "resource/monster/dog.jpg",
+		"goodorbad": "正面",
+		"id": "dog"
+	},
+	{
+		"name": "人魚",
+		"location": "水域",
+		"type": "人加魚",
+		"mean": "假美好的表象",
+		"data": "人身魚尾怪物，以歌聲魅惑來往魚夫；一男一女(金髮)人魚浮出水面即為凶兆。",
+		"imgPng": "resource/monster/fish.png",
+		"imgJpg": "resource/monster/fish.jpg",
+		"goodorbad": "負面",
+		"id": "fish"
+	},
+	{
+		"name": "金銀鬼",
+		"location": "陸地",
+		"type": "鬼",
+		"mean": "諷刺守財奴",
+		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
+		"imgPng": "resource/monster/coin.png",
+		"imgJpg": "resource/monster/coin.jpg",
+		"goodorbad": "負面",
+		"id": "coin"
+	},
+	{
+		"name": "魔神仔",
+		"location": "陸地",
+		"type": "鬼",
+		"mean": "諷刺守財奴",
+		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
+		"imgPng": "resource/monster/msz.png",
+		"imgJpg": "resource/monster/msz.jpg",
+		"goodorbad": "負面",
+		"id": "coin"
+	},{
+		"name": "制風龜",
+		"location": "陸地",
+		"type": "鬼",
+		"mean": "諷刺守財奴",
+		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
+		"imgPng": "resource/monster/turtle.png",
+		"imgJpg": "resource/monster/turtle.jpg",
+		"goodorbad": "負面",
+		"id": "turtle"
+	},{
+		"name": "疫鬼",
+		"location": "陸地",
+		"type": "鬼",
+		"mean": "諷刺守財奴",
+		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
+		"imgPng": "resource/monster/ghost.png",
+		"imgJpg": "resource/monster/ghost.jpg",
+		"goodorbad": "負面",
+		"id": "ghost"
+	}
+]

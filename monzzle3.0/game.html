@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小遊戲</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="resource/header/headerlogo.png" class=""></a>
+        </div>
+        <div class="header-right">
+            <div class="menu-border" id="menu-border"></div>
+            <div class="menu-btn" id="menu-btn">
+                <i class="fa-solid fa-angle-down" id="btn"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-content">
+        <div class="menu-left">
+            <div class="navs">
+                <div class="nav nav-1">
+                    <a href="index.html">首頁</a>
+                </div>
+                <div class="nav nav-2">
+                    <a href="about.html">關於我們</a>
+                </div>
+                <div class="nav nav-3">
+                    <a href="subject.html">專題介紹</a>
+                </div>
+                <div class="nav nav-4">
+                    <a href="monster.html">妖怪選單</a>
+                </div>
+                <div class="nav nav-5">
+                    <a href="game.html">小遊戲</a>
+                </div>
+                <div class="nav nav-6">
+                    <a href="shop.html">商城</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-right">
+            <div class="infos">
+                <div class="info">
+                    學校：<br />
+                    國立勤益科技大學
+                </div>
+                <div class="info">
+                    系所：<br />
+                    文化創意事業系
+                </div>
+                <div class="info">
+                    班級：<br />
+                    四文四甲
+                </div>
+                <div class="info">
+                    聯絡資訊：<br />
+                    <span>monzzle01@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-mask"></div>
+
+    <!-- <section class="s-paragraph">
+        <div class="content" id="content">
+            <div class="content-text">
+                <p>回首頁　　</p>
+            </div>
+            <div>
+                <h1 id="title">維護中</h1>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="navigation" id="navigation">
+        <div>
+            <div class="btn-content">
+                <i class="fa-solid fa-xmark" id="btn2"></i>
+            </div>
+            <div class="m-navs">
+                <div class="left">
+                    <div class="left-nav" id="good">正面</div>
+                    <div class="left-nav" id="bad">負面</div>
+                </div>
+                <div class="good">
+                    <div class="right-nav" id="turtle">制風龜</div>
+                    <div class="right-nav" id="snake">蛇郎君</div>
+                    <div class="right-nav" id="cat">山貓</div>
+                    <div class="right-nav" id="stone">豬哥石</div>
+                    <div class="right-nav" id="horse">白馬妖怪</div>
+                    <div class="right-nav" id="dog">天狗</div>
+                    <div class="right-nav" id="bird">婆娑鳥</div>
+                </div>
+                <div class="bad">
+                    <div class="right-nav" id="dragon">傀儡山之雲龍</div>
+                    <div class="right-nav" id="girl">金魅</div>
+                    <div class="right-nav" id="fish">人魚</div>
+                    <div class="right-nav" id="tiger">虎姑婆</div>
+                    <div class="right-nav" id="coin">金銀鬼</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="s-paragraph">
+        <a href="#">
+            <div class="content" id="changeimage">
+                <div class="content-text">
+                    <p>更換拼圖　　</p>
+                </div>
+                <div>
+                    <h1>選擇拼圖</h1>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <!-- <div id="frame"></div> -->
+    <section class="s-game">
+        <div id="game">
+            <li class="tile" id="1"><span class="number">1</span></li>
+            <li class="tile" id="2"><span class="number">2</span></li>
+            <li class="tile" id="3"><span class="number">3</span></li>
+            <li class="tile" id="4"><span class="number">4</span></li>
+            <li class="tile" id="5"><span class="number">5</span></li>
+            <li class="tile" id="6"><span class="number">6</span></li>
+            <li class="tile" id="7"><span class="number">7</span></li>
+            <li class="tile" id="8"><span class="number">8</span></li>
+            <li class="tile" id="blank"><span></span></li>
+        </div>
+        <!-- <div id="help"><input type="checkbox" name="enablehelp" onchange="shownumbers();">Enable Help</div> -->
+    </section>
+
+    <script src="js/header.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/base.js"></script>
+
+    <script>
+        var imgs = [];  					//定義一個運算元組
+        $('.image').each(function () {  	//遍歷所有圖片,將圖片
+            var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
+            $(this).bind('load', function () {
+                dfd.resolve();  			//圖片載入完成後,表示操作成功
+            });
+            if (this.complete) {				//如果圖片載入狀態為完成,那麼也標識操作成功
+                setTimeout(function () {
+                    dfd.resolve();
+                }, 2000);
+            }
+            imgs.push(dfd);  			//將所有操作物件放入陣列中
+        })
+        $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
+            $('.loader_bg').hide();
+            loadedImg();
+        });
+
+        ScrollReveal({
+            reset: true, distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+
+        function loadedImg() {
+            ScrollReveal({
+                reset: false,
+                distance: '60px',
+                duration: 2500,
+                delay: 200
+            });
+            ScrollReveal().reveal('.content', { delay: 200, origin: 'bottom' });
+
+        };
+    </script>
+</body>
+
+</body>
+
+</html>

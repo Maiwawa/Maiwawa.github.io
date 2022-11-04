@@ -1,0 +1,30 @@
+[
+    {
+        "img": "resource/monster/dog.png",
+        "name": "天狗"
+    },
+    {
+        "img": "resource/monster/cat.png",
+        "name": "山貓"
+    },
+    {
+        "img": "resource/monster/snake.png",
+        "name": "蛇郎君"
+    },
+    {
+        "img": "resource/monster/coin.png",
+        "name": "金銀鬼"
+    },
+    {
+        "img": "resource/monster/hourse.png",
+        "name": "白馬妖怪"
+    },
+    {
+        "img": "resource/monster/msz.png",
+        "name": "魔神仔"
+    },
+    {
+        "img": "resource/monster/fish.png",
+        "name": "人魚"
+    }
+]
