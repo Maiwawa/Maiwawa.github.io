@@ -45,7 +45,7 @@
                     <a href="subject.html">專題介紹</a>
                 </div>
                 <div class="nav nav-4">
-                    <a href="monster.html">妖怪選單</a>
+                    <a href="monster.html">妖怪集結</a>
                 </div>
                 <div class="nav nav-5">
                     <a href="game.html">小遊戲</a>
@@ -81,43 +81,195 @@
 
 
     <style>
-        .monster {
-            width: 100%;
+        .monster-image {
             height: 100vh;
+            width: 100%;
+            padding: 20vh 20vw;
+            display: block;
+            overflow: hidden;
+        }
+
+        .image-content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .image-content img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            position: relative;
+            z-index: 4;
+        }
+
+        .image-content p {
+            font-size: var(--sec-title);
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+        }
+
+        .bg-content {
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .monster-content {
-            width: 80%;
-            height: 80vh;
-        }
-
-        .monster-content img {
-            height: 80vh;
+            padding: 0 10%;
             width: 100%;
-            object-fit: contain;
-            margin-bottom: -40vh;
+            height: 60%;
+            transform: translateY(-90%);
         }
 
-        .monster-bg {
+        @media (max-width:600px) {
+            .bg-content {
+                height: 50%;
+                transform: translateY(-110%);
+            }
+        }
+
+        .image-bg {
+            background: #cbcbcb;
             width: 100%;
-            height: 40vh;
-            border-radius: 50px;
-            background: rgb(212, 211, 211);
+            height: 100%;
+            border-radius: 150px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .s-introduction {
+            min-height: 100vh;
+        }
+
+        .introduction-content {
+            padding: 10vh 15%;
+            width: 100%;
+            height: 100%;
+        }
+
+        .introduction-title {
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: var(--big-p);
+        }
+
+        .introduction-text {
+            font-size: var(--sec-p);
+            /* line-height: 200%; */
+        }
+
+        .line-body {
+            height: 15vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px 0;
+        }
+
+        .line {
+            background: #232323;
+            height: 100%;
+            width: 2.5px;
+        }
+
+        .introduction-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .introduction-image {
+            width: 30%;
+            padding: 15px;
+            background: #cbcbcb;
+            border-radius: 100%;
+            margin: 1.6%;
+        }
+
+        .introduction-image img {
+            width: 100%;
+        }
+
+        @media (max-width:1000px) {
+            .introduction-image {
+                width: 37%;
+                margin: 1% 6%;
+            }
+
+            .line-body {
+                height: 10vh;
+                padding: 20px 0;
+            }
+        }
+
+        @media (max-width:800px) {
+            .introduction-image {
+                width: 80%;
+                margin: 5% 0%;
+            }
+
+            .line-body {
+                height: 10vh;
+                padding: 20px 0;
+            }
+
+            .introduction-content {
+                padding: 10vh 10%;
+            }
         }
     </style>
 
-    <section class="monster">
-        <div class="monster-content">
-            <img src="resource/monster/cat.png" alt="">
-            <div class="monster-bg"></div>
+
+    <section class="monster-image">
+        <div class="image-content">
+            <p>山貓</p>
+            <img src="resource/monster/cat.png" class="image">
+        </div>
+        <div class="bg-content">
+            <div class="image-bg"></div>
+        </div>
+    </section>
+
+    <section class="s-introduction">
+        <div class="introduction-content">
+            <div class="introduction-title">
+                <p>這段文字是關於這隻妖怪</p>
+            </div>
+            <div class="line-body">
+                <div class="line"></div>
+            </div>
+            <div class="introduction-text">
+                <p>
+                    這是<span class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。這是<span
+                        class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。這是<span
+                        class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。<br /><br />
+                    這是<span class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。這是<span
+                        class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。這是<span
+                        class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。<br /><br />
+                    這是<span class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。這是<span
+                        class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。這是<span
+                        class="name"></span>的設計理念，這是<span class="name"></span>的設計理念。
+                </p>
+            </div>
+            <div class="introduction-images">
+                <div class="introduction-image">
+                    <img src="resource/monster/fish.png" class="image">
+                </div>
+                <div class="introduction-image">
+                    <img src="resource/monster/fish.png" class="image">
+                </div>
+                <div class="introduction-image">
+                    <img src="resource/monster/fish.png" class="image">
+                </div>
+            </div>
         </div>
     </section>
 
     <script src="js/header.js"></script>
-    <script src="js/monster.js"></script>
     <script src="js/vanilla-tilt.min.js"></script>
     <script src="js/base.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
@@ -139,8 +291,28 @@
             monsterId = $.urlParam('id');
 
             getMonsterData();
-
         });
+
+        function imgCheck() {
+            var imgs = [];  					//定義一個運算元組
+            $('.image').each(function () {  	//遍歷所有圖片,將圖片
+                var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
+                $(this).bind('load', function () {
+                    dfd.resolve();  			//圖片載入完成後,表示操作成功
+                });
+                if (this.complete) {				//如果圖片載入狀態為完成,那麼也標識操作成功
+                    setTimeout(function () {
+                        dfd.resolve();
+                    }, 2000);
+                }
+                imgs.push(dfd);  			//將所有操作物件放入陣列中
+            })
+            $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
+                $('.loader_bg').hide();
+            });
+        }
+
+
 
 
         function getMonsterData() {
@@ -151,16 +323,20 @@
                 .catch((error) =>
                     console.log(error)
                 )
-        }
+        };
 
         function appendData(res) {
             for (let i = 0; i < res.data.length; i++) {
-                console.log(res.data[i].name)
-                console.log(monsterId)
+                // console.log(res.data[i].name)
+                // console.log(monsterId)
                 if (res.data[i].name == monsterId) {
-                    $('.monster-content img').attr('src',`${res.data[i].imgPng}`)
+                    $('.image-content img').attr('src', `${res.data[i].imgPng}`);
+                    $('.introduction-image img').attr('src', `${res.data[i].imgPng}`);
+                    $('.image-content p').text(res.data[i].name);
+                    $('.name').text(res.data[i].name);
                 }
             }
+            imgCheck();
         };
     </script>
 </body>

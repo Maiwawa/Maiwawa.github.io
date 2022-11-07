@@ -1,6 +1,5 @@
 $(document).ready(function () {
     addImg();
-    imgCheck();
 });
 
 function imgCheck() {
@@ -185,6 +184,8 @@ function appendImg(data) {
                                     </div>`);
 
     $('#scroll-list').css('transform', `translate(-${(scrollWidth + (scrollPadding * 2)) * 2}vw)`);
+
+    imgCheck();
 };
 
 function move() {
