@@ -208,14 +208,16 @@ $('.right-nav').click(function () {
     let id = this.id;
     // console.log(id);
     let text = this.text;
-    $('#changeimage div h1').text(text);
+    $('.content div h1').text($(`#${id}`).text());
     console.log(text);
     game.tiles = Array.from(document.getElementsByClassName('tile'));
     setPuzzleImage(id);
-    console.log(id);
+    // console.log(id);
     setTiles(game);
     game.navigation.style.display = "none";
     $('#game').show();
+    $('.s-game').show();
+    $('.s-paragraph').css('min-height','40vh');
 });
 
 function addClickEvent() { //adding click event to each tile

@@ -1,10 +1,16 @@
-.s-game{
-    padding-bottom: 10vh;
+section{
+    min-height: 50vh;
 }
 
-/* .s-paragraph {
-    min-height: 80vh;
-} */
+.s-game{
+    padding-bottom: 10vh;
+    display: none;
+}
+
+.s-paragraph {
+    min-height: calc(100vh - 160px);
+    padding-top: 160px;
+}
 
 div#game {
     /*border: 1px solid black;*/
