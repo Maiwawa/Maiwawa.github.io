@@ -75,7 +75,8 @@ $('.left-nav').click(function () {
 });
 
 $('.right-nav').click(function () {
-    window.location = `monster_introduction.html?id=${this.id}`
+    let text = $(`#${this.id}`).text();
+    window.location = `monster_introduction.html?id=${text}`
 });
 
 
