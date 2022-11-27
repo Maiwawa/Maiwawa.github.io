@@ -166,7 +166,7 @@
             }
         }
 
-        .member-content {
+        .members-content {
             width: 100%;
             display: flex;
             align-items: center;
@@ -226,7 +226,7 @@
 
 
         @media (max-width:800px) {
-            .member-content {
+            .members-content {
                 -webkit-flex-flow: column-reverse;
                 flex-flow: column-reverse;
                 display: -webkit-box;
@@ -262,8 +262,8 @@
             }
         }
 
-        .member-content2 {
-            height: 100vh;
+        .members-content2 {
+            min-height: 100vh;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -272,7 +272,6 @@
 
         .members {
             width: calc(100% - var(--member-padding)*2);
-            height: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -280,8 +279,7 @@
             padding: 0 var(--member-padding) 10vh var(--member-padding);
         }
 
-        .member-bg {
-            height: 100%;
+        .members-bg {
             background: #ede9e0;
             width: 80%;
             margin-left: -80%;
@@ -289,27 +287,69 @@
         }
 
         .member {
-            background: #232323;
+            /* background: #232323; */
             width: 30%;
-            height: 200px;
+            /* height: 200px; */
             position: relative;
+            padding-bottom: 20px;
         }
 
         @media (max-width:800px) {
-            .member-bg {
+            .members-bg {
                 display: none;
             }
 
             .member {
-                width: 80%;
+                width: 100%;
                 margin-top: 20px;
             }
 
-            .member-content2 {
+            .members-content2 {
                 height: 100%;
                 min-height: 100vh;
                 background: #ede9e0;
             }
+        }
+
+        .member-icon {
+            width: 15%;
+            background: #D89F67;
+            padding: 15px;
+            border-radius: 50%;
+            margin-bottom: -12%;
+            margin-left: -3%;
+            position: relative;
+        }
+
+        @media (max-width:800px) {
+            .member-icon {
+                margin-bottom: -10%;
+                margin-left: -2%;
+            }
+        }
+
+        .member-image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .member-image img {
+            width: 80%;
+            border-radius: 30px;
+        }
+
+        .member-text {
+            padding: 0 12%;
+        }
+
+        .member-text h1 {
+            padding: 5% 0;
+        }
+
+        @media (max-width:800px) {
+            
         }
     </style>
 
@@ -344,7 +384,7 @@
             </div>
         </div>
 
-        <div class="member-content">
+        <div class="members-content">
             <div class="member-left">
                 <h1>團隊介紹</h1><br />
                 <h1>用生命繪製妖怪的人們</h1><br />
@@ -364,15 +404,85 @@
             </div>
         </div>
 
-        <div class="member-content2">
+        <div class="members-content2">
             <div class="members">
-                <div class="member"></div>
-                <div class="member"></div>
-                <div class="member"></div>
-                <div class="member"></div>
-                <div class="member"></div>
+
+                <div class="member">
+                    <div class="member-icon">
+                        <img src="resource/members/11.svg" alt="">
+                    </div>
+                    <div class="member-image">
+                        <img src="resource/horizontal/1.jpg" alt="">
+                    </div>
+                    <div class="member-text">
+                        <h1>妖怪、地圖底色上色<br />
+                            名牌設計</h1>
+                        <p>我叫恩彤，高中是應用英文科畢業，所以在英文能力方面有一定的水準。因為本身對設計行銷方面有興趣，所以來的文化創意事業系學習更多技能和知識。興趣是畫插圖，未來也希望能以圖文創作為目標。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="member-icon">
+                        <img src="resource/members/22.svg" alt="">
+                    </div>
+                    <div class="member-image">
+                        <img src="resource/horizontal/1.jpg" alt="">
+                    </div>
+                    <div class="member-text">
+                        <h1>標準字設計<br />
+                            妖怪、地圖明暗繪製</h1>
+                        <p>雖然我外表看起來很文靜，但其實熟了知會是能和大家一起瘋起來的人！因為平常就有喝茶的習慣，所以和書中人物產生共鳴，便提出關於茶文化的主題，最後被採用也覺得很開心，希望能將茶文化傳遞給更多人知道。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="member-icon">
+                        <img src="resource/members/33.svg" alt="">
+                    </div>
+                    <div class="member-image">
+                        <img src="resource/horizontal/1.jpg" alt="">
+                    </div>
+                    <div class="member-text">
+                        <h1>妖怪、地圖草圖設計<br />
+                            地圖精修</h1>
+                        <p>高中時就讀了廣告設計科，因此開啟了我繪畫創作設計的道路，平常我都會隨身攜帶畫本好能隨時隨地作畫。大一課堂上所教的手抄紙一直讓我印象深刻，如果能用這麼特別的呈現方式來表現出茶文化，我覺得會是一大進展跟突破，開啟大家新的視野。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="member-icon">
+                        <img src="resource/members/44.svg" alt="">
+                    </div>
+                    <div class="member-image">
+                        <img src="resource/horizontal/1.jpg" alt="">
+                    </div>
+                    <div class="member-text">
+                        <h1>圖鑑排版、元素設計​<br />
+                            網站設計</h1>
+                        <p>古靈精怪的水瓶座，有許多天馬行空的想法，偶爾會利用手作實踐一些構想；本身喜歡畫插圖，也有一些貼圖作品，希望能盡自己最大的努力為專題帶來一些幫助。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <div class="member-icon">
+                        <img src="resource/members/55.svg" alt="">
+                    </div>
+                    <div class="member-image">
+                        <img src="resource/horizontal/1.jpg" alt="">
+                    </div>
+                    <div class="member-text">
+                        <h1>網站撰寫</h1>
+                        <p>本身較不喜歡外出的我，平時的休閒娛樂就是待在家中使用電腦，或許是從小較常接觸，所以對軟體的操作，或寫程式較有興趣。仍有不足之處，但我也會盡心盡力完成份內的工作，拿出最好的成品。
+                        </p>
+                    </div>
+                </div>
+
             </div>
-            <div class="member-bg"></div>
+            <div class="members-bg"></div>
         </div>
     </section>
 
@@ -386,7 +496,11 @@
     <script>
         let leftImgs = ["left-img1", "left-img2", "left-img3"];
         let rightImgs = ["right-img1", "right-img2", "right-img3"];
+        $('.members-bg').height($('.members').height() + 100);
 
+        $(window).resize(function(){
+            $('.members-bg').height($('.members').height() +100);
+        })
 
     </script>
 </body>
