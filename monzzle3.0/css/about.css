@@ -438,12 +438,12 @@
 
 .member-right-img img {
     border-radius: 50px;
-    width: 80%;
+    width: 70%;
 }
 
 @media (max-width:1200px) {
     .member-right-img img {
-        width: 80%;
+        width: 70%;
     }
 }
 
@@ -516,6 +516,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 0 var(--member-padding) 10vh var(--member-padding);
+    z-index: 10;
 }
 
 .members-bg {
@@ -568,6 +569,10 @@
         height: 100%;
         min-height: 100vh;
         background: #ede9e0;
+    }
+
+    .members-content2 {
+        padding: 0;
     }
 }
 

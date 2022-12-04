@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/white-header.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 
     <header>
         <div class="logo">
-            <a href="test2.html"><img src="resource/header/headerlogo.png" class=""></a>
+            <a href="index.html"><img src="resource/header/headerlogo.png" class=""></a>
         </div>
         <div class="header-right">
             <div class="menu-border" id="menu-border"></div>
@@ -135,7 +136,7 @@
             <div class="member-left">
                 <h1>團隊介紹</h1>
                 <h1>用生命繪製妖怪的人們</h1>
-                <h1>Monzzle XV</h1><br />
+                <h1>XV Monzzle</h1><br />
                 <p>我們是一群因綠際會下聚在一起的人類僩盥隊總
                     計五人，每個人都有不同的特質與個性，發揮各自
                     的專長，負責不同的工作內容，雖然每週都在趕進
@@ -146,7 +147,7 @@
             </div>
             <div class="member-right">
                 <div class="member-right-img">
-                    <img src="resource/members/team-last.jpg" alt="">
+                    <img src="resource/members/team-last.jpg" class="image">
                 </div>
             </div>
         </div>
@@ -156,10 +157,10 @@
 
                 <div class="member">
                     <div class="member-icon">
-                        <img src="resource/members/11.svg" alt="">
+                        <img src="resource/members/11.svg" class="image">
                     </div>
                     <div class="member-image">
-                        <img src="resource/members/01-min.jpg" alt="">
+                        <img src="resource/members/01-min.jpg" class="image">
                     </div>
                     <div class="member-text">
                         <h1>妖怪、地圖底色上色<br />
@@ -171,10 +172,10 @@
 
                 <div class="member">
                     <div class="member-icon">
-                        <img src="resource/members/22.svg" alt="">
+                        <img src="resource/members/22.svg" class="image">
                     </div>
                     <div class="member-image">
-                        <img src="resource/members/02-min.jpg" alt="">
+                        <img src="resource/members/02-min.jpg" class="image">
                     </div>
                     <div class="member-text">
                         <h1>標準字設計<br />
@@ -186,10 +187,10 @@
 
                 <div class="member">
                     <div class="member-icon">
-                        <img src="resource/members/33.svg" alt="">
+                        <img src="resource/members/33.svg" class="image">
                     </div>
                     <div class="member-image">
-                        <img src="resource/members/03-min.jpg" alt="">
+                        <img src="resource/members/03-min.jpg" class="image">
                     </div>
                     <div class="member-text">
                         <h1>妖怪、地圖草圖設計<br />
@@ -201,10 +202,10 @@
 
                 <div class="member">
                     <div class="member-icon">
-                        <img src="resource/members/44.svg" alt="">
+                        <img src="resource/members/44.svg" class="image">
                     </div>
                     <div class="member-image">
-                        <img src="resource/members/04-min.jpg" alt="">
+                        <img src="resource/members/04-min.jpg" class="image">
                     </div>
                     <div class="member-text">
                         <h1>圖鑑排版、元素設計​<br />
@@ -216,10 +217,10 @@
 
                 <div class="member">
                     <div class="member-icon">
-                        <img src="resource/members/55.svg" alt="">
+                        <img src="resource/members/55.svg" class="image">
                     </div>
                     <div class="member-image">
-                        <img src="resource/members/05-min.jpg" alt="">
+                        <img src="resource/members/05-min.jpg" class="image">
                     </div>
                     <div class="member-text">
                         <h1>網站撰寫</h1><br />
@@ -237,6 +238,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/scrollreveal.js"></script>
     <script src="js/test.js"></script>
     <script src="js/base.js"></script>
     <script src="js/white-header.js"></script>
@@ -248,6 +250,49 @@
         $(window).resize(function () {
             $('.members-bg').height($('.members').height() + 150);
         })
+
+        var imgs = [];  					//定義一個運算元組
+        $('.image').each(function () {  	//遍歷所有圖片,將圖片
+            var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
+            $(this).bind('load', function () {
+                dfd.resolve();  			//圖片載入完成後,表示操作成功
+            });
+            if (this.complete) {				//如果圖片載入狀態為完成,那麼也標識操作成功
+                setTimeout(function () {
+                    dfd.resolve();
+                }, 2000);
+            }
+            imgs.push(dfd);  			//將所有操作物件放入陣列中
+        })
+        $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
+            $('.loader_bg').hide();
+            if ($(window).width() > 600) {
+                loadedImg();
+            }
+        });
+
+        ScrollReveal({
+            reset: true, distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+
+        function loadedImg() {
+            ScrollReveal({
+                reset: false,
+                distance: '60px',
+                duration: 2500,
+                delay: 200
+            });
+            ScrollReveal().reveal('.right-text', { delay: 250, origin: 'bottom' });
+            ScrollReveal().reveal('.team-list', { delay: 200, origin: 'left', interval: 150 });
+            ScrollReveal().reveal('.member-right', { delay: 200, origin: 'right' });
+            ScrollReveal().reveal('.member-left', { delay: 400, origin: 'left' });
+            ScrollReveal().reveal('.members-bg', { delay: 200, origin: 'right' });
+            ScrollReveal().reveal('.members', { delay: 200, origin: 'right' });
+            ScrollReveal().reveal('.member-text', { delay: 400, origin: 'bottom' });
+        };
+
 
     </script>
 </body>
