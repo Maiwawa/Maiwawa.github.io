@@ -147,7 +147,7 @@
     z-index: 9;
     left: 0;
     bottom: 0;
-    background-image: url(../resource/portrait/0.jpg);
+    background-image: url(../resource/members/team01-min.jpg);
     background-size: cover;
     background-position: 50% 50%;
     transition: 1s ease-in-out;
@@ -155,11 +155,11 @@
 }
 
 .left-img2 {
-    background-image: url(../resource/portrait/2.jpg);
+    background-image: url(../resource/members/team02-min.jpg);
 }
 
 .left-img3 {
-    background-image: url(../resource/portrait/3.jpg);
+    background-image: url(../resource/members/team03-min.jpg);
 }
 
 @media (max-width:600px) {
@@ -195,19 +195,28 @@
     z-index: 9;
     width: 100%;
     height: 30%;
-    background-image: url(../resource/portrait/4.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
+    background-image: url(../resource/members/06-min.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
     transition: 1s ease-in-out;
     opacity: 0;
 }
 
 .right-img2 {
-    background-image: url(../resource/portrait/5.jpg);
+    background-image: url(../resource/members/07-min.jpg);
 }
 
 .right-img3 {
-    background-image: url(../resource/portrait/6.jpg);
+    background-image: url(../resource/members/08-min.jpg);
+}
+
+.right-img4 {
+    background-image: url(../resource/members/09-min.jpg);
+}
+
+.right-img5 {
+    background-image: url(../resource/members/10-min.jpg);
 }
 
 @media (max-width:600px) {
