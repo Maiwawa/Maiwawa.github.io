@@ -147,7 +147,7 @@
     z-index: 9;
     left: 0;
     bottom: 0;
-    background-image: url(../resource/portrait/0.jpg);
+    background-image: url(../resource/subject/x1.jpg);
     background-size: cover;
     background-position: 50% 50%;
     transition: 1s ease-in-out;
@@ -155,11 +155,23 @@
 }
 
 .left-img2 {
-    background-image: url(../resource/portrait/2.jpg);
+    background-image: url(../resource/subject/x2.jpg);
 }
 
 .left-img3 {
-    background-image: url(../resource/portrait/3.jpg);
+    background-image: url(../resource/subject/x3.jpg);
+}
+
+.left-img4 {
+    background-image: url(../resource/subject/x4.jpg);
+}
+
+.left-img5 {
+    background-image: url(../resource/subject/x5.jpg);
+}
+
+.left-img6 {
+    background-image: url(../resource/subject/x6.jpg);
 }
 
 @media (max-width:600px) {
@@ -195,7 +207,7 @@
     z-index: 9;
     width: 100%;
     height: 30%;
-    background-image: url(../resource/portrait/4.jpg);
+    background-image: url(../resource/subject/y1.jpg);
     background-size: cover;
     background-position: 50% 50%;
     transition: 1s ease-in-out;
@@ -203,11 +215,35 @@
 }
 
 .right-img2 {
-    background-image: url(../resource/portrait/5.jpg);
+    background-image: url(../resource/subject/y2.jpg);
 }
 
 .right-img3 {
-    background-image: url(../resource/portrait/6.jpg);
+    background-image: url(../resource/subject/y3.jpg);
+}
+
+.right-img4 {
+    background-image: url(../resource/subject/y4.jpg);
+}
+
+.right-img5 {
+    background-image: url(../resource/subject/y5.jpg);
+}
+
+.right-img6 {
+    background-image: url(../resource/subject/y6.jpg);
+}
+
+.right-img7 {
+    background-image: url(../resource/subject/y7.jpg);
+}
+
+.right-img8 {
+    background-image: url(../resource/subject/y8.jpg);
+}
+
+.right-img9 {
+    background-image: url(../resource/subject/y9.jpg);
 }
 
 @media (max-width:600px) {
@@ -399,6 +435,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .member-left h1 {
@@ -510,10 +547,12 @@
     align-items: center;
     padding-bottom: 100px;
     position: relative;
+    overflow-x: hidden;
 }
 
 .members{
     z-index: 10;
+    overflow-x: hidden;
 }
 
 .members-bg {

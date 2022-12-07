@@ -1,11 +1,26 @@
 [
 	{
+		"name": "制風龜",
+		"location": "陸地",
+		"type": "烏龜",
+		"mean": "平息大風",
+		"data": "烏龜每隻腳下各踩一隻烏龜，吼叫能讓大風平息",
+		"imgPng": "resource/monster/turtle.png",
+		"imgPng2": "resource/monster/turtle2.png",
+		"imgPng3": "resource/monster/turtle3.png",
+		"imgJpg": "resource/monster/turtle.jpg",
+		"goodorbad": "正面",
+		"id": "turtle"
+	},
+	{
 		"name": "蛇郎君",
 		"location": "陸地",
 		"type": "人首蛇身",
 		"mean": "嫁好ㄤ防小人",
 		"data": "某處有蛇久而成怪，化為美男子往來村中，村人稱之為蛇郎君。",
 		"imgPng": "resource/monster/snake.png",
+		"imgPng2": "resource/monster/snake2.png",
+		"imgPng3": "resource/monster/snake3.png",
 		"imgJpg": "resource/monster/snake.jpg",
 		"goodorbad": "正面",
 		"id": "snake"
@@ -17,9 +32,24 @@
 		"mean": "避災害",
 		"data": "宜蘭頭城的天神宮奉祀的將軍爺，真身據說是一隻山貓妖怪",
 		"imgPng": "resource/monster/cat.png",
+		"imgPng2": "resource/monster/cat2.png",
+		"imgPng3": "resource/monster/cat3.png",
 		"imgJpg": "resource/monster/cat.jpg",
 		"goodorbad": "正面",
 		"id": "cat"
+	},
+	{
+		"name": "豬哥石",
+		"location": "陸地",
+		"type": "豬",
+		"mean": "使安定心神",
+		"data": "愛哭的小孩認其為義子即可平安長大(?",
+		"imgPng": "resource/monster/pig.png",
+		"imgPng2": "resource/monster/pig2.png",
+		"imgPng3": "resource/monster/pig3.png",
+		"imgJpg": "resource/monster/pig.jpg",
+		"goodorbad": "正面",
+		"id": "pig"
 	},
 	{
 		"name": "白馬妖怪",
@@ -28,6 +58,8 @@
 		"mean": "保護錢財",
 		"data": "與金銀鬼相似，白馬妖怪負責”守護寶藏”，在台灣各地都有現身的故事。此外也有傳說只有品德高超的人，才有機會跟隨白馬與白兔得知寶藏地點。",
 		"imgPng": "resource/monster/hourse.png",
+		"imgPng2": "resource/monster/hourse2.png",
+		"imgPng3": "resource/monster/hourse3.png",
 		"imgJpg": "resource/monster/hourse.jpg",
 		"goodorbad": "正面",
 		"id": "horse"
@@ -39,9 +71,50 @@
 		"mean": "日食",
 		"data": "像狐狸，頭白色，會吃太陽(日食)",
 		"imgPng": "resource/monster/dog.png",
+		"imgPng2": "resource/monster/dog2.png",
+		"imgPng3": "resource/monster/dog3.png",
 		"imgJpg": "resource/monster/dog.jpg",
 		"goodorbad": "正面",
 		"id": "dog"
+	},
+	{
+		"name": "婆娑鳥",
+		"location": "天空",
+		"type": "鳳凰",
+		"mean": "引大鳥朝拜",
+		"data": "雄性如鳳凰，有五色，雌性則灰黑，叫聲引發白鳥來朝，甚至會引來比牛馬還大的海鳥來朝拜",
+		"imgPng": "resource/monster/bird.png",
+		"imgPng2": "resource/monster/bird2.png",
+		"imgPng3": "resource/monster/bird3.png",
+		"imgJpg": "resource/monster/bird.jpg",
+		"goodorbad": "正面",
+		"id": "bird"
+	},
+	{
+		"name": "傀儡山之雲龍",
+		"location": "天空",
+		"type": "龍",
+		"mean": "彗星",
+		"data": "渾身墨黑，能招引風雨，現身前兆常有彗星引路",
+		"imgPng": "resource/monster/dragon.png",
+		"imgPng2": "resource/monster/dragon2.png",
+		"imgPng3": "resource/monster/dragon3.png",
+		"imgJpg": "resource/monster/dragon.jpg",
+		"goodorbad": "負面",
+		"id": "dragon"
+	},
+	{
+		"name": "金魅",
+		"location": "陸地",
+		"type": "人?鬼?",
+		"mean": "辛勤工作；過勞",
+		"data": "金魅是一種魔物，若每年讓它吞食一名活人，它就會”替人工作”，原是一位被主人虐待致死的女婢化身而成。",
+		"imgPng": "resource/monster/girl.png",
+		"imgPng2": "resource/monster/girl2.png",
+		"imgPng3": "resource/monster/girl3.png",
+		"imgJpg": "resource/monster/girl.jpg",
+		"goodorbad": "負面",
+		"id": "girl"
 	},
 	{
 		"name": "人魚",
@@ -50,9 +123,24 @@
 		"mean": "假美好的表象",
 		"data": "人身魚尾怪物，以歌聲魅惑來往魚夫；一男一女(金髮)人魚浮出水面即為凶兆。",
 		"imgPng": "resource/monster/fish.png",
+		"imgPng2 ": "resource/monster/fish2.png",
+		"imgPng3": "resource/monster/fish3.png",
 		"imgJpg": "resource/monster/fish.jpg",
 		"goodorbad": "負面",
 		"id": "fish"
+	},
+	{
+		"name": "虎姑婆",
+		"location": "陸地",
+		"type": "老虎阿嬤",
+		"mean": "時刻存有警惕之心，不輕信他人",
+		"data": "深山中的老虎精化為老婆婆假扮成一對姐妹的姑婆來欺騙他們並吃掉妹妹的故事",
+		"imgPng": "resource/monster/tiger.png",
+		"imgPng2 ": "resource/monster/tiger2.png",
+		"imgPng3": "resource/monster/tiger3.png",
+		"imgJpg": "resource/monster/tiger.jpg",
+		"goodorbad": "負面",
+		"id": "tiger"
 	},
 	{
 		"name": "金銀鬼",
@@ -61,6 +149,8 @@
 		"mean": "諷刺守財奴",
 		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
 		"imgPng": "resource/monster/coin.png",
+		"imgPng2 ": "resource/monster/coin2.png",
+		"imgPng3": "resource/monster/coin3.png",
 		"imgJpg": "resource/monster/coin.jpg",
 		"goodorbad": "負面",
 		"id": "coin"
@@ -72,28 +162,36 @@
 		"mean": "諷刺守財奴",
 		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
 		"imgPng": "resource/monster/msz.png",
+		"imgPng2": "resource/monster/msz2.png",
+		"imgPng3": "resource/monster/msz3.png",
 		"imgJpg": "resource/monster/msz.jpg",
 		"goodorbad": "負面",
 		"id": "coin"
-	},{
-		"name": "制風龜",
-		"location": "陸地",
-		"type": "鬼",
-		"mean": "諷刺守財奴",
-		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
-		"imgPng": "resource/monster/turtle.png",
-		"imgJpg": "resource/monster/turtle.jpg",
-		"goodorbad": "負面",
-		"id": "turtle"
-	},{
+	},
+	{
 		"name": "疫鬼",
 		"location": "陸地",
 		"type": "鬼",
 		"mean": "諷刺守財奴",
 		"data": "一旦金銀放置太久不花用，可能化為金銀鬼，此妖怪有強烈執念，保護金銀讓任何人都無法靠近",
 		"imgPng": "resource/monster/ghost.png",
+		"imgPng2": "resource/monster/ghost2.png",
+		"imgPng3": "resource/monster/ghost3.png",
 		"imgJpg": "resource/monster/ghost.jpg",
 		"goodorbad": "負面",
 		"id": "ghost"
+	},
+	{
+		"name": "麞妖",
+		"location": "陸地",
+		"type": "山羌",
+		"mean": "造成火災",
+		"data": "叫就會火災的棕鹿，可能是山羌",
+		"imgPng": "resource/monster/zy.png",
+		"imgPng2": "resource/monster/zy2.png",
+		"imgPng3": "resource/monster/zy3.png",
+		"imgJpg": "resource/monster/zy.jpg",
+		"goodorbad": "負面",
+		"id": "zy"
 	}
 ]

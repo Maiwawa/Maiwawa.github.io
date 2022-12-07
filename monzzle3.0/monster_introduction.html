@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>妖怪設計理念</title>
+    <title>妖怪集結</title>
     <script src="js/jquery.min.js"></script>
     <script src="js/scrollreveal.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
@@ -256,13 +256,13 @@
                 </p>
             </div>
             <div class="introduction-images">
-                <div class="introduction-image">
+                <div class="introduction-image introduction-image1">
                     <img src="resource/monster/fish.png" class="image">
                 </div>
-                <div class="introduction-image">
+                <div class="introduction-image introduction-image2">
                     <img src="resource/monster/fish.png" class="image">
                 </div>
-                <div class="introduction-image">
+                <div class="introduction-image introduction-image3">
                     <img src="resource/monster/fish.png" class="image">
                 </div>
             </div>
@@ -331,7 +331,9 @@
                 // console.log(monsterId)
                 if (res.data[i].name == monsterId) {
                     $('.image-content img').attr('src', `${res.data[i].imgPng}`);
-                    $('.introduction-image img').attr('src', `${res.data[i].imgPng}`);
+                    $('.introduction-image1 img').attr('src', `${res.data[i].imgPng2}`);
+                    $('.introduction-image2 img').attr('src', `${res.data[i].imgPng3}`);
+                    $('.introduction-image3 img').attr('src', `${res.data[i].imgPng}`);
                     $('.image-content p').text(res.data[i].name);
                     $('.name').text(res.data[i].name);
                 }
