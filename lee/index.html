@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李貞慧老師</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="js/scrollreveal.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* body */
+        .body-left {
+            width: 60px;
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .body-right {
+            width: calc(100% - 60px);
+            background: rgb(224, 224, 224);
+            position: relative;
+            left: 60px;
+        }
+
+
+        /* header */
+        header {
+            width: 100%;
+            /* background: #888; */
+            height: 240px;
+            padding: 0 40px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 99;
+        }
+
+        .header-left {
+            background: #F0E4D6;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 130px 80px 40px;
+            clip-path: polygon(100% 0, 0 0, 0 100%);
+            cursor: pointer;
+            transition: 0.5s;
+            margin-top: -200vh;
+        }
+
+        .header-left:hover {
+            background: #e7c7a3;
+        }
+
+        .logo p {
+            font-size: 1.6em;
+            line-height: 0em;
+            font-weight: 800;
+        }
+
+        .logo p:first-child {
+            color: #14232C;
+        }
+
+        .logo p:last-child {
+            color: #77582D;
+        }
+
+        .menu-btn {
+            position: fixed;
+            right: 40px;
+            top: 40px;
+            background: #14232C;
+            padding: 30px;
+            border-radius: 50%;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .menu-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-btn i {
+            font-size: 1.5em;
+            color: #fff;
+        }
+
+        /* s-banner */
+        .s-banner {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            background: #999;
+            background-size: cover;
+            position: center center;
+            background-image: url(../resource/image/x1.jpg);
+            position: absolute;
+            z-index: 19;
+        }
+
+        .image1 {
+            z-index: 20;
+        }
+
+        .show {
+            animation: banner 1s ease-in-out;
+        }
+
+        @keyframes banner {
+            0% {
+                transform: scale(0);
+                transform-origin: 0% 0%;
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                transform-origin: 0% 0%;
+                opacity: 1;
+            }
+        }
+
+        .banner-text {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            z-index: 21;
+            font-size: 2em;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* s-about */
+        .s-about {
+            position: relative;
+            margin-top: 100vh;
+            width: 100%;
+            background: #232323;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            color: #fff;
+        }
+
+        .about-top {
+            width: 100%;
+            padding: 80px;
+        }
+
+        .about-top h1:nth-child(1) {
+            font-size: 2em;
+            margin-bottom: 40px;
+        }
+
+        .about-top h1 {
+            font-size: 1.2em;
+        }
+
+        .about-top p {
+            margin-bottom: 20px;
+        }
+
+        .about-right {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-right img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .about-bottom {
+            width: 100%;
+            display: flex;
+        }
+
+        .about-bottom img {
+            width: 100%;
+        }
+
+
+        /* s-time */
+        .s-time {
+            width: 100%;
+            height: 100vh;
+            background: #d5e4f1;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body-left">
+
+    </div>
+    <div class="body-right">
+        <header>
+            <div class="header-left">
+                <div class="logo">
+                    <p>膠彩藝術家</p><br />
+                    <p>李貞慧老師</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <section class="s-banner">
+            <div class="banner-text">
+                時‧光景—李貞慧創作個展<br />
+                膠彩描繪現真景 光影錯落存時序
+            </div>
+            <div class="image image1"></div>
+            <div class="image image2"></div>
+        </section>
+
+        <section class="s-about">
+            <div class="about-top">
+                <h1>李貞慧 老師</h1>
+                <h1>-研究專長 | Research：</h1>
+                <p>膠彩、素描、繪畫創作、國畫、工筆花鳥、民俗藝術製作</p>
+                <h1>-現任：</h1>
+                <p>東海大學美術系專任教授，兼任美術系學士學分班班主任
+                    東海大學美術系系主任</p>
+                <h1>-經歷：</h1>
+                <p>1987 私立東海大學美術系畢業、留校任助教<br />
+                    1993 日本國立筑波大學藝術研究所碩士、私立東海大學美術系兼任講師<br />
+                    1994 東海大學美術系專任講師、國立藝術學院(台北藝術大學)美術系兼任講師<br />
+                    1998 東海大學美術系專任副教授（1998 ~迄今）<br />
+                    2004 東海大學美術系主任(2004~2007)<br />
+                    2007 東海大學美術系學士學分班班主任(2007~迄今)<br />
+                    2008 國立台灣師範大學美術系兼任副教授 (2008-2011)<br />
+                    2017東海大學美術系專任教授（2017~ 迄今）</p>
+            </div>
+            <div class="about-bottom">
+                <img src="resource/image/lee3-2.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="s-time">
+
+        </section>
+    </div>
+
+    <script>
+        let time = 5000,
+            aa = 2,
+            bb = 2;
+
+        $(document).ready(function () {
+            changeBanner();
+            setTimeout(() => {
+                changeBanner2();
+            }, 1500);
+        });
+
+        function addAnimation() {
+            $(".image1").addClass('show');
+        }
+
+        function removeAnimation() {
+            $(".image1").removeClass('show');
+        }
+
+        function changeBanner() {
+            if (aa != 8) {
+                setTimeout(() => {
+                    $('.image1').css('background-image', `url(../resource/image/x${aa}.jpg)`);
+                    aa++
+                    changeBanner();
+                    addAnimation();
+                }, time);
+            } else {
+                aa = 1;
+                setTimeout(() => {
+                    $('.image1').css('background-image', `url(../resource/image/x${aa}.jpg)`);
+                    aa++
+                    changeBanner();
+                    addAnimation();
+                }, time);
+            }
+        }
+
+        function changeBanner2() {
+            if (bb != 8) {
+                setTimeout(() => {
+                    $('.image2').css('background-image', `url(../resource/image/x${bb}.jpg)`);
+                    bb++
+                    changeBanner2();
+                    removeAnimation();
+                }, time);
+            } else {
+                bb = 1;
+                setTimeout(() => {
+                    $('.image2').css('background-image', `url(../resource/image/x${bb}.jpg)`);
+                    bb++
+                    changeBanner2();
+                    removeAnimation();
+                }, time);
+            }
+        }
+    </script>
+</body>
+
+</html>
