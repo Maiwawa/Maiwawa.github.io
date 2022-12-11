@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap');
+
+:root {
+    --height: 45px;
+    --card-p: 6em;
+    --card-title: 3em;
+}
+
+@media (max-width:1200px) {
+    :root {
+        --height: 39px;
+        --card-p: 6em;
+        --card-title: 3em;
+    }
+}
+
+@media (max-width:1000px) {
+    :root {
+        --height: 33px;
+        --card-p: 5em;
+        --card-title: 2.5em;
+    }
+}
+
+@media (max-width:800px) {
+    :root {
+        --height: 27px;
+        --card-p: 4em;
+        --card-title: 2em;
+    }
+}
+
+@media (max-width:600px) {
+    :root {
+        --card-p: 3.5em;
+    }
+}
+
+/* s-paragraph*/
+.s-paragraph {
+    min-height: 100vh;
+}
+
+.s-paragraph .content div h1 {
+    min-width: 130px;
+}
+
+.content-text p::after{
+    content: '更換妖怪　→';
+}
+
+.content-text p::before{
+    content: '更換妖怪　　';
+}
+
+/*card v2*/
+.container {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.container .box::before {
+    content: 'Monzzle';
+    position: absolute;
+    top: 0vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    font-size: var(--card-p);
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box::after {
+    content: 'Created';
+    position: absolute;
+    bottom: 0vh;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: var(--card-p);
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box:hover::before,
+.container .box:hover::after {
+    opacity: 0.04;
+}
+
+.container .box .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    font-size: var(--card-title);
+}
+
+.container .box:hover .name {
+    top: 5vh;
+    opacity: 1;
+}
+
+.container .box .buy {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 75px);
+    color: #232323;
+    background: url(../resource/monster/good.jpg);
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 11;
+}
+
+.container .box:hover .buy {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.container .box .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: url(../resource/monster/good.jpg);
+    transform-style: preserve-3d;
+    /* z-index: 10; */
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 50px);
+}
+
+.container .box .product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 60%;
+    object-fit: contain;
+    transition: 0.5s;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 51px);
+}
+
+.container .box:hover .product {
+    transform: translate3d(-50%, -50%, 100px);
+}
+
+@media (max-width:600px) {
+    .section-50:last-child {
+        height: 80vh;
+    }
+
+    .container .box::before,
+    .container .box::after {
+        opacity: 0.04;
+    }
+
+    .container .box .name {
+        top: 5vh;
+        opacity: 1;
+    }
+
+    .container .box .buy {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
