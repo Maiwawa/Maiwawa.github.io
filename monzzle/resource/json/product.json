@@ -1,0 +1,56 @@
+[
+    {
+        "cardtitle": "商品1",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/1.jpg",
+        "sales": 0
+    },
+    {
+        "cardtitle": "商品2",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/2.jpg",
+        "sales": 0
+    },
+    {
+        "cardtitle": "商品3",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/3.jpg",
+        "sales": 0
+    },
+    {
+        "cardtitle": "商品4",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/4.jpg",
+        "sales": 0
+    },
+    {
+        "cardtitle": "商品5",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/5.jpg",
+        "sales": 0
+    },
+    {
+        "cardtitle": "商品6",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/6.jpg",
+        "sales": 0
+    },
+    {
+        "cardtitle": "商品7",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/7.jpg",
+        "sales": 0
+    },
+    {
+        "cardtitle": "商品8",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/8.jpg",
+        "sales": 0
+    },
+    {
+        "cardtitle": "商品9",
+        "cardintroduction": "商品介紹商品介紹商品介紹商品介紹",
+        "cardurl": "resource/product/9.jpg",
+        "sales": 0
+    }
+]

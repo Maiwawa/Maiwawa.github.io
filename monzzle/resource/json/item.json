@@ -1,0 +1,32 @@
+[
+    {
+        "name": "妖來妖去-首頁",
+        "item": "nav-item-home",
+        "menu": "menu-item-home"
+    },
+    {
+        "name": "妖來妖去-關於我們",
+        "item": "nav-item-aboutus",
+        "menu": "menu-item-aboutus"
+    },
+    {
+        "name": "妖來妖去-專題介紹",
+        "item": "nav-item-subject",
+        "menu": "menu-item-subject"
+    },
+    {
+        "name": "妖來妖去-妖怪選單",
+        "item": "nav-item-monster",
+        "menu": "menu-item-monster"
+    },
+    {
+        "name": "妖來妖去-商城",
+        "item": "nav-item-shop",
+        "menu": "menu-item-shop"
+    },
+    {
+        "name": "妖來妖去-小遊戲",
+        "item": "nav-item-game",
+        "menu": "menu-item-game"
+    }
+]
