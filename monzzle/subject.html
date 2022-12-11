@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/subject.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/white-header.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 
 <body>
@@ -461,9 +462,8 @@
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/scrollreveal.js"></script>
-    <script src="js/test.js"></script>
-    <script src="js/base.js"></script>
     <script src="js/white-header.js"></script>
+    <script src="js/subject-about.js"></script>
     <script src="js/map.js"></script>
     <script>
         let leftImgs = ["left-img1", "left-img2", "left-img3", "left-img4", "left-img5", "left-img6"];
@@ -488,7 +488,7 @@
             imgs.push(dfd);  			//將所有操作物件放入陣列中
         })
         $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
-            $('.loader_bg').hide();
+            imgCheck2();
             if ($(window).width() > 600) {
                 loadedImg();
             }
@@ -526,6 +526,37 @@
         $('.time-lists-top i').click(function () {
             $('.time-content').css('transform', 'scale(0)');
         });
+
+
+        function imgCheck2() {
+            let aa = ['./resource/subject/map/map.jpg',
+                './resource/subject/map/map2.jpg',
+                './resource/subject/dog.jpg',
+                './resource/subject/ghost.jpg',
+                './resource/subject/hourse.jpg',
+                './resource/subject/pig.jpg',
+                './resource/subject/girl.jpg',
+                './resource/subject/zy.jpg',
+                './resource/subject/fish.jpg',
+                './resource/subject/turtle.jpg',
+                './resource/subject/bird.jpg',
+                './resource/subject/cat.jpg',
+                './resource/subject/tiger.jpg',
+                './resource/subject/snake.jpg',
+                './resource/subject/coin.jpg',
+                './resource/subject/dragon.jpg',
+                './resource/subject/msz.jpg'
+            ]
+
+            for (let i = 0; i < aa.length; i++) {
+                var img = new Image();
+                $(img).on('load', function () {
+                    // console.log(aa[i]);
+                });
+                img.src = aa[i];
+            }
+            $('.loader_bg').hide();
+        }
 
     </script>
 </body>

@@ -277,7 +277,7 @@
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/scrollreveal.js"></script>
-    <script src="js/test.js"></script>
+    <script src="js/subject-about.js"></script>
     <script src="js/base.js"></script>
     <script src="js/white-header.js"></script>
     <script>
@@ -339,6 +339,27 @@
         $('.time-lists-top i').click(function () {
             $('.time-content').css('transform', 'scale(0)');
         });
+
+        function imgCheck2() {
+            let aa = ['./resource/members/team01-min.jpg',
+                './resource/members/team02-min.jpg',
+                './resource/members/team03-min.jpg',
+                './resource/members/06-min.jpg',
+                './resource/members/07-min.jpg',
+                './resource/members/08-min.jpg',
+                './resource/members/09-min.jpg',
+                './resource/members/10-min.jpg'
+            ]
+
+            for (let i = 0; i < aa.length; i++) {
+                var img = new Image();
+                $(img).on('load', function () {
+                    // console.log(aa[i]);
+                });
+                img.src = aa[i];
+            }
+            $('.loader_bg').hide();
+        }
 
     </script>
 </body>

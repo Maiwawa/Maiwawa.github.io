@@ -153,7 +153,7 @@
     z-index: 9;
     left: 0;
     bottom: 0;
-    background-image: url(../resource/members/team01-min.jpg);
+    background-image: url(../resource/members/team03-min.jpg);
     background-size: cover;
     background-position: 50% 50%;
     transition: 1s ease-in-out;
@@ -161,11 +161,11 @@
 }
 
 .left-img2 {
-    background-image: url(../resource/members/team02-min.jpg);
+    background-image: url(../resource/members/team01-min.jpg);
 }
 
 .left-img3 {
-    background-image: url(../resource/members/team03-min.jpg);
+    background-image: url(../resource/members/team02-min.jpg);
 }
 
 @media (max-width:600px) {
