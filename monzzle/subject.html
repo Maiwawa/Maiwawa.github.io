@@ -236,8 +236,224 @@
         </div>
     </section>
 
-    <section class="s-map">
+    <style>
+        .s-map {
+            margin-top: 10vh;
+            height: 100vh;
+            min-height: clac(var(--map-h) * var(--map-per));
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
 
+        .map-content {
+            width: calc(var(--map-per) * 1200px);
+            height: calc(var(--map-per) * 800px);
+            background-image: url(./resource/subject/map/map.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+        }
+
+        .map-content img {
+            position: absolute;
+            height: calc(var(--map-per) * 100px);
+            cursor: pointer;
+        }
+
+        .map-content img:hover {
+            transform: scale(1.1);
+        }
+
+        .bird-img {
+            left: calc(var(--map-per) * 462.677px);
+            top: calc(var(--map-per) * 368.4388px);
+        }
+
+        .msz-img {
+            left: calc(var(--map-per) * 124.7654px);
+            top: calc(var(--map-per) * 190.4128px);
+        }
+
+        .pig-img {
+            left: calc(var(--map-per) * 176.6471px);
+            top: calc(var(--map-per) * 250.4388px);
+        }
+
+        .coin-img {
+            left: calc(var(--map-per) * 227.2601px);
+            top: calc(var(--map-per) * 224.8904px);
+        }
+
+        .cat-img {
+            left: calc(var(--map-per) * 294.2571px);
+            top: calc(var(--map-per) * 161.4065px);
+        }
+
+        .snake-img {
+            left: calc(var(--map-per) * 436.0102px);
+            top: calc(var(--map-per) * 240.3743px);
+        }
+
+        .dog-img {
+            left: calc(var(--map-per) * 393.3291px);
+            top: calc(var(--map-per) * 343.9872px);
+        }
+
+        .ghost-img {
+            left: calc(var(--map-per) * 419.9959px);
+            top: calc(var(--map-per) * 454.8259px);
+        }
+
+        .girl-img {
+            left: calc(var(--map-per) * 516.116px);
+            top: calc(var(--map-per) * 443.9872px);
+        }
+
+        .fish-img {
+            left: calc(var(--map-per) * 715.7112px);
+            top: calc(var(--map-per) * 525.2775px);
+        }
+
+        .turtle-img {
+            left: calc(var(--map-per) * 769.8738px);
+            top: calc(var(--map-per) * 539.213px);
+        }
+
+        .tiger-img {
+            left: calc(var(--map-per) * 812.5548px);
+            top: calc(var(--map-per) * 318.4388px);
+        }
+
+        .zy-img {
+            left: calc(var(--map-per) * 815.024px);
+            top: calc(var(--map-per) * 454.8259px);
+        }
+
+        .dragon-img {
+            left: calc(var(--map-per) * 865.1174px);
+            top: calc(var(--map-per) * 331.7291px);
+        }
+
+        .hourse-img {
+            left: calc(var(--map-per) * 912px);
+            top: calc(var(--map-per) * 413.7936px);
+        }
+
+        @media (max-width:800px) {
+            .map-content {
+                width: calc(var(--map-per) * 800px);
+                height: calc(var(--map-per) * 1200px);
+                background-image: url(./resource/subject/map/map2.jpg);
+            }
+
+            .bird-img {
+                left: calc(var(--map-per) * 354.2078px);
+                top: calc(var(--map-per) * 444.8562px);
+            }
+
+            .msz-img {
+                left: calc(var(--map-per) * 538.2052px);
+                top: calc(var(--map-per) * 96.1444px);
+            }
+
+            .pig-img {
+                left: calc(var(--map-per) * 470.4373px);
+                top: calc(var(--map-per) * 146.1059px);
+            }
+
+            .coin-img {
+                left: calc(var(--map-per) * 516.8647px);
+                top: calc(var(--map-per) * 202.5101px);
+            }
+
+            .cat-img {
+                left: calc(var(--map-per) * 567.2115px);
+                top: calc(var(--map-per) * 265.6361px);
+            }
+
+            .snake-img {
+                left: calc(var(--map-per) * 488.2437px);
+                top: calc(var(--map-per) * 407.3892px);
+            }
+
+            .dog-img {
+                left: calc(var(--map-per) * 396.8889px);
+                top: calc(var(--map-per) * 336.0245px);
+            }
+
+            .ghost-img {
+                left: calc(var(--map-per) * 263.2903px);
+                top: calc(var(--map-per) * 373.5685px);
+            }
+
+            .girl-img {
+                left: calc(var(--map-per) * 284.6308px);
+                top: calc(var(--map-per) * 487.4951px);
+            }
+
+            .fish-img {
+                left: calc(var(--map-per) * 210.7455px);
+                top: calc(var(--map-per) * 659.2193px);
+            }
+
+            .turtle-img {
+                left: calc(var(--map-per) * 177.0179px);
+                top: calc(var(--map-per) * 754.4141px);
+            }
+
+            .tiger-img {
+                left: calc(var(--map-per) * 416.7715px);
+                top: calc(var(--map-per) * 746.5225px);
+            }
+
+            .zy-img {
+                left: calc(var(--map-per) * 273.7921px);
+                top: calc(var(--map-per) * 786.4031px);
+            }
+
+            .dragon-img {
+                left: calc(var(--map-per) * 378.658px);
+                top: calc(var(--map-per) * 846.5225px);
+            }
+
+            .hourse-img {
+                left: calc(var(--map-per) * 314.8244px);
+                top: calc(var(--map-per) * 883.379px);
+            }
+        }
+    </style>
+
+    <section class="s-map" id="map">
+        <div class="map-content">
+            <img src="resource/subject/map/bird.png" class="bird-img image" id="bird">
+            <img src="resource/subject/map/turtle.png" class="turtle-img image" id="turtle">
+            <img src="resource/subject/map/dog.png" class="dog-img image" id="dog">
+            <img src="resource/subject/map/dragon.png" class="dragon-img" id="dragon">
+            <img src="resource/subject/map/snake.png" class="snake-img" id="snake">
+            <img src="resource/subject/map/fish.png" class="fish-img" id="fish">
+            <img src="resource/subject/map/girl.png" class="girl-img" id="girl">
+            <img src="resource/subject/map/cat.png" class="cat-img" id="cat">
+            <img src="resource/subject/map/ghost.png" class="ghost-img" id="ghost">
+            <img src="resource/subject/map/hourse.png" class="hourse-img" id="hourse">
+            <img src="resource/subject/map/zy.png" class="zy-img" id="zy">
+            <img src="resource/subject/map/msz.png" class="msz-img" id="msz">
+            <img src="resource/subject/map/tiger.png" class="tiger-img" id="tiger">
+            <img src="resource/subject/map/pig.png" class="pig-img" id="pig">
+            <img src="resource/subject/map/coin.png" class="coin-img" id="coin">
+        </div>
+    </section>
+
+    <section class="s-popup">
+        <div class="popup-content">
+            <div class="popup-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <img src="resource/subject/cat.jpg">
+        </div>
     </section>
 
 
@@ -248,9 +464,10 @@
     <script src="js/test.js"></script>
     <script src="js/base.js"></script>
     <script src="js/white-header.js"></script>
+    <script src="js/map.js"></script>
     <script>
-        let leftImgs = ["left-img1", "left-img2", "left-img3"];
-        let rightImgs = ["right-img1", "right-img2", "right-img3"];
+        let leftImgs = ["left-img1", "left-img2", "left-img3", "left-img4", "left-img5", "left-img6"];
+        let rightImgs = ["right-img1", "right-img2", "right-img3", "right-img4", "right-img5", "right-img6", "right-img7", "right-img8", "right-img9"];
         $('.members-bg').height($('.members').height() + 100);
 
         $(window).resize(function () {
