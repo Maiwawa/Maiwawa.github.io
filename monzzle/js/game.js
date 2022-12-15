@@ -155,17 +155,17 @@ function getTotal() {
 
 var game = new Object();
 game.tiles = Array.from(document.getElementsByClassName('tile')); //is our board
-game.folders = ["coin", "dog", "bird", "turtle", "snake", "girl"]; //while randoming picture
+game.folders = ["coin", "dragon", "ghost", "hourse", "msz", "pig", "zy", "dog", "bird", "turtle", "snake", "girl", "fish", "cat", "tiger"]; //while randoming picture
 game.gameStarted = false;
 game.img = {
-    1: "1.jpg", //for setting the board up
-    2: "2.jpg",
-    3: "3.jpg",
-    4: "4.jpg",
-    5: "5.jpg",
-    6: "6.jpg",
-    7: "7.jpg",
-    8: "8.jpg",
+    1: "01.jpg", //for setting the board up
+    2: "02.jpg",
+    3: "03.jpg",
+    4: "04.jpg",
+    5: "05.jpg",
+    6: "06.jpg",
+    7: "07.jpg",
+    8: "08.jpg",
     9: ""
 };
 game.blanktile = document.getElementById('blank'); //the blank tile
@@ -186,7 +186,7 @@ function setPuzzleImage(foldername) { //adding images to every tile in the game
 
         for (var i = 0; i < game.tiles.length; i++) {
             var tileImg = i + 1;
-            game.tiles[i].style.backgroundImage = "url('" + "resource/puzzle/" + folder + "/" + game.img[tileImg] + "')"
+            game.tiles[i].style.backgroundImage = "url(" + "../resource/puzzle/" + folder + "/" + game.img[tileImg] + ")"
         }
 
     }
@@ -196,7 +196,7 @@ function setPuzzleImage(foldername) { //adding images to every tile in the game
         // game.frame.style.backgroundImage = "url('" + "resource/puzzle/" + foldername + "/" + "frame.jpg" + "')"
         for (var i = 0; i < game.tiles.length; i++) {
             var tileImg = i + 1;
-            game.tiles[i].style.backgroundImage = "url('" + "resource/puzzle/" + foldername + "/" + game.img[tileImg] + "')"
+            game.tiles[i].style.backgroundImage = "url(" + "../resource/puzzle/" + foldername + "/" + game.img[tileImg] + ")"
 
         }
 
@@ -217,7 +217,7 @@ $('.right-nav').click(function () {
     game.navigation.style.display = "none";
     $('#game').show();
     $('.s-game').show();
-    $('.s-paragraph').css('min-height','40vh');
+    $('.s-paragraph').css('min-height', '40vh');
 });
 
 function addClickEvent() { //adding click event to each tile

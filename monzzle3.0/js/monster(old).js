@@ -63,7 +63,7 @@ $('.right-nav').click(function () {
     let id = this.id;
     // console.log(id);
     $.ajax({
-        url: 'resource/monster/monster.json',
+        url: 'json/monster.json',
         method: 'GET',
         dataType: 'json',
         data: '',
@@ -79,15 +79,15 @@ $('.right-nav').click(function () {
                     $('#title').text(data[i].name);
                     $('#monster-img').attr('src', `resource/monster/${data[i].id}.png`);
                     if (isGood) {
-                        $('.circle').css('background', 'url(../monzzle2.0/resource/monster/good.jpg)');
-                        $('.buy').css('background', 'url(../monzzle2.0/resource/monster/good.jpg)');
+                        $('.circle').css('background', 'url(../resource/monster/good.jpg)');
+                        $('.buy').css('background', 'url(../resource/monster/good.jpg)');
                     } else if (!isGood) {
-                        $('.circle').css('background', 'url(../monzzle2.0/resource/monster/bad.jpg)');
-                        $('.buy').css('background', 'url(../monzzle2.0/resource/monster/bad.jpg)');
+                        $('.circle').css('background', 'url(../resource/monster/bad.jpg)');
+                        $('.buy').css('background', 'url(../resource/monster/bad.jpg)');
                     }
                     $('.monster-content').show();
                     $('.navigation').hide();
-                    move();
+                    // move();
                 };
             };
         },

@@ -288,6 +288,7 @@
     align-items: center;
     /* background: #353254; */
     font-size: var(--big-p);
+    font-weight: 700;
 }
 
 @media (max-width:600px) {
@@ -570,7 +571,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20vh var(--member-padding) 10vh 0;
+    padding: 20vh var(--member-padding) 20vh 0;
     border-top-left-radius: 60px;
 }
 
