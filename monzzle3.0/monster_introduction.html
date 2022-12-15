@@ -109,8 +109,13 @@
                 <div class="line"></div>
             </div>
             <div class="introduction-text">
+                <p></p><br />
+            </div>
+
+            <div class="introduction-text2">
                 <p></p>
             </div>
+
             <div class="introduction-images">
                 <div class="introduction-image introduction-image1">
                     <img src="resource/monster/fish.png" class="image">
@@ -124,6 +129,36 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-left">
+            <a href="index.html">首頁</a>
+            <a href="about.html">關於我們</a>
+            <a href="shop.html">專題介紹</a>
+            <a href="monster.html">妖怪集結</a>
+            <a href="game.html">小遊戲</a>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-info">
+                <p>學校：</p>
+                <p>國立勤益科技大學</p>
+            </div>
+            <div class="footer-info">
+                <p>系所：</p>
+                <p>文化創意事業系</p>
+            </div>
+            <div class="footer-info">
+                <p>班級：</p>
+                <p>四文四甲</p>
+            </div>
+            <div class="footer-info">
+                <p>聯絡資訊：</p>
+                <p>monzzle01@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">&copy;XV Monzzle</div>
 
     <script src="js/header.js"></script>
     <script src="js/base.js"></script>
@@ -196,6 +231,7 @@
                     $('.introduction-image3 img').attr('src', `${res.data[i].imgPng}`);
                     $('.introduction-title p').text(res.data[i].mean);
                     $('.introduction-text p').text(res.data[i].design);
+                    $('.introduction-text2 p').text("設計理念：" + res.data[i].design2);
                     $('.name').text(res.data[i].name);
                     if (res.data[i].goodorbad == '正面') {
                         $('.container .box .circle').css('background', 'url(./resource/monster/good.jpg)');

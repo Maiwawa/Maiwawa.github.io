@@ -276,7 +276,7 @@
     font-size: var(--big-p);
 }
 
-.introduction-text {
+.introduction-text, .introduction-text2 {
     font-size: var(--sec-p);
     /* line-height: 200%; */
 }

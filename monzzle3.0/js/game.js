@@ -186,7 +186,7 @@ function setPuzzleImage(foldername) { //adding images to every tile in the game
 
         for (var i = 0; i < game.tiles.length; i++) {
             var tileImg = i + 1;
-            game.tiles[i].style.backgroundImage = "url(" + "../resource/puzzle/" + folder + "/" + game.img[tileImg] + ")"
+            game.tiles[i].style.backgroundImage = "url(" + "./resource/puzzle/" + folder + "/" + game.img[tileImg] + ")"
         }
 
     }
@@ -196,7 +196,7 @@ function setPuzzleImage(foldername) { //adding images to every tile in the game
         // game.frame.style.backgroundImage = "url('" + "resource/puzzle/" + foldername + "/" + "frame.jpg" + "')"
         for (var i = 0; i < game.tiles.length; i++) {
             var tileImg = i + 1;
-            game.tiles[i].style.backgroundImage = "url(" + "../resource/puzzle/" + foldername + "/" + game.img[tileImg] + ")"
+            game.tiles[i].style.backgroundImage = "url(" + "./resource/puzzle/" + foldername + "/" + game.img[tileImg] + ")"
 
         }
 
@@ -217,7 +217,7 @@ $('.right-nav').click(function () {
     game.navigation.style.display = "none";
     $('#game').show();
     $('.s-game').show();
-    $('.s-paragraph').css('min-height', '40vh');
+    $('.s-paragraph').css('height', '40vh');
 });
 
 function addClickEvent() { //adding click event to each tile
