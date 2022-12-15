@@ -109,8 +109,13 @@
                 <div class="line"></div>
             </div>
             <div class="introduction-text">
+                <p></p><br />
+            </div>
+
+            <div class="introduction-text2">
                 <p></p>
             </div>
+
             <div class="introduction-images">
                 <div class="introduction-image introduction-image1">
                     <img src="resource/monster/fish.png" class="image">
@@ -196,6 +201,7 @@
                     $('.introduction-image3 img').attr('src', `${res.data[i].imgPng}`);
                     $('.introduction-title p').text(res.data[i].mean);
                     $('.introduction-text p').text(res.data[i].design);
+                    $('.introduction-text2 p').text("設計理念：" + res.data[i].design2);
                     $('.name').text(res.data[i].name);
                     if (res.data[i].goodorbad == '正面') {
                         $('.container .box .circle').css('background', 'url(./resource/monster/good.jpg)');
