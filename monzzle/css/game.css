@@ -8,8 +8,9 @@ section{
 }
 
 .s-paragraph {
-    min-height: calc(100vh - 160px);
+    height: 100vh;
     padding-top: 160px;
+    transition: 1s;
 }
 
 div#game {

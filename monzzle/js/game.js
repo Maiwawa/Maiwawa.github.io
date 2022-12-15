@@ -217,7 +217,7 @@ $('.right-nav').click(function () {
     game.navigation.style.display = "none";
     $('#game').show();
     $('.s-game').show();
-    $('.s-paragraph').css('min-height', '40vh');
+    $('.s-paragraph').css('height', '40vh');
 });
 
 function addClickEvent() { //adding click event to each tile
