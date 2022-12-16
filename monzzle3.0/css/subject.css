@@ -832,6 +832,7 @@ footer {
     align-items: center;
     justify-content: flex-end;
     padding-right: 40px;
+    padding-bottom: 40px;
     color: #fff;
 }
 

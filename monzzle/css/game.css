@@ -25,7 +25,6 @@ div#game {
 
 
 li.tile {
-
     display: inline-block;
     height: 110px;
     width: 110px;
@@ -115,8 +114,6 @@ div#frame {
 }
 
 .imageselect:hover {
-
-
     cursor: pointer;
     display: inline-block;
     /*border: 1px solid black;*/
