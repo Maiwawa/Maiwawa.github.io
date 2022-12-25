@@ -164,3 +164,54 @@ div#frame {
 .s-paragraph a {
     color: #000;
 }
+
+.timer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.timer p{
+    font-size: var(--sec-title);
+}
+
+.finished{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9999999;
+}
+
+.finished-content{
+    width: 50%;
+    height: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4vw;
+}
+
+.okay{
+    text-align: center;
+    padding: 5%;
+    background: rgb(69, 189, 81);
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out transform;
+    cursor: pointer;
+}
+
+.okay:hover{
+    transform: scale(1.1);
+}

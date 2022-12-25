@@ -2,6 +2,10 @@
 let isGood = false;
 let isBad = false;
 
+let sec = 0;
+let min = 0;
+let timer;
+
 $('#changeimage').click(() => {
     $('.navigation').css('display', 'flex');
     // isGood = false;
@@ -218,7 +222,30 @@ $('.right-nav').click(function () {
     $('#game').show();
     $('.s-game').show();
     $('.s-paragraph').css('height', '40vh');
+    $('.timer').css('display', 'flex');
+    clearTimeout(timer);
+    sec = 0;
+    min = 0;
+    $('#start').text('Time: 0m 0s');
+    startTimer();
 });
+
+function startTimer() {
+
+    function run() {
+        if (sec == 59) {
+            min++;
+            sec = -1;
+            $('#start').text('Time: ' + min + 'm ' + sec + 's');
+        }
+        sec++;
+        $('#start').text('Time: ' + min + 'm ' + sec + 's');
+        startTimer();
+    }
+
+    timer = setTimeout(run, 1000);
+
+}
 
 function addClickEvent() { //adding click event to each tile
 
@@ -328,9 +355,6 @@ function shuffle(array) { //shuffle is part of set tiles
     }
 
     return array
-
-
-
 }
 
 function setTiles(gameobj) {
@@ -550,9 +574,18 @@ function win() {
     // body...
 
     if (isEqual(game.tiles, game.winCondition)) {
-        setTimeout(function () { alert("You win!"); }, 500);
+        clearTimeout(timer);
+        setTimeout(() => {
+            $('.finished').show();
+            $('.finished div p').text('時間： ' + min + '分 ' + sec + '秒');
+        }, 500);
     }
 }
+
+$('.okay').click(function () {
+    $('.finished').hide();
+    
+});
 
 
 (function (global) {
@@ -560,7 +593,6 @@ function win() {
     setPuzzleImage();
     addClickEvent();
     setTiles(global);
-
 }(game));
 
 // function shownumbers() {
