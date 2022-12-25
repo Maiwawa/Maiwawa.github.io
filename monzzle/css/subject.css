@@ -138,7 +138,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .left {
@@ -151,12 +151,13 @@
 
 .left-imgs {
     width: calc(100% - var(--right-width) - var(--left-padding-right));
-    height: calc(100vh - var(--header-height));
+    height: calc(100vh - var(--header-height) + 200px);
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -200px;
     overflow: hidden;
-    border-radius: 0 80px 0 0;
+    border-top-right-radius: 4vw;
+    border-bottom-right-radius: 4vw;
 }
 
 .left-img {
@@ -200,8 +201,8 @@
 
     .left-imgs {
         width: 90%;
-        height: 55vh;
-        border-radius: 0 30px 0 0;
+        height: calc(55vh + 200px);
+        /* border-radius: 0 30px 0 0; */
     }
 }
 
@@ -218,7 +219,8 @@
     top: 0;
     right: 0;
     overflow: hidden;
-    border-radius: 0 0 0 80px;
+    border-radius: 0 0 0 4vw;
+    background: #E8D0B8;
 }
 
 .right-img {
@@ -227,8 +229,9 @@
     width: 100%;
     height: 30%;
     background-image: url(../resource/subject/fish.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
     transition: 1s ease-in-out;
     opacity: 0;
 }
