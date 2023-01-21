@@ -7,7 +7,7 @@ section {
 }
 
 .section1 {
-    background: url(../resource/banner.jpg);
+    background: url(../resource/banner-min.jpg);
     background-position: center center;
     background-size: cover;
 }
@@ -79,7 +79,7 @@ section {
     justify-content: flex-start;
 }
 
-.left-btn a{
+.left-btn a {
     display: flex;
     align-items: center;
     justify-content: center;

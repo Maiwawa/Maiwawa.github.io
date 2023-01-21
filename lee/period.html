@@ -11,9 +11,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/period.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 
 <body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
     <div id="btn">
         <i class="fa-solid fa-bars"></i>
     </div>
@@ -158,25 +163,29 @@
             <div class="section-content">
                 <div class="section-content-title">李貞慧老師的作品一共分為四期，每期各挑出了六張畫作來介紹</div>
                 <div class="periods">
-                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true" data-tilt-reset="false" class="period period-1">
+                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true"
+                        data-tilt-reset="false" class="period period-1">
                         <div class="number">1</div>
                         <div class="period-img period-img1"></div>
                         <div class="period-text">第一期的簡單介紹。</div>
                     </div>
 
-                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true" data-tilt-reset="false" class="period period-2">
+                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true"
+                        data-tilt-reset="false" class="period period-2">
                         <div class="number">2</div>
                         <div class="period-img period-img2"></div>
                         <div class="period-text">第二期的簡單介紹。</div>
                     </div>
 
-                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true" data-tilt-reset="false" class="period period-3">
+                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true"
+                        data-tilt-reset="false" class="period period-3">
                         <div class="number">3</div>
                         <div class="period-img period-img3"></div>
                         <div class="period-text">第三期的簡單介紹。</div>
                     </div>
 
-                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true" data-tilt-reset="false" class="period period-4">
+                    <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true"
+                        data-tilt-reset="false" class="period period-4">
                         <div class="number">4</div>
                         <div class="period-img period-img4"></div>
                         <div class="period-text">第四期的簡單介紹。</div>
@@ -196,6 +205,32 @@
     <script src="js/header.js"></script>
     <script src="js/vanilla-tilt.min.js"></script>
     <script>
+        let imgs = [
+            './resource/period/01.jpg',
+            './resource/period/02.jpg',
+            './resource/period/03.jpg',
+            './resource/period/04.jpg'
+        ];
+
+        $(document).ready(function () {
+            loadImg();
+        });
+
+        function loadImg() {
+            for (let i = 0; i < imgs.length; i++) {
+                var img = new Image();
+                $(img).on('load', function () {
+                    // console.log(aa[i]);
+                });
+                img.src = imgs[i];
+            }
+
+            $('.loader_bg').css('opacity', '0');
+            setTimeout(() => {
+                $('.loader_bg').hide();
+            }, 1500);
+        };
+
         window.addEventListener('scroll', function () {
             const pageScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -203,18 +238,22 @@
             $('.bar').css('height', scrollValue + "%")
         });
 
-        $('.period-1').click(()=>{
+
+
+        $('.period-1').click(() => {
             window.location = 'period-information.html?id=first';
         });
-        $('.period-2').click(()=>{
+        $('.period-2').click(() => {
             window.location = 'period-information.html?id=second';
         });
-        $('.period-3').click(()=>{
+        $('.period-3').click(() => {
             window.location = 'period-information.html?id=third';
         });
-        $('.period-4').click(()=>{
+        $('.period-4').click(() => {
             window.location = 'period-information.html?id=fourth';
         });
+
+
     </script>
 </body>
 

@@ -11,9 +11,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/period-information.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 
 <body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
     <div id="btn">
         <i class="fa-solid fa-bars"></i>
     </div>
@@ -170,13 +175,13 @@
                 </div>
             </div>
             <div class="section-image">
-                <img src="resource/banner.jpg" alt="">
+                <img src="resource/banner.jpg" class="image">
             </div>
         </section>
 
         <section class="sections section-2">
             <div class="section-image">
-                <img src="resource/banner.jpg" alt="">
+                <img src="resource/banner.jpg" class="image">
             </div>
             <div class="section-content">
                 <div>
@@ -222,13 +227,13 @@
                 </div>
             </div>
             <div class="section-image">
-                <img src="resource/banner.jpg" alt="">
+                <img src="resource/banner.jpg" class="image">
             </div>
         </section>
 
         <section class="sections section-4">
             <div class="section-image">
-                <img src="resource/banner.jpg" alt="">
+                <img src="resource/banner.jpg" class="image">
             </div>
             <div class="section-content">
                 <div>
@@ -274,13 +279,13 @@
                 </div>
             </div>
             <div class="section-image">
-                <img src="resource/banner.jpg" alt="">
+                <img src="resource/banner.jpg" class="image">
             </div>
         </section>
 
         <section class="sections section-6">
             <div class="section-image">
-                <img src="resource/banner.jpg" alt="">
+                <img src="resource/banner.jpg" class="image">
             </div>
             <div class="section-content">
                 <div>
@@ -313,6 +318,58 @@
     <script src="js/script.js"></script>
     <script src="js/header.js"></script>
     <script>
+        let period;
+
+        $(document).ready(function () {
+            $.urlParam = function (name) {
+                var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+                if (results == null) {
+                    return null;
+                }
+                return decodeURI(results[1]) || 0;
+            };
+
+            period = $.urlParam('id');
+            if (period == 'first') {
+                document.title = "第一期 - 簡單命名";
+            } else if (period == 'second') {
+                document.title = "第二期 - 簡單命名";
+            } else if (period == 'third') {
+                document.title = "第三期 - 簡單命名";
+            } else if (period == 'fourth') {
+                document.title = "第四期 - 簡單命名";
+            } else {
+                document.title = 'error';
+            };
+
+            imgCheck();
+        });
+
+
+        function imgCheck() {
+            var imgs = [];  					//定義一個運算元組
+            $('.image').each(function () {  	//遍歷所有圖片,將圖片
+                var dfd = $.Deferred();  				//定義一個將要完成某個操作的物件
+                $(this).bind('load', function () {
+                    dfd.resolve();  			//圖片載入完成後,表示操作成功
+                });
+                if (this.complete) {				//如果圖片載入狀態為完成,那麼也標識操作成功
+                    setTimeout(function () {
+                        dfd.resolve();
+                    }, 2000);
+                }
+                imgs.push(dfd);  			//將所有操作物件放入陣列中
+            })
+            $.when.apply(null, imgs).done(function () {  	//註冊所有操作完成後的執行方法
+                $('.loader_bg').css('opacity', '0');
+                setTimeout(() => {
+                    $('.loader_bg').hide();
+                }, 1500);
+            });
+        };
+
+
+
         window.addEventListener('scroll', function () {
             const pageScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -331,32 +388,7 @@
                 $('.text').text('第五張畫(作品名)');
             } else if (scrollValue <= (100 / 6 * 6)) {
                 $('.text').text('第六張畫(作品名)');
-            }
-        });
-
-        let period;
-
-        $(document).ready(function () {
-            $.urlParam = function (name) {
-                var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
-                if (results == null) {
-                    return null;
-                }
-                return decodeURI(results[1]) || 0;
-            }
-
-            period = $.urlParam('id');
-            if (period == 'first') {
-                document.title = "第一期 - 簡單命名";
-            } else if (period == 'second') {
-                document.title = "第二期 - 簡單命名";
-            } else if (period == 'third') {
-                document.title = "第三期 - 簡單命名";
-            } else if (period == 'fourth') {
-                document.title = "第四期 - 簡單命名";
-            } else {
-                document.title = 'error';
-            }
+            };
         });
 
     </script>
