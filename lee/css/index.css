@@ -36,11 +36,32 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
+    padding: 0 var(--left-width);
+    transition: 0.8s ease-in-out width;
 }
 
 .sec-right {
     width: 45%;
+    transition: 0.8s ease-in-out width;
+}
+
+.section2 {
+    transition: 0.8s ease-in-out flex-wrap;
+}
+
+@media (max-width:900px) {
+    .section2 {
+        flex-wrap: wrap;
+    }
+
+    .sec-left {
+        width: 100%;
+    }
+
+    .sec-right {
+        width: 100%;
+        height: 50vh;
+    }
 }
 
 .left-title {

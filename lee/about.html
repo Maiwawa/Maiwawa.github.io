@@ -10,9 +10,14 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 
 <body>
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+
     <div id="btn">
         <i class="fa-solid fa-bars"></i>
     </div>
@@ -40,7 +45,7 @@
                             <div class="bottom-line"></div>
                         </div>
                     </a>
-                    <div>
+                    <div class="second-navs">
                         <div class="menu-second-nav">
                             <a href="period-information.html?id=first">
                                 <div>
@@ -148,8 +153,6 @@
 
     <div class="right">
 
-
-
     </div>
 
 
@@ -160,15 +163,38 @@
     <script src="js/script.js"></script>
     <script src="js/header.js"></script>
     <script>
+        let imgs = ['./resource/banner-min.jpg'];
+
+        $(document).ready(function () {
+            loadImg();
+        });
+
+        function loadImg() {
+            for (let i = 0; i < imgs.length; i++) {
+                var img = new Image();
+                $(img).on('load', function () {
+                    // console.log(aa[i]);
+                });
+                img.src = imgs[i];
+            }
+            $('.loader_bg').css('opacity', '0');
+            setTimeout(() => {
+                $('.loader_bg').hide();
+            }, 1500);
+        };
+
         window.addEventListener('scroll', function () {
             const pageScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollValue = (pageScroll / height) * 100;
             $('.bar').css('height', scrollValue + "%")
 
-
+            // if (scrollValue <= 50) {
+            //     $('.text').text('HOMEPAGE');
+            // } else {
+            //     $('.text').text('ABOUT');
+            // }
         });
-
     </script>
 </body>
 

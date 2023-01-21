@@ -2,8 +2,13 @@
     background: #DCDDDD;
 }
 
+@media (min-width:901px) {
+    .sections {
+        height: calc(100vh - calc(var(--left-width) * 2));
+    }
+}
+
 .sections {
-    height: calc(100vh - calc(var(--left-width) * 2));
     width: calc(100% - calc(var(--left-width) * 3));
     background: #fff;
     display: flex;
@@ -18,14 +23,37 @@
     margin: var(--left-width) 0px var(--left-width) var(--left-width);
 }
 
+
+
 .section-2,
 .section-4,
 .section-6 {
     margin: var(--left-width) var(--left-width) var(--left-width) 0px;
 }
 
+@media (max-width:900px) {
 
+    .section-1,
+    .section-3,
+    .section-5 {
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-flex-flow: column-reverse;
+        flex-flow: column-reverse;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    }
 
+    .section-2,
+    .section-4,
+    .section-6 {
+        margin: var(--left-width) var(--left-width) var(--left-width) 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 
 .left-btn {
     margin-top: 30px;
@@ -75,12 +103,21 @@
     justify-content: center;
 }
 
+@media (max-width:900px) {
+    .section-content {
+        width: 100%;
+        padding: var(--left-width) 0;
+    }
+}
+
 .section-1 .section-content div,
 .section-3 .section-content div,
 .section-5 .section-content div {
     width: calc(100% - var(--left-width));
     padding-right: var(--left-width);
 }
+
+
 
 .section-2 .section-content div,
 .section-4 .section-content div,
@@ -89,12 +126,34 @@
     padding-left: var(--left-width);
 }
 
+@media (max-width:900px) {
+
+    .section-1 .section-content div,
+    .section-3 .section-content div,
+    .section-5 .section-content div {
+        padding-right: 0;
+    }
+
+    .section-2 .section-content div,
+    .section-4 .section-content div,
+    .section-6 .section-content div {
+        padding-left: 0;
+    }
+}
+
 .section-image {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width:900px) {
+    .section-image {
+        width: 100%;
+        padding: var(--left-width) 0 0 0;
+    }
 }
 
 .section-image img {

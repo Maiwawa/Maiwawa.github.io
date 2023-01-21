@@ -15,6 +15,8 @@
 </head>
 
 <body>
+    <!-- <div class="test">0</div> -->
+
     <div class="loader_bg">
         <div class="loader"></div>
     </div>
@@ -46,7 +48,7 @@
                             <div class="bottom-line"></div>
                         </div>
                     </a>
-                    <div>
+                    <div class="second-navs">
                         <div class="menu-second-nav">
                             <a href="period-information.html?id=first">
                                 <div>
@@ -148,11 +150,41 @@
             <div class="bar-content">
                 <div class="bar"></div>
             </div>
-            <div class="text">PERIOD</div>
+            <div class="text">APPRECIATION</div>
         </div>
     </div>
     <div class="right">
-        <section class="section1">
+        <section class="section-1">
+            <div class="sec-title">
+                <div>
+                    <a href="index.html">
+                        <span>FLOATING FANTASY</span><br />
+                        <span>FLOATING FANTASY</span><br />
+                        <span>─ Eastern Gouache art of Lee Chen-huei ─</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="section-top">
+                <div class="section-left">
+                    <div>Appreciation of works</div>
+                    <div>作品賞析</div>
+                </div>
+                <div class="section-right">
+                    <img src="resource/banner.jpg" class="image">
+                </div>
+            </div>
+
+            <div class="section-bottom">
+                由勤益科大文創系學生們,以客觀的角度描述了每個作品的內涵、特色;我們是要透過賞
+                析這些作品,學習各種不同創作的思維,進而提升自己的創作高度。因為藝術與大眾從來
+                不是背道而馳的,就像無論菜單簡單或豐富,表面上矛盾的手段,背後目的卻是共同的:
+                希望客人能夠享受,一個美好的夜晚。
+            </div>
+
+        </section>
+
+        <section class="section-2">
             <div class="section-title">
                 <div class="section-title-line"></div>
                 <div class="section-title-text">Recap
@@ -161,7 +193,7 @@
             </div>
 
             <div class="section-content">
-                <div class="section-content-title">李貞慧老師的作品一共分為四期，每期各挑出了六張畫作來介紹</div>
+                <div class="section-content-title">李貞慧老師的作品一共分為四期，每期各挑出了六張畫作來介紹。</div>
                 <div class="periods">
                     <div data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-reverse="true"
                         data-tilt-reset="false" class="period period-1">
@@ -236,6 +268,14 @@
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrollValue = (pageScroll / height) * 100;
             $('.bar').css('height', scrollValue + "%")
+
+            // $('.test').text(scrollValue);
+
+            if (scrollValue <= 55) {
+                $('.text').text('APPRECIATION');
+            } else {
+                $('.text').text('RECAP');
+            }
         });
 
 

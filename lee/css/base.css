@@ -1,10 +1,12 @@
  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
- 
+
  :root {
      --header-padding: 80px;
+     --menu-padding: 80px;
      --btn-size: 2.5em;
+     --btn-width: 90px;
      --section-title: 2.5rem;
      --section-second-title: 1.5rem;
      --header-big-font: 1.8em;
@@ -17,6 +19,77 @@
      --menu-nav-second-size: 1.8rem;
      --menu-nav-note-size: 1.3rem;
      --period-number: 6rem;
+     --list-margin-top: 100px;
+     --list-second-margin-top: 30px;
+     --arrow-width: 40px;
+ }
+
+ @media (max-width:1200px) {
+     :root {
+         --header-padding: 70px;
+         --menu-padding: 70px;
+         --btn-size: 2.3em;
+         --btn-width: 80px;
+         --menu-title-size: 1.6em;
+         --menu-title-second-size: 0.65em;
+         --menu-nav-size: 2rem;
+         --menu-nav-second-size: 1.5rem;
+         --menu-nav-note-size: 1.1rem;
+         --section-title: 2.2rem;
+         --section-second-title: 1.3rem;
+         --content-text: 1.2em;
+         --header-big-font: 1.6em;
+         --header-second-font: 1em;
+         --left-width: 70px;
+         --list-margin-top: 75px;
+         --list-second-margin-top: 20px;
+         --arrow-width: 30px;
+     }
+ }
+
+ @media (max-width:900px) {
+     :root {
+         --header-padding: 60px;
+         --menu-padding: 60px;
+         --btn-size: 2em;
+         --btn-width: 70px;
+         --menu-title-size: 1.4em;
+         --menu-title-second-size: 0.6em;
+         --menu-nav-size: 1.6rem;
+         --menu-nav-second-size: 1.3rem;
+         --menu-nav-note-size: 0.9rem;
+         --section-title: 2rem;
+         --section-second-title: 1.1rem;
+         --content-text: 1em;
+         --header-big-font: 1.4em;
+         --header-second-font: 0.9em;
+         --left-width: 60px;
+         --list-margin-top: 50px;
+         --list-second-margin-top: 10px;
+         --arrow-width: 20px;
+     }
+ }
+
+ @media (max-width:500px) {
+     :root {
+         --header-padding: 40px;
+         --menu-padding: 40px;
+         --btn-size: 2em;
+         --btn-width: 60px;
+         --menu-title-size: 1.3em;
+         --menu-title-second-size: 0.5em;
+         --menu-nav-size: 1.6rem;
+         --menu-nav-second-size: 1.3rem;
+         --menu-nav-note-size: 0.9rem;
+         --section-title: 1.8rem;
+         --section-second-title: 1rem;
+         --content-text: 1em;
+         --header-big-font: 1.3em;
+         --header-second-font: 0.8em;
+         --left-width: 40px;
+         --list-margin-top: 20px;
+         --list-second-margin-top: 0px;
+     }
  }
 
  * {
@@ -41,6 +114,12 @@
      align-items: flex-end;
      justify-content: center;
      padding: 10vh 0;
+ }
+
+ @media (max-width:900px) {
+     .left {
+         display: none;
+     }
  }
 
  .left-content {
@@ -75,10 +154,18 @@
 
  .right {
      width: calc(100% - var(--left-width));
+     transition: 0.8s ease width;
      position: absolute;
      top: 0;
      right: 0;
  }
+
+ @media (max-width:900px) {
+     .right {
+         width: 100%;
+     }
+ }
+
 
  .sec-title {
      position: absolute;
@@ -90,13 +177,14 @@
      align-items: center;
      justify-content: flex-start;
      padding: var(--header-padding);
+     transition: 0.8s ease padding;
+     padding-bottom: 0;
  }
 
  #btn {
      font-size: var(--btn-size);
-     /* padding: 18px 30px; */
-     width: 100px;
-     height: 100px;
+     width: var(--btn-width);
+     height: var(--btn-width);
      display: flex;
      align-items: center;
      justify-content: center;
@@ -108,7 +196,7 @@
      right: var(--header-padding);
      border-radius: 50%;
      transition: 0.5s ease-in-out;
-     transition-property: transform, background;
+     transition-property: transform, background, width, height;
  }
 
  #btn:hover {
@@ -146,6 +234,12 @@
      color: #231815;
  }
 
+ @media (max-width:900px) {
+     .menu-left {
+         display: none;
+     }
+ }
+
  .menu-left span {
      color: #91702F;
      font-weight: bolder;
@@ -153,12 +247,19 @@
 
  .menu-right {
      background: #231815;
+     transition: 0.8s ease width;
      width: calc(100% - var(--left-width));
      height: 100%;
  }
 
+ @media (max-width:900px) {
+     .menu-right {
+         width: 100%;
+     }
+ }
+
  .menu-title {
-     padding: 80px;
+     padding: var(--menu-padding);
      color: #fff;
  }
 
@@ -178,10 +279,33 @@
      align-items: flex-start;
      justify-content: space-around;
      color: #C9A063;
+     padding: 0 var(--left-width);
+ }
+
+ @media (max-width:700px) {
+     .menu-lists {
+         display: inline-block;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translateX(-50%)translateY(-50%);
+         padding: 0;
+     }
  }
 
  .menu-list:not(:first-child) .menu-nav:not(:first-child) {
-     margin-top: 100px;
+     transition: 0.8s ease margin-top;
+     margin-top: var(--list-margin-top);
+ }
+
+ @media (max-width:700px) {
+     .menu-list:not(:first-child) .menu-nav:not(:first-child) {
+         margin-top: 0px;
+     }
+
+     .menu-nav {
+         margin-top: 40px !important;
+     }
  }
 
  .menu-list {
@@ -207,8 +331,8 @@
      color: #C9A063;
  }
 
- .menu-nav a{
-    color: #C9A063;
+ .menu-nav a {
+     color: #C9A063;
  }
 
  .menu-nav:hover .bottom-line {
@@ -227,6 +351,12 @@
      transition: 0.3s ease-in-out transform;
  }
 
+ @media (max-width:700px) {
+     .second-navs {
+         display: none;
+     }
+ }
+
  .menu-second-nav:hover {
      transform: translateX(-20px);
  }
@@ -238,11 +368,11 @@
  }
 
  .menu-second-nav:nth-child(1) {
-     margin-top: 50px;
+     margin-top: calc(var(--list-second-margin-top) + 20px);
  }
 
  .menu-second-nav:not(:first-child) {
-     margin-top: 30px;
+     margin-top: var(--list-second-margin-top);
  }
 
  .menu-second-nav div:nth-child(1) {
@@ -251,7 +381,7 @@
  }
 
  .arrow {
-     width: 40px;
+     width: var(--arrow-width);
      height: 2px;
      position: absolute;
      /* background: #fff; */
