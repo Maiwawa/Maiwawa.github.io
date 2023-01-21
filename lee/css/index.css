@@ -1,0 +1,114 @@
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section1 {
+    background: url(../resource/banner.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.section1 h1 {
+    max-width: calc(100% - 60px);
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.sec-title div span:nth-child(1) {
+    font-size: var(--header-big-font);
+    color: #231815;
+}
+
+.sec-title div span:nth-child(3) {
+    font-size: var(--header-big-font);
+    color: #9A6A25;
+}
+
+.sec-title div span:nth-child(5) {
+    font-size: var(--header-second-font);
+    color: #231815;
+    font-family: 'Great Vibes';
+}
+
+.sec-left {
+    width: 55%;
+    height: 100vh;
+    background: #2C2B2C;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+.sec-right {
+    width: 45%;
+}
+
+.left-title {
+    font-size: var(--section-title);
+    margin-bottom: 50px;
+}
+
+.left-title:nth-child(1) {
+    color: #91702F;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.left-title:nth-child(1) span {
+    color: #898989;
+    font-size: var(--section-second-title);
+    transform: translateY(5px);
+}
+
+.left-title:nth-child(2) {
+    margin-bottom: 60px;
+}
+
+.left-text {
+    font-size: var(--content-text);
+    line-height: 2.3rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.left-btn {
+    margin-top: 30px;
+    color: #898989;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: 0.5s ease-in-out color;
+}
+
+.line-bg {
+    background: #898989;
+    width: 80px;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.line {
+    background: #fff;
+    height: 2px;
+    width: 15%;
+    transition: 0.5s width ease-in-out;
+}
+
+.left-btn:hover .line {
+    width: 100%;
+}
+
+.left-btn:hover {
+    color: #fff;
+}

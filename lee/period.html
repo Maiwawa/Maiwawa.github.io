@@ -10,7 +10,7 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/period.css">
 </head>
 
 <body>
@@ -129,48 +129,63 @@
             <div class="bar-content">
                 <div class="bar"></div>
             </div>
-            <div class="text">HOMEPAGE</div>
+            <div class="text">PERIOD</div>
         </div>
     </div>
-
     <div class="right">
         <section class="section1">
-            <div class="sec-title">
-                <div>
-                    <span>FLOATING FANTASY</span><br />
-                    <span>FLOATING FANTASY</span><br />
-                    <span>─ Eastern Gouache art of Lee Chen-huei ─</span>
+            <div class="section-title">
+                <div class="section-title-line"></div>
+                <div class="section-title-text">Recap
+                    <div class="section-title-second-text">前情摘要</div>
                 </div>
             </div>
-        </section>
-        <section class="section2">
-            <div class="sec-left">
-                <div>
-                    <div class="left-title">
-                        About　<span>展覽理念</span>
-                    </div>
-                    <div class="left-title">
-                        Exhibition concept
-                    </div>
-                    <div class="left-text">
-                        藝術家李貞慧現任東海大學美術系主任
-                        ,膠彩作品風格自然清雅、氣韻生動又
-                        兼具光彩迷幻之美。她長年觀察東海校
-                        園景色,試圖捕捉光影的變化為其創作
-                        上追求的目標。光線的變化除了在作品
-                        中展現不同的亮度和色澤外,也呼應其
-                        內心對時序改變及生命消逝的感嘆。
-                    </div>
-                    <div class="left-btn">
-                        VIEW ALL <span class="line-bg"><span class="line"></span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="sec-right">
 
+            <div class="section-content">
+                <div class="section-content-title">李貞慧老師的作品一共分為四期，每期各挑出了六張畫作來介紹</div>
+                <div class="periods">
+                    <div class="period">
+                        <div class="number">1</div>
+                        <div class="period-img period-img1"></div>
+                        <div class="period-text">
+                            寒林深秋,1993<br />
+                            老師使用多種色彩創作，楓紅的樹葉及還未枯黃的綠葉相互交縱著，乍看之下彷彿是異世界空間，充滿混沌，其中的亮光為我照亮心中的不安，混沌世界也能成為彩色幻境。
+                        </div>
+                    </div>
+
+                    <div class="period">
+                        <div class="number">2</div>
+                        <div class="period-img period-img2"></div>
+                        <div class="period-text">
+                            樹洞,1994<br />
+                            豐富多元的色彩，繪出樹幹的年邁堅毅，以隨興的筆觸堆疊粗獷肌理，營造雄厚磅礡的氣勢。
+
+                        </div>
+                    </div>
+
+                    <div class="period">
+                        <div class="number">3</div>
+                        <div class="period-img period-img3"></div>
+                        <div class="period-text">
+                            潸然,2005<br />
+                            作者以灰白筆墨描繪如遠處山巒的輪廓，區隔明亮和灰暗的漸變，強化畫面上下的明暗對比，彰顯畫面張力。
+                        </div>
+                    </div>
+
+                    <div class="period">
+                        <div class="number">4</div>
+                        <div class="period-img period-img4"></div>
+                        <div class="period-text">
+                            芳草,2006<br />
+                            以宏觀的視野，大筆刷染、奔放揮毫出一幅耐人尋味的草原景象，作品畫面自然清雅、氣韻生動又兼具光彩迷幻之美。
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -186,11 +201,11 @@
             const scrollValue = (pageScroll / height) * 100;
             $('.bar').css('height', scrollValue + "%")
 
-            if (scrollValue >= 50) {
-                $('.text').text('ABOUT');
-            } else {
-                $('.text').text('HOMEPAGE');
-            }
+            // if (scrollValue >= 50) {
+            //     $('.text').text('ABOUT');
+            // } else {
+            //     $('.text').text('HOMEPAGE');
+            // }
         });
 
     </script>
