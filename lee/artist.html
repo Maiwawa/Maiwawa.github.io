@@ -10,7 +10,7 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/artist.css">
 </head>
 
 <body>
@@ -143,12 +143,12 @@
             <div class="bar-content">
                 <div class="bar"></div>
             </div>
-            <div class="text">HOMEPAGE</div>
+            <div class="text">AUTHOR</div>
         </div>
     </div>
 
     <div class="right">
-        <section class="section1">
+        <div class="section-1">
             <div class="sec-title">
                 <div>
                     <a href="index.html">
@@ -158,36 +158,12 @@
                     </a>
                 </div>
             </div>
-        </section>
-        <section class="section2">
-            <div class="sec-left">
-                <div>
-                    <div class="left-title">
-                        About　<span>展覽理念</span>
-                    </div>
-                    <div class="left-title">
-                        Exhibition concept
-                    </div>
-                    <div class="left-text">
-                        藝術家李貞慧現任東海大學美術系主任
-                        ,膠彩作品風格自然清雅、氣韻生動又
-                        兼具光彩迷幻之美。她長年觀察東海校
-                        園景色,試圖捕捉光影的變化為其創作
-                        上追求的目標。光線的變化除了在作品
-                        中展現不同的亮度和色澤外,也呼應其
-                        內心對時序改變及生命消逝的感嘆。
-                    </div>
-                    <div class="left-btn">
-                        <a href="about.html">
-                            VIEW ALL <span class="line-bg"><span class="line"></span></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="sec-right">
 
+            <div class="section-title">
+                
             </div>
-        </section>
+            
+        </div>
     </div>
 
 
@@ -204,11 +180,7 @@
             const scrollValue = (pageScroll / height) * 100;
             $('.bar').css('height', scrollValue + "%")
 
-            if (scrollValue <= 50) {
-                $('.text').text('HOMEPAGE');
-            } else {
-                $('.text').text('ABOUT');
-            }
+
         });
 
     </script>

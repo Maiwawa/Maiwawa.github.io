@@ -7,8 +7,8 @@
      --btn-size: 2.5em;
      --section-title: 2.5rem;
      --section-second-title: 1.5rem;
-     --header-big-font: 3em;
-     --header-second-font: 1.9em;
+     --header-big-font: 1.8em;
+     --header-second-font: 1.15em;
      --content-text: 1.2em;
      --left-width: 100px;
      --menu-title-size: 1.8em;
@@ -205,6 +205,10 @@
  .menu-nav {
      transition: 0.5s ease-in-out transform;
      color: #C9A063;
+ }
+
+ .menu-nav a{
+    color: #C9A063;
  }
 
  .menu-nav:hover .bottom-line {

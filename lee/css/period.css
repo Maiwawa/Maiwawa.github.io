@@ -49,9 +49,15 @@
 
 .period {
     width: 30%;
-    padding: 5% 10%;
+    padding: 5% 5%;
+    margin: 0 5%;
     position: relative;
     cursor: pointer;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .period:hover .number {
@@ -59,12 +65,24 @@
 }
 
 .number {
-    color: #DCDDDD;
+    color: #545454;
     font-size: var(--period-number);
     position: absolute;
-    transform: translateX(-150%)translateY(-40%);
     font-family: 'Dancing Script';
     transition: 1s color ease-in-out;
+    transform-style: preserve-3d;
+    transform:translateZ(50px);
+}
+
+.period-img {
+    opacity: 0.8;
+    transform-style: preserve-3d;
+    transform: translateZ(20px);
+    transition: 0.5s ease-in-out opacity;
+}
+
+.period:hover .period-img{
+    opacity: 0.6;
 }
 
 .period-img1 {
@@ -103,7 +121,6 @@
     background-repeat: no-repeat;
 }
 
-.period-text {
-    font-size: var(--content-text);
+.period-text{
     margin-top: 20px;
 }

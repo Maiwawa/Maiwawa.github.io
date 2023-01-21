@@ -12,12 +12,6 @@ section {
     background-size: cover;
 }
 
-.section1 h1 {
-    max-width: calc(100% - 60px);
-    flex-wrap: wrap;
-    display: flex;
-}
-
 .sec-title div span:nth-child(1) {
     font-size: var(--header-big-font);
     color: #231815;
@@ -80,11 +74,16 @@ section {
 
 .left-btn {
     margin-top: 30px;
-    color: #898989;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.left-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #898989;
     transition: 0.5s ease-in-out color;
 }
 
@@ -105,10 +104,10 @@ section {
     transition: 0.5s width ease-in-out;
 }
 
-.left-btn:hover .line {
+.left-btn a:hover .line {
     width: 100%;
 }
 
-.left-btn:hover {
+.left-btn a:hover {
     color: #fff;
 }
