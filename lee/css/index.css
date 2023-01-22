@@ -6,10 +6,48 @@ section {
     justify-content: center;
 }
 
-.section1 {
-    background: url(../resource/banner-min.jpg);
-    background-position: center center;
-    background-size: cover;
+.section-1 {
+    background: #DFDFDF;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.section-title {
+    left: 0;
+}
+
+.section-animation {
+    height: 100vh;
+}
+
+.section-imgs {
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    animation: banner-animation 500s infinite;
+    /* animation-delay: 2s; */
+}
+
+.section-animation img:nth-child(1) {
+    height: 100vh;
+}
+
+.section-animation img:nth-child(2) {
+    height: 100vh;
+    position: relative;
+}
+
+@keyframes banner-animation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-70%);
+    }
 }
 
 .sec-title div span:nth-child(1) {
@@ -45,12 +83,12 @@ section {
     transition: 0.8s ease-in-out width;
 }
 
-.section2 {
+.section-2 {
     transition: 0.8s ease-in-out flex-wrap;
 }
 
 @media (max-width:900px) {
-    .section2 {
+    .section-2 {
         flex-wrap: wrap;
     }
 
