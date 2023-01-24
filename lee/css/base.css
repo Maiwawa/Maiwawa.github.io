@@ -106,7 +106,7 @@
 
  .left {
      width: var(--left-width);
-     height: 80vh;
+     height: 85vh;
      position: fixed;
      left: 0;
      top: 0;
@@ -134,12 +134,12 @@
  .bar-content {
      width: 2px;
      height: 20vh;
-     background-color: rgb(190, 205, 248);
+     background-color:#DCDDDD;
  }
 
  .bar {
      width: 2px;
-     background-color: rgb(114, 144, 235);
+     background-color: #231815;
  }
 
  .text {
@@ -168,12 +168,12 @@
  }
 
 
- .sec-title {
+ .header-title {
      position: absolute;
      z-index: 5;
      top: 0;
      right: 0;
-     width: calc(100% - calc(var(--header-padding)*2));
+     width: 100%;
      display: flex;
      align-items: center;
      justify-content: flex-start;

@@ -50,17 +50,17 @@ section {
     }
 }
 
-.sec-title div span:nth-child(1) {
+.header-title div span:nth-child(1) {
     font-size: var(--header-big-font);
     color: #231815;
 }
 
-.sec-title div span:nth-child(3) {
+.header-title div span:nth-child(3) {
     font-size: var(--header-big-font);
     color: #9A6A25;
 }
 
-.sec-title div span:nth-child(5) {
+.header-title div span:nth-child(5) {
     font-size: var(--header-second-font);
     color: #231815;
     font-family: 'Great Vibes';
