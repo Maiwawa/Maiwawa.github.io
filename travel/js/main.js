@@ -1,9 +1,11 @@
 let currentLocation = 1;
+let currentLocationX = 1;
 let numOfPapers = 11;
 let maxLocation = numOfPapers + 1;
 
 let aa = [];
 let bb = [];
+let isBIg;
 
 $(document).ready(function () {
     for (let i = numOfPapers + 2; i > 0; i--) {
@@ -15,8 +17,10 @@ $(document).ready(function () {
 
     if (winWidth < winHeight) {
         $('#book').addClass('book-y');
+        isBIg = false;
     } else {
         $('#book').removeClass('book-y');
+        isBIg = true;
     }
 
     let cc = 1;
@@ -50,7 +54,7 @@ $(document).ready(function () {
     for (let i = 0; i < bb.length; i++) {
         var img = new Image();
         $(img).on('load', function () {
-            console.log(bb[i]);
+            console.log(aa[i]);
         });
         img.src = bb[i];
     }
@@ -66,6 +70,14 @@ $(window).resize(function () {
     } else {
         $('#book').removeClass('book-y');
     }
+
+    if (winWidth < 900) {
+        currentLocationX = currentLocation * 2 - 1;
+        $('.phone-img').attr('src', `resource/p${currentLocationX}.jpg`);
+    } 
+    // else if (winWidth > 900 && !isBIg) {
+    //     currentLocation = parseInt(currentLocationX / 2);
+    // }
 });
 
 $('#prev-btn').click(function () {
@@ -115,3 +127,16 @@ function closeBook() {
     $('#next-btn').css('transform', `translateX(0px)`);
 }
 
+$('.right').click(function () {
+    if (currentLocationX < 22) {
+        $('.phone-img').attr('src', `resource/p${currentLocationX + 1}.jpg`)
+        currentLocationX++;
+    }
+})
+
+$('.left').click(function () {
+    if (currentLocationX > 1) {
+        $('.phone-img').attr('src', `resource/p${currentLocationX - 1}.jpg`)
+        currentLocationX--;
+    }
+})

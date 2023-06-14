@@ -139,7 +139,7 @@ i {
     display: none;
 }
 
-.image {
+.image, .phone-img {
     width: 100%;
     height: 100%;
     object-fit: contain
@@ -152,6 +152,26 @@ i {
 
     .phone {
         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left {
+        width: 45vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+    }
+
+    .right {
+        width: 45vw;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
     }
 
     #paper {
