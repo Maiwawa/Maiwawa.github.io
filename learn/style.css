@@ -138,27 +138,28 @@ body {
     align-items: center;
 } */
 
-.test {
-    position: fixed;
-    width: 100%;
-    height: 100px;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding-right: 30px;
+.hide {
+    display: none;
 }
 
-.btn {
-    background: #DF5E6D;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    font-size: var(--btn-font);
-    cursor: pointer;
+.start-btn {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FCE8E5;
+}
+
+#btn {
+    color: var(--card-color);
+    background: var(--answer-color);
+    font-size: var(--title-font);
+    padding: 2% 5%;
+    border-radius: 100%;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#btn:hover {
+    transform: scale(1.05);
 }
