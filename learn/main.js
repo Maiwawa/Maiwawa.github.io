@@ -111,7 +111,7 @@ $('.answer').click(function () {
 
 //是否重抽
 function getRandomQuation() {
-    if (time < quastions.length) {
+    if (time < quastions.length -1) {
         getInt();
         if (verify(aa)) {
             // console.log("same:" + aa)
